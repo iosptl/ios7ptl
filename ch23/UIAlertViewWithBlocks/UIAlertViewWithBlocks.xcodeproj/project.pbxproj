@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB8FB46E13ED01E7008DA91D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8FB46D13ED01E7008DA91D /* UIKit.framework */; };
+		AB8FB47013ED01E7008DA91D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8FB46F13ED01E7008DA91D /* Foundation.framework */; };
+		AB8FB47213ED01E7008DA91D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8FB47113ED01E7008DA91D /* CoreGraphics.framework */; };
+		AB8FB47813ED01E7008DA91D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB8FB47613ED01E7008DA91D /* InfoPlist.strings */; };
+		AB8FB47A13ED01E7008DA91D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FB47913ED01E7008DA91D /* main.m */; };
+		AB8FB47E13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FB47D13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m */; };
+		AB8FB48513ED01E7008DA91D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FB48313ED01E7008DA91D /* MainWindow.xib */; };
+		AB8FB49413ED01F3008DA91D /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FB49313ED01F3008DA91D /* UIAlertView+Blocks.m */; };
+		FB1A38F216419CF200E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A38F116419CF200E387DC /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB8FB46913ED01E7008DA91D /* UIAlertViewWithBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIAlertViewWithBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8FB46D13ED01E7008DA91D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AB8FB46F13ED01E7008DA91D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB8FB47113ED01E7008DA91D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AB8FB47513ED01E7008DA91D /* UIAlertViewWithBlocks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIAlertViewWithBlocks-Info.plist"; sourceTree = "<group>"; };
+		AB8FB47713ED01E7008DA91D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB8FB47913ED01E7008DA91D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB8FB47B13ED01E7008DA91D /* UIAlertViewWithBlocks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertViewWithBlocks-Prefix.pch"; sourceTree = "<group>"; };
+		AB8FB47C13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAlertViewWithBlocksAppDelegate.h; sourceTree = "<group>"; };
+		AB8FB47D13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewWithBlocksAppDelegate.m; sourceTree = "<group>"; };
+		AB8FB48413ED01E7008DA91D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		AB8FB49213ED01F3008DA91D /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		AB8FB49313ED01F3008DA91D /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		FB1A38F116419CF200E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB8FB46613ED01E7008DA91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8FB46E13ED01E7008DA91D /* UIKit.framework in Frameworks */,
+				AB8FB47013ED01E7008DA91D /* Foundation.framework in Frameworks */,
+				AB8FB47213ED01E7008DA91D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB8FB45E13ED01E7008DA91D = {
+			isa = PBXGroup;
+			children = (
+				FB1A38F116419CF200E387DC /* Default-568h@2x.png */,
+				AB8FB47313ED01E7008DA91D /* UIAlertViewWithBlocks */,
+				AB8FB46C13ED01E7008DA91D /* Frameworks */,
+				AB8FB46A13ED01E7008DA91D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB8FB46A13ED01E7008DA91D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB8FB46913ED01E7008DA91D /* UIAlertViewWithBlocks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB8FB46C13ED01E7008DA91D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB8FB46D13ED01E7008DA91D /* UIKit.framework */,
+				AB8FB46F13ED01E7008DA91D /* Foundation.framework */,
+				AB8FB47113ED01E7008DA91D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB8FB47313ED01E7008DA91D /* UIAlertViewWithBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				AB8FB49213ED01F3008DA91D /* UIAlertView+Blocks.h */,
+				AB8FB49313ED01F3008DA91D /* UIAlertView+Blocks.m */,
+				AB8FB47C13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.h */,
+				AB8FB47D13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m */,
+				AB8FB48313ED01E7008DA91D /* MainWindow.xib */,
+				AB8FB47413ED01E7008DA91D /* Supporting Files */,
+			);
+			path = UIAlertViewWithBlocks;
+			sourceTree = "<group>";
+		};
+		AB8FB47413ED01E7008DA91D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB8FB47513ED01E7008DA91D /* UIAlertViewWithBlocks-Info.plist */,
+				AB8FB47613ED01E7008DA91D /* InfoPlist.strings */,
+				AB8FB47913ED01E7008DA91D /* main.m */,
+				AB8FB47B13ED01E7008DA91D /* UIAlertViewWithBlocks-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB8FB46813ED01E7008DA91D /* UIAlertViewWithBlocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB8FB48F13ED01E7008DA91D /* Build configuration list for PBXNativeTarget "UIAlertViewWithBlocks" */;
+			buildPhases = (
+				AB8FB46513ED01E7008DA91D /* Sources */,
+				AB8FB46613ED01E7008DA91D /* Frameworks */,
+				AB8FB46713ED01E7008DA91D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIAlertViewWithBlocks;
+			productName = UIAlertViewWithBlocks;
+			productReference = AB8FB46913ED01E7008DA91D /* UIAlertViewWithBlocks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB8FB46013ED01E7008DA91D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = AB8FB46313ED01E7008DA91D /* Build configuration list for PBXProject "UIAlertViewWithBlocks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB8FB45E13ED01E7008DA91D;
+			productRefGroup = AB8FB46A13ED01E7008DA91D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB8FB46813ED01E7008DA91D /* UIAlertViewWithBlocks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB8FB46713ED01E7008DA91D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8FB47813ED01E7008DA91D /* InfoPlist.strings in Resources */,
+				AB8FB48513ED01E7008DA91D /* MainWindow.xib in Resources */,
+				FB1A38F216419CF200E387DC /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB8FB46513ED01E7008DA91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8FB47A13ED01E7008DA91D /* main.m in Sources */,
+				AB8FB47E13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m in Sources */,
+				AB8FB49413ED01F3008DA91D /* UIAlertView+Blocks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB8FB47613ED01E7008DA91D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB8FB47713ED01E7008DA91D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AB8FB48313ED01E7008DA91D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB8FB48413ED01E7008DA91D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB8FB48D13ED01E7008DA91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB8FB48E13ED01E7008DA91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB8FB49013ED01E7008DA91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIAlertViewWithBlocks/UIAlertViewWithBlocks-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "UIAlertViewWithBlocks/UIAlertViewWithBlocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AB8FB49113ED01E7008DA91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIAlertViewWithBlocks/UIAlertViewWithBlocks-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "UIAlertViewWithBlocks/UIAlertViewWithBlocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB8FB46313ED01E7008DA91D /* Build configuration list for PBXProject "UIAlertViewWithBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB8FB48D13ED01E7008DA91D /* Debug */,
+				AB8FB48E13ED01E7008DA91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB8FB48F13ED01E7008DA91D /* Build configuration list for PBXNativeTarget "UIAlertViewWithBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB8FB49013ED01E7008DA91D /* Debug */,
+				AB8FB49113ED01E7008DA91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB8FB46013ED01E7008DA91D /* Project object */;
+}

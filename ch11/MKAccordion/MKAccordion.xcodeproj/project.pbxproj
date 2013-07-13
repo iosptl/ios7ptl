@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABA070CF1605757D003B5D7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA070CE1605757D003B5D7A /* Default-568h@2x.png */; };
+		ABA070D21605759A003B5D7A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA070D11605759A003B5D7A /* QuartzCore.framework */; };
+		ABA4BBB515BE562E0008F660 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BBB415BE562E0008F660 /* UIKit.framework */; };
+		ABA4BBB715BE562E0008F660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BBB615BE562E0008F660 /* Foundation.framework */; };
+		ABA4BBB915BE562E0008F660 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BBB815BE562E0008F660 /* CoreGraphics.framework */; };
+		ABA4BBBF15BE562E0008F660 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABA4BBBD15BE562E0008F660 /* InfoPlist.strings */; };
+		ABA4BBC115BE562E0008F660 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA4BBC015BE562E0008F660 /* main.m */; };
+		ABA4BBC515BE562E0008F660 /* MKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA4BBC415BE562E0008F660 /* MKAppDelegate.m */; };
+		ABA4BBC815BE562E0008F660 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA4BBC615BE562E0008F660 /* MainStoryboard.storyboard */; };
+		ABA4BBCB15BE562E0008F660 /* MKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA4BBCA15BE562E0008F660 /* MKMasterViewController.m */; };
+		ABA4BBD615BE5BA60008F660 /* MKAccordionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA4BBD515BE5BA60008F660 /* MKAccordionButton.m */; };
+		ABA4BBD815BE5BF30008F660 /* MKAccordionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA4BBD715BE5BF20008F660 /* MKAccordionButton.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABA070CE1605757D003B5D7A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ABA070D11605759A003B5D7A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ABA4BBB015BE562E0008F660 /* MKAccordion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKAccordion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA4BBB415BE562E0008F660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABA4BBB615BE562E0008F660 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABA4BBB815BE562E0008F660 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABA4BBBC15BE562E0008F660 /* MKAccordion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKAccordion-Info.plist"; sourceTree = "<group>"; };
+		ABA4BBBE15BE562E0008F660 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABA4BBC015BE562E0008F660 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABA4BBC215BE562E0008F660 /* MKAccordion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKAccordion-Prefix.pch"; sourceTree = "<group>"; };
+		ABA4BBC315BE562E0008F660 /* MKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
+		ABA4BBC415BE562E0008F660 /* MKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKAppDelegate.m; sourceTree = "<group>"; };
+		ABA4BBC715BE562E0008F660 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		ABA4BBC915BE562E0008F660 /* MKMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMasterViewController.h; sourceTree = "<group>"; };
+		ABA4BBCA15BE562E0008F660 /* MKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKMasterViewController.m; sourceTree = "<group>"; };
+		ABA4BBD415BE5BA60008F660 /* MKAccordionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAccordionButton.h; sourceTree = "<group>"; };
+		ABA4BBD515BE5BA60008F660 /* MKAccordionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAccordionButton.m; sourceTree = "<group>"; };
+		ABA4BBD715BE5BF20008F660 /* MKAccordionButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MKAccordionButton.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABA4BBAD15BE562E0008F660 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA070D21605759A003B5D7A /* QuartzCore.framework in Frameworks */,
+				ABA4BBB515BE562E0008F660 /* UIKit.framework in Frameworks */,
+				ABA4BBB715BE562E0008F660 /* Foundation.framework in Frameworks */,
+				ABA4BBB915BE562E0008F660 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABA4BBA515BE562D0008F660 = {
+			isa = PBXGroup;
+			children = (
+				ABA070CE1605757D003B5D7A /* Default-568h@2x.png */,
+				ABA4BBBA15BE562E0008F660 /* MKAccordion */,
+				ABA4BBB315BE562E0008F660 /* Frameworks */,
+				ABA4BBB115BE562E0008F660 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABA4BBB115BE562E0008F660 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4BBB015BE562E0008F660 /* MKAccordion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABA4BBB315BE562E0008F660 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABA070D11605759A003B5D7A /* QuartzCore.framework */,
+				ABA4BBB415BE562E0008F660 /* UIKit.framework */,
+				ABA4BBB615BE562E0008F660 /* Foundation.framework */,
+				ABA4BBB815BE562E0008F660 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABA4BBBA15BE562E0008F660 /* MKAccordion */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4BBC315BE562E0008F660 /* MKAppDelegate.h */,
+				ABA4BBC415BE562E0008F660 /* MKAppDelegate.m */,
+				ABA4BBC615BE562E0008F660 /* MainStoryboard.storyboard */,
+				ABA4BBC915BE562E0008F660 /* MKMasterViewController.h */,
+				ABA4BBCA15BE562E0008F660 /* MKMasterViewController.m */,
+				ABA4BBBB15BE562E0008F660 /* Supporting Files */,
+				ABA4BBD415BE5BA60008F660 /* MKAccordionButton.h */,
+				ABA4BBD515BE5BA60008F660 /* MKAccordionButton.m */,
+				ABA4BBD715BE5BF20008F660 /* MKAccordionButton.xib */,
+			);
+			path = MKAccordion;
+			sourceTree = "<group>";
+		};
+		ABA4BBBB15BE562E0008F660 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4BBBC15BE562E0008F660 /* MKAccordion-Info.plist */,
+				ABA4BBBD15BE562E0008F660 /* InfoPlist.strings */,
+				ABA4BBC015BE562E0008F660 /* main.m */,
+				ABA4BBC215BE562E0008F660 /* MKAccordion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABA4BBAF15BE562E0008F660 /* MKAccordion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABA4BBD115BE562E0008F660 /* Build configuration list for PBXNativeTarget "MKAccordion" */;
+			buildPhases = (
+				ABA4BBAC15BE562E0008F660 /* Sources */,
+				ABA4BBAD15BE562E0008F660 /* Frameworks */,
+				ABA4BBAE15BE562E0008F660 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKAccordion;
+			productName = MKAccordion;
+			productReference = ABA4BBB015BE562E0008F660 /* MKAccordion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABA4BBA715BE562D0008F660 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MK;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Steinlogic Consulting and Training Pte Ltd";
+			};
+			buildConfigurationList = ABA4BBAA15BE562D0008F660 /* Build configuration list for PBXProject "MKAccordion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABA4BBA515BE562D0008F660;
+			productRefGroup = ABA4BBB115BE562E0008F660 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABA4BBAF15BE562E0008F660 /* MKAccordion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABA4BBAE15BE562E0008F660 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA4BBBF15BE562E0008F660 /* InfoPlist.strings in Resources */,
+				ABA4BBC815BE562E0008F660 /* MainStoryboard.storyboard in Resources */,
+				ABA4BBD815BE5BF30008F660 /* MKAccordionButton.xib in Resources */,
+				ABA070CF1605757D003B5D7A /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABA4BBAC15BE562E0008F660 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA4BBC115BE562E0008F660 /* main.m in Sources */,
+				ABA4BBC515BE562E0008F660 /* MKAppDelegate.m in Sources */,
+				ABA4BBCB15BE562E0008F660 /* MKMasterViewController.m in Sources */,
+				ABA4BBD615BE5BA60008F660 /* MKAccordionButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABA4BBBD15BE562E0008F660 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABA4BBBE15BE562E0008F660 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABA4BBC615BE562E0008F660 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABA4BBC715BE562E0008F660 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABA4BBCF15BE562E0008F660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABA4BBD015BE562E0008F660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABA4BBD215BE562E0008F660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MKAccordion/MKAccordion-Prefix.pch";
+				INFOPLIST_FILE = "MKAccordion/MKAccordion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABA4BBD315BE562E0008F660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MKAccordion/MKAccordion-Prefix.pch";
+				INFOPLIST_FILE = "MKAccordion/MKAccordion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABA4BBAA15BE562D0008F660 /* Build configuration list for PBXProject "MKAccordion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABA4BBCF15BE562E0008F660 /* Debug */,
+				ABA4BBD015BE562E0008F660 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABA4BBD115BE562E0008F660 /* Build configuration list for PBXNativeTarget "MKAccordion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABA4BBD215BE562E0008F660 /* Debug */,
+				ABA4BBD315BE562E0008F660 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABA4BBA715BE562D0008F660 /* Project object */;
+}

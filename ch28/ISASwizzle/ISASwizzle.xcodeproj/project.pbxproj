@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB0AB86C14033EED007F02E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0AB86B14033EED007F02E5 /* UIKit.framework */; };
+		FB0AB86E14033EED007F02E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0AB86D14033EED007F02E5 /* Foundation.framework */; };
+		FB0AB87414033EED007F02E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB0AB87214033EED007F02E5 /* InfoPlist.strings */; };
+		FB0AB87614033EED007F02E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB87514033EED007F02E5 /* main.m */; };
+		FB0AB88914033F01007F02E5 /* MYNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */; };
+		FB0AB88A14033F01007F02E5 /* NSObject+SetClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */; };
+		FBBF3A6C16053FF80093BD67 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB0AB86714033EED007F02E5 /* ISASwizzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISASwizzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0AB86B14033EED007F02E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB0AB86D14033EED007F02E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB0AB87114033EED007F02E5 /* ISASwizzle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ISASwizzle-Info.plist"; sourceTree = "<group>"; };
+		FB0AB87314033EED007F02E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB0AB87514033EED007F02E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ISASwizzle/main.m; sourceTree = "<group>"; };
+		FB0AB87714033EED007F02E5 /* ISASwizzle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISASwizzle-Prefix.pch"; sourceTree = "<group>"; };
+		FB0AB88514033F01007F02E5 /* MYNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNotificationCenter.h; sourceTree = "<group>"; };
+		FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNotificationCenter.m; sourceTree = "<group>"; };
+		FB0AB88714033F01007F02E5 /* NSObject+SetClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SetClass.h"; sourceTree = "<group>"; };
+		FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SetClass.m"; sourceTree = "<group>"; };
+		FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB0AB86414033EED007F02E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0AB86C14033EED007F02E5 /* UIKit.framework in Frameworks */,
+				FB0AB86E14033EED007F02E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB0AB85C14033EED007F02E5 = {
+			isa = PBXGroup;
+			children = (
+				FB0AB88514033F01007F02E5 /* MYNotificationCenter.h */,
+				FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */,
+				FB0AB88714033F01007F02E5 /* NSObject+SetClass.h */,
+				FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */,
+				FB0AB87514033EED007F02E5 /* main.m */,
+				FB0AB86F14033EED007F02E5 /* ISASwizzle */,
+				FB0AB86A14033EED007F02E5 /* Frameworks */,
+				FB0AB86814033EED007F02E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB0AB86814033EED007F02E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB0AB86714033EED007F02E5 /* ISASwizzle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB0AB86A14033EED007F02E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB0AB86B14033EED007F02E5 /* UIKit.framework */,
+				FB0AB86D14033EED007F02E5 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB0AB86F14033EED007F02E5 /* ISASwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				FB0AB87014033EED007F02E5 /* Supporting Files */,
+			);
+			path = ISASwizzle;
+			sourceTree = "<group>";
+		};
+		FB0AB87014033EED007F02E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */,
+				FB0AB87114033EED007F02E5 /* ISASwizzle-Info.plist */,
+				FB0AB87214033EED007F02E5 /* InfoPlist.strings */,
+				FB0AB87714033EED007F02E5 /* ISASwizzle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB0AB86614033EED007F02E5 /* ISASwizzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB0AB87D14033EED007F02E5 /* Build configuration list for PBXNativeTarget "ISASwizzle" */;
+			buildPhases = (
+				FB0AB86314033EED007F02E5 /* Sources */,
+				FB0AB86414033EED007F02E5 /* Frameworks */,
+				FB0AB86514033EED007F02E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISASwizzle;
+			productName = ISASwizzle;
+			productReference = FB0AB86714033EED007F02E5 /* ISASwizzle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB0AB85E14033EED007F02E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FB0AB86114033EED007F02E5 /* Build configuration list for PBXProject "ISASwizzle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB0AB85C14033EED007F02E5;
+			productRefGroup = FB0AB86814033EED007F02E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB0AB86614033EED007F02E5 /* ISASwizzle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB0AB86514033EED007F02E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0AB87414033EED007F02E5 /* InfoPlist.strings in Resources */,
+				FBBF3A6C16053FF80093BD67 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB0AB86314033EED007F02E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0AB87614033EED007F02E5 /* main.m in Sources */,
+				FB0AB88914033F01007F02E5 /* MYNotificationCenter.m in Sources */,
+				FB0AB88A14033F01007F02E5 /* NSObject+SetClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB0AB87214033EED007F02E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB0AB87314033EED007F02E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB0AB87B14033EED007F02E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB0AB87C14033EED007F02E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB0AB87E14033EED007F02E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISASwizzle/ISASwizzle-Prefix.pch";
+				INFOPLIST_FILE = "ISASwizzle/ISASwizzle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB0AB87F14033EED007F02E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ISASwizzle/ISASwizzle-Prefix.pch";
+				INFOPLIST_FILE = "ISASwizzle/ISASwizzle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB0AB86114033EED007F02E5 /* Build configuration list for PBXProject "ISASwizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0AB87B14033EED007F02E5 /* Debug */,
+				FB0AB87C14033EED007F02E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB0AB87D14033EED007F02E5 /* Build configuration list for PBXNativeTarget "ISASwizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0AB87E14033EED007F02E5 /* Debug */,
+				FB0AB87F14033EED007F02E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB0AB85E14033EED007F02E5 /* Project object */;
+}
