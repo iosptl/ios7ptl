@@ -62,7 +62,9 @@
 				FBF62EC01426A29000804CA5 /* Products */,
 				FB1BBF2B164198ED002140CF /* Default-568h@2x.png */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		FBF62EC01426A29000804CA5 /* Products */ = {
 			isa = PBXGroup;

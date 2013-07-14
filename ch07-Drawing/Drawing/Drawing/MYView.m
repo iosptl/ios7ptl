@@ -60,5 +60,4 @@
   UIRectFillUsingBlendMode(CGRectMake(100, 100, 100, 100),kCGBlendModeNormal);
 }
 
-
 @end
