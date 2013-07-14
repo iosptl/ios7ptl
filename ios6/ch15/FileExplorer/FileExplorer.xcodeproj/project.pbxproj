@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB17A1CC13E49E9200DCBA02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17A1CB13E49E9200DCBA02 /* UIKit.framework */; };
+		FB17A1CE13E49E9200DCBA02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17A1CD13E49E9200DCBA02 /* Foundation.framework */; };
+		FB17A1D013E49E9200DCBA02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17A1CF13E49E9200DCBA02 /* CoreGraphics.framework */; };
+		FB17A1D613E49E9200DCBA02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB17A1D413E49E9200DCBA02 /* InfoPlist.strings */; };
+		FB17A1D813E49E9200DCBA02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17A1D713E49E9200DCBA02 /* main.m */; };
+		FB17A1DC13E49E9200DCBA02 /* FileExplorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17A1DB13E49E9200DCBA02 /* FileExplorerAppDelegate.m */; };
+		FB17A1DF13E49E9200DCBA02 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB17A1DD13E49E9200DCBA02 /* MainStoryboard.storyboard */; };
+		FB17A1E213E49E9200DCBA02 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17A1E113E49E9200DCBA02 /* DirectoryViewController.m */; };
+		FB1A38D216419BD900E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A38D116419BD900E387DC /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB17A1C713E49E9200DCBA02 /* FileExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB17A1CB13E49E9200DCBA02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB17A1CD13E49E9200DCBA02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB17A1CF13E49E9200DCBA02 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB17A1D313E49E9200DCBA02 /* FileExplorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileExplorer-Info.plist"; sourceTree = "<group>"; };
+		FB17A1D513E49E9200DCBA02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB17A1D713E49E9200DCBA02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB17A1D913E49E9200DCBA02 /* FileExplorer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileExplorer-Prefix.pch"; sourceTree = "<group>"; };
+		FB17A1DA13E49E9200DCBA02 /* FileExplorerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileExplorerAppDelegate.h; sourceTree = "<group>"; };
+		FB17A1DB13E49E9200DCBA02 /* FileExplorerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileExplorerAppDelegate.m; sourceTree = "<group>"; };
+		FB17A1DE13E49E9200DCBA02 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FB17A1E013E49E9200DCBA02 /* DirectoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
+		FB17A1E113E49E9200DCBA02 /* DirectoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
+		FB1A38D116419BD900E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB17A1C413E49E9200DCBA02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17A1CC13E49E9200DCBA02 /* UIKit.framework in Frameworks */,
+				FB17A1CE13E49E9200DCBA02 /* Foundation.framework in Frameworks */,
+				FB17A1D013E49E9200DCBA02 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB17A1BC13E49E9200DCBA02 = {
+			isa = PBXGroup;
+			children = (
+				FB1A38D116419BD900E387DC /* Default-568h@2x.png */,
+				FB17A1D113E49E9200DCBA02 /* FileExplorer */,
+				FB17A1CA13E49E9200DCBA02 /* Frameworks */,
+				FB17A1C813E49E9200DCBA02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB17A1C813E49E9200DCBA02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB17A1C713E49E9200DCBA02 /* FileExplorer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB17A1CA13E49E9200DCBA02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB17A1CB13E49E9200DCBA02 /* UIKit.framework */,
+				FB17A1CD13E49E9200DCBA02 /* Foundation.framework */,
+				FB17A1CF13E49E9200DCBA02 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB17A1D113E49E9200DCBA02 /* FileExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				FB17A1DA13E49E9200DCBA02 /* FileExplorerAppDelegate.h */,
+				FB17A1DB13E49E9200DCBA02 /* FileExplorerAppDelegate.m */,
+				FB17A1DD13E49E9200DCBA02 /* MainStoryboard.storyboard */,
+				FB17A1E013E49E9200DCBA02 /* DirectoryViewController.h */,
+				FB17A1E113E49E9200DCBA02 /* DirectoryViewController.m */,
+				FB17A1D213E49E9200DCBA02 /* Supporting Files */,
+			);
+			path = FileExplorer;
+			sourceTree = "<group>";
+		};
+		FB17A1D213E49E9200DCBA02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB17A1D313E49E9200DCBA02 /* FileExplorer-Info.plist */,
+				FB17A1D413E49E9200DCBA02 /* InfoPlist.strings */,
+				FB17A1D713E49E9200DCBA02 /* main.m */,
+				FB17A1D913E49E9200DCBA02 /* FileExplorer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB17A1C613E49E9200DCBA02 /* FileExplorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB17A1E813E49E9200DCBA02 /* Build configuration list for PBXNativeTarget "FileExplorer" */;
+			buildPhases = (
+				FB17A1C313E49E9200DCBA02 /* Sources */,
+				FB17A1C413E49E9200DCBA02 /* Frameworks */,
+				FB17A1C513E49E9200DCBA02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileExplorer;
+			productName = FileExplorer;
+			productReference = FB17A1C713E49E9200DCBA02 /* FileExplorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB17A1BE13E49E9200DCBA02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FB17A1C113E49E9200DCBA02 /* Build configuration list for PBXProject "FileExplorer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB17A1BC13E49E9200DCBA02;
+			productRefGroup = FB17A1C813E49E9200DCBA02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB17A1C613E49E9200DCBA02 /* FileExplorer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB17A1C513E49E9200DCBA02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17A1D613E49E9200DCBA02 /* InfoPlist.strings in Resources */,
+				FB17A1DF13E49E9200DCBA02 /* MainStoryboard.storyboard in Resources */,
+				FB1A38D216419BD900E387DC /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB17A1C313E49E9200DCBA02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17A1D813E49E9200DCBA02 /* main.m in Sources */,
+				FB17A1DC13E49E9200DCBA02 /* FileExplorerAppDelegate.m in Sources */,
+				FB17A1E213E49E9200DCBA02 /* DirectoryViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB17A1D413E49E9200DCBA02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17A1D513E49E9200DCBA02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB17A1DD13E49E9200DCBA02 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17A1DE13E49E9200DCBA02 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB17A1E613E49E9200DCBA02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB17A1E713E49E9200DCBA02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB17A1E913E49E9200DCBA02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileExplorer/FileExplorer-Prefix.pch";
+				INFOPLIST_FILE = "FileExplorer/FileExplorer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB17A1EA13E49E9200DCBA02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FileExplorer/FileExplorer-Prefix.pch";
+				INFOPLIST_FILE = "FileExplorer/FileExplorer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB17A1C113E49E9200DCBA02 /* Build configuration list for PBXProject "FileExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB17A1E613E49E9200DCBA02 /* Debug */,
+				FB17A1E713E49E9200DCBA02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB17A1E813E49E9200DCBA02 /* Build configuration list for PBXNativeTarget "FileExplorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB17A1E913E49E9200DCBA02 /* Debug */,
+				FB17A1EA13E49E9200DCBA02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB17A1BE13E49E9200DCBA02 /* Project object */;
+}

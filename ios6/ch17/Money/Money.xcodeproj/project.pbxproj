@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBABCC4113CD251700C465E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBABCC4013CD251700C465E5 /* Foundation.framework */; };
+		FBABCC4413CD251700C465E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBABCC4313CD251700C465E5 /* main.m */; };
+		FBABCC4813CD251700C465E5 /* Money.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBABCC4713CD251700C465E5 /* Money.1 */; };
+		FBABCC5013CD255400C465E5 /* RNMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = FBABCC4F13CD255400C465E5 /* RNMoney.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FBABCC3A13CD251700C465E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				FBABCC4813CD251700C465E5 /* Money.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FBABCC3C13CD251700C465E5 /* Money */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Money; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBABCC4013CD251700C465E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FBABCC4313CD251700C465E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBABCC4613CD251700C465E5 /* Money-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Money-Prefix.pch"; sourceTree = "<group>"; };
+		FBABCC4713CD251700C465E5 /* Money.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Money.1; sourceTree = "<group>"; };
+		FBABCC4E13CD255400C465E5 /* RNMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMoney.h; sourceTree = "<group>"; };
+		FBABCC4F13CD255400C465E5 /* RNMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMoney.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBABCC3913CD251700C465E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBABCC4113CD251700C465E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBABCC3113CD251700C465E5 = {
+			isa = PBXGroup;
+			children = (
+				FBABCC4213CD251700C465E5 /* Money */,
+				FBABCC3F13CD251700C465E5 /* Frameworks */,
+				FBABCC3D13CD251700C465E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBABCC3D13CD251700C465E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBABCC3C13CD251700C465E5 /* Money */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBABCC3F13CD251700C465E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBABCC4013CD251700C465E5 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBABCC4213CD251700C465E5 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				FBABCC4E13CD255400C465E5 /* RNMoney.h */,
+				FBABCC4F13CD255400C465E5 /* RNMoney.m */,
+				FBABCC4313CD251700C465E5 /* main.m */,
+				FBABCC4713CD251700C465E5 /* Money.1 */,
+				FBABCC4513CD251700C465E5 /* Supporting Files */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		FBABCC4513CD251700C465E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBABCC4613CD251700C465E5 /* Money-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBABCC3B13CD251700C465E5 /* Money */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBABCC4B13CD251700C465E5 /* Build configuration list for PBXNativeTarget "Money" */;
+			buildPhases = (
+				FBABCC3813CD251700C465E5 /* Sources */,
+				FBABCC3913CD251700C465E5 /* Frameworks */,
+				FBABCC3A13CD251700C465E5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Money;
+			productName = Money;
+			productReference = FBABCC3C13CD251700C465E5 /* Money */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBABCC3313CD251700C465E5 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FBABCC3613CD251700C465E5 /* Build configuration list for PBXProject "Money" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FBABCC3113CD251700C465E5;
+			productRefGroup = FBABCC3D13CD251700C465E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBABCC3B13CD251700C465E5 /* Money */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBABCC3813CD251700C465E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBABCC4413CD251700C465E5 /* main.m in Sources */,
+				FBABCC5013CD255400C465E5 /* RNMoney.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FBABCC4913CD251700C465E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FBABCC4A13CD251700C465E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FBABCC4C13CD251700C465E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Money/Money-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FBABCC4D13CD251700C465E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Money/Money-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBABCC3613CD251700C465E5 /* Build configuration list for PBXProject "Money" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBABCC4913CD251700C465E5 /* Debug */,
+				FBABCC4A13CD251700C465E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBABCC4B13CD251700C465E5 /* Build configuration list for PBXNativeTarget "Money" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBABCC4C13CD251700C465E5 /* Debug */,
+				FBABCC4D13CD251700C465E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBABCC3313CD251700C465E5 /* Project object */;
+}

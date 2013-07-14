@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1923CB13F16ABA00D72D93 /* CPPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1923CA13F16ABA00D72D93 /* CPPasswordViewController.m */; };
+		FB23C83D13F1AA3900D8D380 /* CPCryptController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB23C83C13F1AA3900D8D380 /* CPCryptController.m */; };
+		FB7CBB5413F16C5700907980 /* RNCryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7CBB5313F16C5700907980 /* RNCryptManager.m */; };
+		FB7CBB5713F1730F00907980 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7CBB5613F1730F00907980 /* Security.framework */; };
+		FB95FB141607749E00210BD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB95FB131607749E00210BD7 /* Default-568h@2x.png */; };
+		FB9616D313F168C1002129A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9616D213F168C1002129A8 /* UIKit.framework */; };
+		FB9616D513F168C1002129A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9616D413F168C1002129A8 /* Foundation.framework */; };
+		FB9616DB13F168C1002129A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB9616D913F168C1002129A8 /* InfoPlist.strings */; };
+		FB9616DD13F168C1002129A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9616DC13F168C1002129A8 /* main.m */; };
+		FB9616E113F168C1002129A8 /* CPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9616E013F168C1002129A8 /* CPAppDelegate.m */; };
+		FB9616E413F168C1002129A8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9616E213F168C1002129A8 /* MainStoryboard.storyboard */; };
+		FB9616E713F168C1002129A8 /* CPEncyptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9616E613F168C1002129A8 /* CPEncyptViewController.m */; };
+		FB9616E913F168C1002129A8 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9616E813F168C1002129A8 /* first.png */; };
+		FB9616EB13F168C1002129A8 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9616EA13F168C1002129A8 /* first@2x.png */; };
+		FB9616EE13F168C1002129A8 /* CPDecryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9616ED13F168C1002129A8 /* CPDecryptViewController.m */; };
+		FB9616F013F168C2002129A8 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9616EF13F168C1002129A8 /* second.png */; };
+		FB9616F213F168C2002129A8 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9616F113F168C2002129A8 /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB1923C913F16ABA00D72D93 /* CPPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPasswordViewController.h; sourceTree = "<group>"; };
+		FB1923CA13F16ABA00D72D93 /* CPPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPasswordViewController.m; sourceTree = "<group>"; };
+		FB23C83B13F1AA3900D8D380 /* CPCryptController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCryptController.h; sourceTree = "<group>"; };
+		FB23C83C13F1AA3900D8D380 /* CPCryptController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCryptController.m; sourceTree = "<group>"; };
+		FB7CBB5213F16C5700907980 /* RNCryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCryptManager.h; path = CryptPic/RNCryptManager.h; sourceTree = "<group>"; };
+		FB7CBB5313F16C5700907980 /* RNCryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCryptManager.m; path = CryptPic/RNCryptManager.m; sourceTree = "<group>"; };
+		FB7CBB5613F1730F00907980 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB95FB131607749E00210BD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB9616CE13F168C1002129A8 /* CryptPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9616D213F168C1002129A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB9616D413F168C1002129A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB9616D813F168C1002129A8 /* CryptPic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CryptPic-Info.plist"; sourceTree = "<group>"; };
+		FB9616DA13F168C1002129A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB9616DC13F168C1002129A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB9616DE13F168C1002129A8 /* CryptPic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptPic-Prefix.pch"; sourceTree = "<group>"; };
+		FB9616DF13F168C1002129A8 /* CPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAppDelegate.h; sourceTree = "<group>"; };
+		FB9616E013F168C1002129A8 /* CPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAppDelegate.m; sourceTree = "<group>"; };
+		FB9616E313F168C1002129A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FB9616E513F168C1002129A8 /* CPEncyptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPEncyptViewController.h; sourceTree = "<group>"; };
+		FB9616E613F168C1002129A8 /* CPEncyptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPEncyptViewController.m; sourceTree = "<group>"; };
+		FB9616E813F168C1002129A8 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		FB9616EA13F168C1002129A8 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		FB9616EC13F168C1002129A8 /* CPDecryptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPDecryptViewController.h; sourceTree = "<group>"; };
+		FB9616ED13F168C1002129A8 /* CPDecryptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPDecryptViewController.m; sourceTree = "<group>"; };
+		FB9616EF13F168C1002129A8 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		FB9616F113F168C2002129A8 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB9616CB13F168C1002129A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7CBB5713F1730F00907980 /* Security.framework in Frameworks */,
+				FB9616D313F168C1002129A8 /* UIKit.framework in Frameworks */,
+				FB9616D513F168C1002129A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB9616C313F168C1002129A8 = {
+			isa = PBXGroup;
+			children = (
+				FB7CBB5213F16C5700907980 /* RNCryptManager.h */,
+				FB7CBB5313F16C5700907980 /* RNCryptManager.m */,
+				FB9616D613F168C1002129A8 /* CryptPic */,
+				FB9616D113F168C1002129A8 /* Frameworks */,
+				FB9616CF13F168C1002129A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB9616CF13F168C1002129A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB9616CE13F168C1002129A8 /* CryptPic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB9616D113F168C1002129A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB7CBB5613F1730F00907980 /* Security.framework */,
+				FB9616D213F168C1002129A8 /* UIKit.framework */,
+				FB9616D413F168C1002129A8 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB9616D613F168C1002129A8 /* CryptPic */ = {
+			isa = PBXGroup;
+			children = (
+				FB1923C913F16ABA00D72D93 /* CPPasswordViewController.h */,
+				FB1923CA13F16ABA00D72D93 /* CPPasswordViewController.m */,
+				FB9616DF13F168C1002129A8 /* CPAppDelegate.h */,
+				FB9616E013F168C1002129A8 /* CPAppDelegate.m */,
+				FB9616E213F168C1002129A8 /* MainStoryboard.storyboard */,
+				FB9616E513F168C1002129A8 /* CPEncyptViewController.h */,
+				FB9616E613F168C1002129A8 /* CPEncyptViewController.m */,
+				FB9616E813F168C1002129A8 /* first.png */,
+				FB9616EA13F168C1002129A8 /* first@2x.png */,
+				FB9616EC13F168C1002129A8 /* CPDecryptViewController.h */,
+				FB9616ED13F168C1002129A8 /* CPDecryptViewController.m */,
+				FB9616EF13F168C1002129A8 /* second.png */,
+				FB9616F113F168C2002129A8 /* second@2x.png */,
+				FB9616D713F168C1002129A8 /* Supporting Files */,
+				FB23C83B13F1AA3900D8D380 /* CPCryptController.h */,
+				FB23C83C13F1AA3900D8D380 /* CPCryptController.m */,
+			);
+			path = CryptPic;
+			sourceTree = "<group>";
+		};
+		FB9616D713F168C1002129A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB95FB131607749E00210BD7 /* Default-568h@2x.png */,
+				FB9616D813F168C1002129A8 /* CryptPic-Info.plist */,
+				FB9616D913F168C1002129A8 /* InfoPlist.strings */,
+				FB9616DC13F168C1002129A8 /* main.m */,
+				FB9616DE13F168C1002129A8 /* CryptPic-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB9616CD13F168C1002129A8 /* CryptPic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9616F513F168C2002129A8 /* Build configuration list for PBXNativeTarget "CryptPic" */;
+			buildPhases = (
+				FB9616CA13F168C1002129A8 /* Sources */,
+				FB9616CB13F168C1002129A8 /* Frameworks */,
+				FB9616CC13F168C1002129A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptPic;
+			productName = CryptPic;
+			productReference = FB9616CE13F168C1002129A8 /* CryptPic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB9616C513F168C1002129A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Rob Napier";
+			};
+			buildConfigurationList = FB9616C813F168C1002129A8 /* Build configuration list for PBXProject "CryptPic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB9616C313F168C1002129A8;
+			productRefGroup = FB9616CF13F168C1002129A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB9616CD13F168C1002129A8 /* CryptPic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB9616CC13F168C1002129A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9616DB13F168C1002129A8 /* InfoPlist.strings in Resources */,
+				FB9616E413F168C1002129A8 /* MainStoryboard.storyboard in Resources */,
+				FB9616E913F168C1002129A8 /* first.png in Resources */,
+				FB9616EB13F168C1002129A8 /* first@2x.png in Resources */,
+				FB9616F013F168C2002129A8 /* second.png in Resources */,
+				FB9616F213F168C2002129A8 /* second@2x.png in Resources */,
+				FB95FB141607749E00210BD7 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB9616CA13F168C1002129A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9616DD13F168C1002129A8 /* main.m in Sources */,
+				FB9616E113F168C1002129A8 /* CPAppDelegate.m in Sources */,
+				FB9616E713F168C1002129A8 /* CPEncyptViewController.m in Sources */,
+				FB9616EE13F168C1002129A8 /* CPDecryptViewController.m in Sources */,
+				FB1923CB13F16ABA00D72D93 /* CPPasswordViewController.m in Sources */,
+				FB7CBB5413F16C5700907980 /* RNCryptManager.m in Sources */,
+				FB23C83D13F1AA3900D8D380 /* CPCryptController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB9616D913F168C1002129A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB9616DA13F168C1002129A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB9616E213F168C1002129A8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB9616E313F168C1002129A8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB9616F313F168C2002129A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB9616F413F168C2002129A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB9616F613F168C2002129A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CryptPic/CryptPic-Prefix.pch";
+				INFOPLIST_FILE = "CryptPic/CryptPic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB9616F713F168C2002129A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CryptPic/CryptPic-Prefix.pch";
+				INFOPLIST_FILE = "CryptPic/CryptPic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB9616C813F168C1002129A8 /* Build configuration list for PBXProject "CryptPic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9616F313F168C2002129A8 /* Debug */,
+				FB9616F413F168C2002129A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9616F513F168C2002129A8 /* Build configuration list for PBXNativeTarget "CryptPic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9616F613F168C2002129A8 /* Debug */,
+				FB9616F713F168C2002129A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB9616C513F168C1002129A8 /* Project object */;
+}

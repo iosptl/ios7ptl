@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1000C01417E41500431287 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1000BF1417E41500431287 /* UIKit.framework */; };
+		FB1000C21417E41500431287 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1000C11417E41500431287 /* Foundation.framework */; };
+		FB1000C41417E41500431287 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1000C31417E41500431287 /* CoreGraphics.framework */; };
+		FB1000CA1417E41500431287 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB1000C81417E41500431287 /* InfoPlist.strings */; };
+		FB1000CC1417E41500431287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000CB1417E41500431287 /* main.m */; };
+		FB1000D01417E41500431287 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000CF1417E41500431287 /* AppDelegate.m */; };
+		FB1000D31417E41500431287 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1000D11417E41500431287 /* MainStoryboard_iPhone.storyboard */; };
+		FB1000D61417E41600431287 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1000D41417E41600431287 /* MainStoryboard_iPad.storyboard */; };
+		FB1000D91417E41600431287 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000D81417E41600431287 /* ViewController.m */; };
+		FB1000E11417E46B00431287 /* RNObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000E01417E46B00431287 /* RNObserverManager.m */; };
+		FB2A1C77141911BB004303E7 /* RNMainThreadTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */; };
+		FB5DB1F7164196B1004448BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB5DB1F6164196B1004448BD /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB1000BB1417E41500431287 /* ObserverTrampoline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObserverTrampoline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1000BF1417E41500431287 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB1000C11417E41500431287 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB1000C31417E41500431287 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB1000C71417E41500431287 /* ObserverTrampoline-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObserverTrampoline-Info.plist"; sourceTree = "<group>"; };
+		FB1000C91417E41500431287 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB1000CB1417E41500431287 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB1000CD1417E41500431287 /* ObserverTrampoline-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObserverTrampoline-Prefix.pch"; sourceTree = "<group>"; };
+		FB1000CE1417E41500431287 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB1000CF1417E41500431287 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB1000D21417E41500431287 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		FB1000D51417E41600431287 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		FB1000D71417E41600431287 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB1000D81417E41600431287 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB1000DF1417E46B00431287 /* RNObserverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNObserverManager.h; sourceTree = "<group>"; };
+		FB1000E01417E46B00431287 /* RNObserverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNObserverManager.m; sourceTree = "<group>"; };
+		FB2A1C75141911BB004303E7 /* RNMainThreadTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainThreadTrampoline.h; sourceTree = "<group>"; };
+		FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainThreadTrampoline.m; sourceTree = "<group>"; };
+		FB5DB1F6164196B1004448BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB1000B81417E41500431287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1000C01417E41500431287 /* UIKit.framework in Frameworks */,
+				FB1000C21417E41500431287 /* Foundation.framework in Frameworks */,
+				FB1000C41417E41500431287 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB1000B01417E41500431287 = {
+			isa = PBXGroup;
+			children = (
+				FB5DB1F6164196B1004448BD /* Default-568h@2x.png */,
+				FB1000DF1417E46B00431287 /* RNObserverManager.h */,
+				FB1000E01417E46B00431287 /* RNObserverManager.m */,
+				FB2A1C75141911BB004303E7 /* RNMainThreadTrampoline.h */,
+				FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */,
+				FB1000C51417E41500431287 /* ObserverTrampoline */,
+				FB1000BE1417E41500431287 /* Frameworks */,
+				FB1000BC1417E41500431287 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB1000BC1417E41500431287 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB1000BB1417E41500431287 /* ObserverTrampoline.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB1000BE1417E41500431287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB1000BF1417E41500431287 /* UIKit.framework */,
+				FB1000C11417E41500431287 /* Foundation.framework */,
+				FB1000C31417E41500431287 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1000C51417E41500431287 /* ObserverTrampoline */ = {
+			isa = PBXGroup;
+			children = (
+				FB1000CE1417E41500431287 /* AppDelegate.h */,
+				FB1000CF1417E41500431287 /* AppDelegate.m */,
+				FB1000D11417E41500431287 /* MainStoryboard_iPhone.storyboard */,
+				FB1000D41417E41600431287 /* MainStoryboard_iPad.storyboard */,
+				FB1000D71417E41600431287 /* ViewController.h */,
+				FB1000D81417E41600431287 /* ViewController.m */,
+				FB1000C61417E41500431287 /* Supporting Files */,
+			);
+			path = ObserverTrampoline;
+			sourceTree = "<group>";
+		};
+		FB1000C61417E41500431287 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB1000C71417E41500431287 /* ObserverTrampoline-Info.plist */,
+				FB1000C81417E41500431287 /* InfoPlist.strings */,
+				FB1000CB1417E41500431287 /* main.m */,
+				FB1000CD1417E41500431287 /* ObserverTrampoline-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB1000BA1417E41500431287 /* ObserverTrampoline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1000DC1417E41600431287 /* Build configuration list for PBXNativeTarget "ObserverTrampoline" */;
+			buildPhases = (
+				FB1000B71417E41500431287 /* Sources */,
+				FB1000B81417E41500431287 /* Frameworks */,
+				FB1000B91417E41500431287 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObserverTrampoline;
+			productName = ObserverTrampoline;
+			productReference = FB1000BB1417E41500431287 /* ObserverTrampoline.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB1000B21417E41500431287 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FB1000B51417E41500431287 /* Build configuration list for PBXProject "ObserverTrampoline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB1000B01417E41500431287;
+			productRefGroup = FB1000BC1417E41500431287 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB1000BA1417E41500431287 /* ObserverTrampoline */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB1000B91417E41500431287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1000CA1417E41500431287 /* InfoPlist.strings in Resources */,
+				FB1000D31417E41500431287 /* MainStoryboard_iPhone.storyboard in Resources */,
+				FB1000D61417E41600431287 /* MainStoryboard_iPad.storyboard in Resources */,
+				FB5DB1F7164196B1004448BD /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB1000B71417E41500431287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1000CC1417E41500431287 /* main.m in Sources */,
+				FB1000D01417E41500431287 /* AppDelegate.m in Sources */,
+				FB1000D91417E41600431287 /* ViewController.m in Sources */,
+				FB1000E11417E46B00431287 /* RNObserverManager.m in Sources */,
+				FB2A1C77141911BB004303E7 /* RNMainThreadTrampoline.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB1000C81417E41500431287 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1000C91417E41500431287 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB1000D11417E41500431287 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1000D21417E41500431287 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		FB1000D41417E41600431287 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1000D51417E41600431287 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB1000DA1417E41600431287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB1000DB1417E41600431287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB1000DD1417E41600431287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObserverTrampoline/ObserverTrampoline-Prefix.pch";
+				INFOPLIST_FILE = "ObserverTrampoline/ObserverTrampoline-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB1000DE1417E41600431287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObserverTrampoline/ObserverTrampoline-Prefix.pch";
+				INFOPLIST_FILE = "ObserverTrampoline/ObserverTrampoline-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB1000B51417E41500431287 /* Build configuration list for PBXProject "ObserverTrampoline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1000DA1417E41600431287 /* Debug */,
+				FB1000DB1417E41600431287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1000DC1417E41600431287 /* Build configuration list for PBXNativeTarget "ObserverTrampoline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1000DD1417E41600431287 /* Debug */,
+				FB1000DE1417E41600431287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB1000B21417E41500431287 /* Project object */;
+}

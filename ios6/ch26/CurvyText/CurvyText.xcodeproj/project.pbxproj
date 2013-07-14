@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBF04060140ADF4400D1CD70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF0405F140ADF4400D1CD70 /* UIKit.framework */; };
+		FBF04062140ADF4400D1CD70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF04061140ADF4400D1CD70 /* Foundation.framework */; };
+		FBF04068140ADF4400D1CD70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBF04066140ADF4400D1CD70 /* InfoPlist.strings */; };
+		FBF0406A140ADF4400D1CD70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF04069140ADF4400D1CD70 /* main.m */; };
+		FBF0406E140ADF4400D1CD70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF0406D140ADF4400D1CD70 /* AppDelegate.m */; };
+		FBF04071140ADF4400D1CD70 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF0406F140ADF4400D1CD70 /* MainStoryboard.storyboard */; };
+		FBF04074140ADF4400D1CD70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF04073140ADF4400D1CD70 /* ViewController.m */; };
+		FBF0407C140ADF6700D1CD70 /* CurvyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF0407B140ADF6700D1CD70 /* CurvyTextView.m */; };
+		FBF0407E140AE67300D1CD70 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF0407D140AE67300D1CD70 /* QuartzCore.framework */; };
+		FBF04080140AE69400D1CD70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF0407F140AE69400D1CD70 /* CoreGraphics.framework */; };
+		FBF04082140AF24E00D1CD70 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF04081140AF24E00D1CD70 /* CoreText.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FBF0405B140ADF4400D1CD70 /* CurvyText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurvyText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBF0405F140ADF4400D1CD70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FBF04061140ADF4400D1CD70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FBF04065140ADF4400D1CD70 /* CurvyText-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CurvyText-Info.plist"; sourceTree = "<group>"; };
+		FBF04067140ADF4400D1CD70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FBF04069140ADF4400D1CD70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBF0406B140ADF4400D1CD70 /* CurvyText-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurvyText-Prefix.pch"; sourceTree = "<group>"; };
+		FBF0406C140ADF4400D1CD70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FBF0406D140ADF4400D1CD70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FBF04070140ADF4400D1CD70 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FBF04072140ADF4400D1CD70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FBF04073140ADF4400D1CD70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBF0407A140ADF6700D1CD70 /* CurvyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurvyTextView.h; path = CurvyText/CurvyTextView.h; sourceTree = "<group>"; };
+		FBF0407B140ADF6700D1CD70 /* CurvyTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurvyTextView.m; path = CurvyText/CurvyTextView.m; sourceTree = "<group>"; };
+		FBF0407D140AE67300D1CD70 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FBF0407F140AE69400D1CD70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FBF04081140AF24E00D1CD70 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBF04058140ADF4400D1CD70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF04082140AF24E00D1CD70 /* CoreText.framework in Frameworks */,
+				FBF04080140AE69400D1CD70 /* CoreGraphics.framework in Frameworks */,
+				FBF0407E140AE67300D1CD70 /* QuartzCore.framework in Frameworks */,
+				FBF04060140ADF4400D1CD70 /* UIKit.framework in Frameworks */,
+				FBF04062140ADF4400D1CD70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBF04050140ADF4300D1CD70 = {
+			isa = PBXGroup;
+			children = (
+				FBF0407A140ADF6700D1CD70 /* CurvyTextView.h */,
+				FBF0407B140ADF6700D1CD70 /* CurvyTextView.m */,
+				FBF04063140ADF4400D1CD70 /* CurvyText */,
+				FBF0405E140ADF4400D1CD70 /* Frameworks */,
+				FBF0405C140ADF4400D1CD70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBF0405C140ADF4400D1CD70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBF0405B140ADF4400D1CD70 /* CurvyText.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBF0405E140ADF4400D1CD70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBF04081140AF24E00D1CD70 /* CoreText.framework */,
+				FBF0407F140AE69400D1CD70 /* CoreGraphics.framework */,
+				FBF0407D140AE67300D1CD70 /* QuartzCore.framework */,
+				FBF0405F140ADF4400D1CD70 /* UIKit.framework */,
+				FBF04061140ADF4400D1CD70 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBF04063140ADF4400D1CD70 /* CurvyText */ = {
+			isa = PBXGroup;
+			children = (
+				FBF0406C140ADF4400D1CD70 /* AppDelegate.h */,
+				FBF0406D140ADF4400D1CD70 /* AppDelegate.m */,
+				FBF0406F140ADF4400D1CD70 /* MainStoryboard.storyboard */,
+				FBF04072140ADF4400D1CD70 /* ViewController.h */,
+				FBF04073140ADF4400D1CD70 /* ViewController.m */,
+				FBF04064140ADF4400D1CD70 /* Supporting Files */,
+			);
+			path = CurvyText;
+			sourceTree = "<group>";
+		};
+		FBF04064140ADF4400D1CD70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBF04065140ADF4400D1CD70 /* CurvyText-Info.plist */,
+				FBF04066140ADF4400D1CD70 /* InfoPlist.strings */,
+				FBF04069140ADF4400D1CD70 /* main.m */,
+				FBF0406B140ADF4400D1CD70 /* CurvyText-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBF0405A140ADF4400D1CD70 /* CurvyText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBF04077140ADF4400D1CD70 /* Build configuration list for PBXNativeTarget "CurvyText" */;
+			buildPhases = (
+				FBF04057140ADF4400D1CD70 /* Sources */,
+				FBF04058140ADF4400D1CD70 /* Frameworks */,
+				FBF04059140ADF4400D1CD70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CurvyText;
+			productName = CurvyText;
+			productReference = FBF0405B140ADF4400D1CD70 /* CurvyText.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBF04052140ADF4300D1CD70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FBF04055140ADF4300D1CD70 /* Build configuration list for PBXProject "CurvyText" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FBF04050140ADF4300D1CD70;
+			productRefGroup = FBF0405C140ADF4400D1CD70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBF0405A140ADF4400D1CD70 /* CurvyText */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBF04059140ADF4400D1CD70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF04068140ADF4400D1CD70 /* InfoPlist.strings in Resources */,
+				FBF04071140ADF4400D1CD70 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBF04057140ADF4400D1CD70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF0406A140ADF4400D1CD70 /* main.m in Sources */,
+				FBF0406E140ADF4400D1CD70 /* AppDelegate.m in Sources */,
+				FBF04074140ADF4400D1CD70 /* ViewController.m in Sources */,
+				FBF0407C140ADF6700D1CD70 /* CurvyTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBF04066140ADF4400D1CD70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBF04067140ADF4400D1CD70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FBF0406F140ADF4400D1CD70 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBF04070140ADF4400D1CD70 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBF04075140ADF4400D1CD70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FBF04076140ADF4400D1CD70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBF04078140ADF4400D1CD70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CurvyText/CurvyText-Prefix.pch";
+				INFOPLIST_FILE = "CurvyText/CurvyText-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FBF04079140ADF4400D1CD70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CurvyText/CurvyText-Prefix.pch";
+				INFOPLIST_FILE = "CurvyText/CurvyText-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBF04055140ADF4300D1CD70 /* Build configuration list for PBXProject "CurvyText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBF04075140ADF4400D1CD70 /* Debug */,
+				FBF04076140ADF4400D1CD70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBF04077140ADF4400D1CD70 /* Build configuration list for PBXNativeTarget "CurvyText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBF04078140ADF4400D1CD70 /* Debug */,
+				FBF04079140ADF4400D1CD70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBF04052140ADF4300D1CD70 /* Project object */;
+}

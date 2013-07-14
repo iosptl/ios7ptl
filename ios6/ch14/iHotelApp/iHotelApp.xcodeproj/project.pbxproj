@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB1367AF13A5CBBB007D5996 /* RESTError.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1367AE13A5CBBB007D5996 /* RESTError.m */; };
+		AB1367B713A5CDCD007D5996 /* Errors_en_US.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB1367B613A5CDCC007D5996 /* Errors_en_US.plist */; };
+		AB27FD3B13908E5E00696D56 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = AB27FD3A13908E5E00696D56 /* Review.m */; };
+		AB27FD571390A78D00696D56 /* RESTfulOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AB27FD561390A78A00696D56 /* RESTfulOperation.m */; };
+		AB45F0E0159C4E5600C03684 /* iHotelAppMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB45F0DB159C4E5600C03684 /* iHotelAppMenuViewController.m */; };
+		AB45F0E2159C4E5600C03684 /* iHotelAppMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB45F0DE159C4E5600C03684 /* iHotelAppMenuViewController.xib */; };
+		AB529415138CDBDA00E5F2C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529414138CDBDA00E5F2C6 /* UIKit.framework */; };
+		AB529417138CDBDA00E5F2C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529416138CDBDA00E5F2C6 /* Foundation.framework */; };
+		AB529419138CDBDA00E5F2C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529418138CDBDA00E5F2C6 /* CoreGraphics.framework */; };
+		AB52941F138CDBDA00E5F2C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB52941D138CDBDA00E5F2C6 /* InfoPlist.strings */; };
+		AB529422138CDBDA00E5F2C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB529421138CDBDA00E5F2C6 /* main.m */; };
+		AB529425138CDBDA00E5F2C6 /* iHotelAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB529424138CDBDA00E5F2C6 /* iHotelAppAppDelegate.m */; };
+		AB529428138CDBDA00E5F2C6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB529426138CDBDA00E5F2C6 /* MainWindow.xib */; };
+		AB52942B138CDBDA00E5F2C6 /* iHotelAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB52942A138CDBDA00E5F2C6 /* iHotelAppViewController.m */; };
+		AB52942E138CDBDA00E5F2C6 /* iHotelAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB52942C138CDBDA00E5F2C6 /* iHotelAppViewController.xib */; };
+		AB529437138CDC0200E5F2C6 /* RESTfulEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AB529436138CDC0100E5F2C6 /* RESTfulEngine.m */; };
+		AB52948F138CE37300E5F2C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB52948D138CE37300E5F2C6 /* CFNetwork.framework */; };
+		AB529490138CE37300E5F2C6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB52948E138CE37300E5F2C6 /* MobileCoreServices.framework */; };
+		AB529492138CE38500E5F2C6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529491138CE38500E5F2C6 /* libz.dylib */; };
+		AB529494138CE39300E5F2C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529493138CE39300E5F2C6 /* SystemConfiguration.framework */; };
+		AB52949D138D0D0B00E5F2C6 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB529498138D0D0B00E5F2C6 /* JSONModel.m */; };
+		AB5294AA138D1D0500E5F2C6 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5294A9138D1D0500E5F2C6 /* MenuItem.m */; };
+		ABE85FCD1580895500C622FD /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FBA1580895500C622FD /* NSAlert+MKNetworkKitAdditions.m */; };
+		ABE85FCE1580895500C622FD /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FBC1580895500C622FD /* NSData+Base64.m */; };
+		ABE85FCF1580895500C622FD /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FBE1580895500C622FD /* NSDate+RFC1123.m */; };
+		ABE85FD01580895500C622FD /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FC01580895500C622FD /* NSDictionary+RequestEncoding.m */; };
+		ABE85FD11580895500C622FD /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FC21580895500C622FD /* NSString+MKNetworkKitAdditions.m */; };
+		ABE85FD21580895500C622FD /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FC41580895500C622FD /* UIAlertView+MKNetworkKitAdditions.m */; };
+		ABE85FD31580895500C622FD /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FC61580895500C622FD /* MKNetworkEngine.m */; };
+		ABE85FD41580895500C622FD /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FC91580895500C622FD /* MKNetworkOperation.m */; };
+		ABE85FD51580895500C622FD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FCC1580895500C622FD /* Reachability.m */; };
+		ABE85FE3158193E600C622FD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE85FE2158193E600C622FD /* Security.framework */; };
+		ABF82F1D160436E300A3B8DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF82F1C160436E300A3B8DF /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB1367AD13A5CBBB007D5996 /* RESTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTError.h; sourceTree = "<group>"; };
+		AB1367AE13A5CBBB007D5996 /* RESTError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTError.m; sourceTree = "<group>"; };
+		AB1367B613A5CDCC007D5996 /* Errors_en_US.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Errors_en_US.plist; sourceTree = "<group>"; };
+		AB27FD3913908E5E00696D56 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		AB27FD3A13908E5E00696D56 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		AB27FD551390A78900696D56 /* RESTfulOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTfulOperation.h; sourceTree = "<group>"; };
+		AB27FD561390A78A00696D56 /* RESTfulOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTfulOperation.m; sourceTree = "<group>"; };
+		AB45F0DB159C4E5600C03684 /* iHotelAppMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHotelAppMenuViewController.m; sourceTree = "<group>"; };
+		AB45F0DE159C4E5600C03684 /* iHotelAppMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iHotelAppMenuViewController.xib; sourceTree = "<group>"; };
+		AB45F0DF159C4E5600C03684 /* iHotelAppMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHotelAppMenuViewController.h; sourceTree = "<group>"; };
+		AB529410138CDBDA00E5F2C6 /* iHotelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHotelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB529414138CDBDA00E5F2C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AB529416138CDBDA00E5F2C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB529418138CDBDA00E5F2C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AB52941C138CDBDA00E5F2C6 /* iHotelApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHotelApp-Info.plist"; sourceTree = "<group>"; };
+		AB52941E138CDBDA00E5F2C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB529420138CDBDA00E5F2C6 /* iHotelApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iHotelApp-Prefix.pch"; sourceTree = "<group>"; };
+		AB529421138CDBDA00E5F2C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB529423138CDBDA00E5F2C6 /* iHotelAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHotelAppAppDelegate.h; sourceTree = "<group>"; };
+		AB529424138CDBDA00E5F2C6 /* iHotelAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHotelAppAppDelegate.m; sourceTree = "<group>"; };
+		AB529427138CDBDA00E5F2C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		AB529429138CDBDA00E5F2C6 /* iHotelAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHotelAppViewController.h; sourceTree = "<group>"; };
+		AB52942A138CDBDA00E5F2C6 /* iHotelAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHotelAppViewController.m; sourceTree = "<group>"; };
+		AB52942D138CDBDA00E5F2C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/iHotelAppViewController.xib; sourceTree = "<group>"; };
+		AB529435138CDC0100E5F2C6 /* RESTfulEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTfulEngine.h; path = RESTEngine/RESTfulEngine.h; sourceTree = "<group>"; };
+		AB529436138CDC0100E5F2C6 /* RESTfulEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTfulEngine.m; path = RESTEngine/RESTfulEngine.m; sourceTree = "<group>"; };
+		AB52948D138CE37300E5F2C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AB52948E138CE37300E5F2C6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AB529491138CE38500E5F2C6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AB529493138CE39300E5F2C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AB529497138D0D0B00E5F2C6 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		AB529498138D0D0B00E5F2C6 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		AB5294A8138D1D0500E5F2C6 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		AB5294A9138D1D0500E5F2C6 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		ABE85FB91580895500C622FD /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		ABE85FBA1580895500C622FD /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		ABE85FBB1580895500C622FD /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		ABE85FBC1580895500C622FD /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		ABE85FBD1580895500C622FD /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
+		ABE85FBE1580895500C622FD /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
+		ABE85FBF1580895500C622FD /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
+		ABE85FC01580895500C622FD /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
+		ABE85FC11580895500C622FD /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		ABE85FC21580895500C622FD /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		ABE85FC31580895500C622FD /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		ABE85FC41580895500C622FD /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		ABE85FC51580895500C622FD /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
+		ABE85FC61580895500C622FD /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
+		ABE85FC71580895500C622FD /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
+		ABE85FC81580895500C622FD /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
+		ABE85FC91580895500C622FD /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
+		ABE85FCB1580895500C622FD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		ABE85FCC1580895500C622FD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		ABE85FE2158193E600C622FD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ABF82F1C160436E300A3B8DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB52940D138CDBDA00E5F2C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE85FE3158193E600C622FD /* Security.framework in Frameworks */,
+				AB529494138CE39300E5F2C6 /* SystemConfiguration.framework in Frameworks */,
+				AB529492138CE38500E5F2C6 /* libz.dylib in Frameworks */,
+				AB52948F138CE37300E5F2C6 /* CFNetwork.framework in Frameworks */,
+				AB529490138CE37300E5F2C6 /* MobileCoreServices.framework in Frameworks */,
+				AB529415138CDBDA00E5F2C6 /* UIKit.framework in Frameworks */,
+				AB529417138CDBDA00E5F2C6 /* Foundation.framework in Frameworks */,
+				AB529419138CDBDA00E5F2C6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB1367B813A5CDE2007D5996 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				AB1367B613A5CDCC007D5996 /* Errors_en_US.plist */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
+		AB529405138CDBDA00E5F2C6 = {
+			isa = PBXGroup;
+			children = (
+				ABF82F1C160436E300A3B8DF /* Default-568h@2x.png */,
+				AB529446138CDDB600E5F2C6 /* Externals */,
+				AB52941A138CDBDA00E5F2C6 /* iHotelApp */,
+				AB529413138CDBDA00E5F2C6 /* Frameworks */,
+				AB529411138CDBDA00E5F2C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB529411138CDBDA00E5F2C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB529410138CDBDA00E5F2C6 /* iHotelApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB529413138CDBDA00E5F2C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABE85FE2158193E600C622FD /* Security.framework */,
+				AB529491138CE38500E5F2C6 /* libz.dylib */,
+				AB52948E138CE37300E5F2C6 /* MobileCoreServices.framework */,
+				AB52948D138CE37300E5F2C6 /* CFNetwork.framework */,
+				AB529493138CE39300E5F2C6 /* SystemConfiguration.framework */,
+				AB529414138CDBDA00E5F2C6 /* UIKit.framework */,
+				AB529416138CDBDA00E5F2C6 /* Foundation.framework */,
+				AB529418138CDBDA00E5F2C6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB52941A138CDBDA00E5F2C6 /* iHotelApp */ = {
+			isa = PBXGroup;
+			children = (
+				AB529434138CDBE700E5F2C6 /* RESTEngine */,
+				AB529423138CDBDA00E5F2C6 /* iHotelAppAppDelegate.h */,
+				AB529424138CDBDA00E5F2C6 /* iHotelAppAppDelegate.m */,
+				AB529426138CDBDA00E5F2C6 /* MainWindow.xib */,
+				AB529429138CDBDA00E5F2C6 /* iHotelAppViewController.h */,
+				AB52942A138CDBDA00E5F2C6 /* iHotelAppViewController.m */,
+				AB52942C138CDBDA00E5F2C6 /* iHotelAppViewController.xib */,
+				AB45F0DF159C4E5600C03684 /* iHotelAppMenuViewController.h */,
+				AB45F0DB159C4E5600C03684 /* iHotelAppMenuViewController.m */,
+				AB45F0DE159C4E5600C03684 /* iHotelAppMenuViewController.xib */,
+				AB52941B138CDBDA00E5F2C6 /* Supporting Files */,
+			);
+			path = iHotelApp;
+			sourceTree = "<group>";
+		};
+		AB52941B138CDBDA00E5F2C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB52941C138CDBDA00E5F2C6 /* iHotelApp-Info.plist */,
+				AB52941D138CDBDA00E5F2C6 /* InfoPlist.strings */,
+				AB529420138CDBDA00E5F2C6 /* iHotelApp-Prefix.pch */,
+				AB529421138CDBDA00E5F2C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB529434138CDBE700E5F2C6 /* RESTEngine */ = {
+			isa = PBXGroup;
+			children = (
+				AB1367B813A5CDE2007D5996 /* Errors */,
+				AB529496138D0D0000E5F2C6 /* Models */,
+				AB529435138CDC0100E5F2C6 /* RESTfulEngine.h */,
+				AB529436138CDC0100E5F2C6 /* RESTfulEngine.m */,
+				AB27FD551390A78900696D56 /* RESTfulOperation.h */,
+				AB27FD561390A78A00696D56 /* RESTfulOperation.m */,
+			);
+			name = RESTEngine;
+			sourceTree = "<group>";
+		};
+		AB529446138CDDB600E5F2C6 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				ABE85FB71580895500C622FD /* MKNetworkKit */,
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+		AB529496138D0D0000E5F2C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB1367AD13A5CBBB007D5996 /* RESTError.h */,
+				AB1367AE13A5CBBB007D5996 /* RESTError.m */,
+				AB529497138D0D0B00E5F2C6 /* JSONModel.h */,
+				AB529498138D0D0B00E5F2C6 /* JSONModel.m */,
+				AB27FD3913908E5E00696D56 /* Review.h */,
+				AB27FD3A13908E5E00696D56 /* Review.m */,
+				AB5294A8138D1D0500E5F2C6 /* MenuItem.h */,
+				AB5294A9138D1D0500E5F2C6 /* MenuItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ABE85FB71580895500C622FD /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				ABE85FB81580895500C622FD /* Categories */,
+				ABE85FC51580895500C622FD /* MKNetworkEngine.h */,
+				ABE85FC61580895500C622FD /* MKNetworkEngine.m */,
+				ABE85FC71580895500C622FD /* MKNetworkKit.h */,
+				ABE85FC81580895500C622FD /* MKNetworkOperation.h */,
+				ABE85FC91580895500C622FD /* MKNetworkOperation.m */,
+				ABE85FCA1580895500C622FD /* Reachability */,
+			);
+			name = MKNetworkKit;
+			path = MKNetworkKit/MKNetworkKit;
+			sourceTree = "<group>";
+		};
+		ABE85FB81580895500C622FD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ABE85FB91580895500C622FD /* NSAlert+MKNetworkKitAdditions.h */,
+				ABE85FBA1580895500C622FD /* NSAlert+MKNetworkKitAdditions.m */,
+				ABE85FBB1580895500C622FD /* NSData+Base64.h */,
+				ABE85FBC1580895500C622FD /* NSData+Base64.m */,
+				ABE85FBD1580895500C622FD /* NSDate+RFC1123.h */,
+				ABE85FBE1580895500C622FD /* NSDate+RFC1123.m */,
+				ABE85FBF1580895500C622FD /* NSDictionary+RequestEncoding.h */,
+				ABE85FC01580895500C622FD /* NSDictionary+RequestEncoding.m */,
+				ABE85FC11580895500C622FD /* NSString+MKNetworkKitAdditions.h */,
+				ABE85FC21580895500C622FD /* NSString+MKNetworkKitAdditions.m */,
+				ABE85FC31580895500C622FD /* UIAlertView+MKNetworkKitAdditions.h */,
+				ABE85FC41580895500C622FD /* UIAlertView+MKNetworkKitAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ABE85FCA1580895500C622FD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				ABE85FCB1580895500C622FD /* Reachability.h */,
+				ABE85FCC1580895500C622FD /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB52940F138CDBDA00E5F2C6 /* iHotelApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB529431138CDBDA00E5F2C6 /* Build configuration list for PBXNativeTarget "iHotelApp" */;
+			buildPhases = (
+				AB52940C138CDBDA00E5F2C6 /* Sources */,
+				AB52940D138CDBDA00E5F2C6 /* Frameworks */,
+				AB52940E138CDBDA00E5F2C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iHotelApp;
+			productName = iHotelApp;
+			productReference = AB529410138CDBDA00E5F2C6 /* iHotelApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB529407138CDBDA00E5F2C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Steinlogic;
+			};
+			buildConfigurationList = AB52940A138CDBDA00E5F2C6 /* Build configuration list for PBXProject "iHotelApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB529405138CDBDA00E5F2C6;
+			productRefGroup = AB529411138CDBDA00E5F2C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB52940F138CDBDA00E5F2C6 /* iHotelApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB52940E138CDBDA00E5F2C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB52941F138CDBDA00E5F2C6 /* InfoPlist.strings in Resources */,
+				AB529428138CDBDA00E5F2C6 /* MainWindow.xib in Resources */,
+				AB52942E138CDBDA00E5F2C6 /* iHotelAppViewController.xib in Resources */,
+				AB1367B713A5CDCD007D5996 /* Errors_en_US.plist in Resources */,
+				AB45F0E2159C4E5600C03684 /* iHotelAppMenuViewController.xib in Resources */,
+				ABF82F1D160436E300A3B8DF /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB52940C138CDBDA00E5F2C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB529422138CDBDA00E5F2C6 /* main.m in Sources */,
+				AB529425138CDBDA00E5F2C6 /* iHotelAppAppDelegate.m in Sources */,
+				AB52942B138CDBDA00E5F2C6 /* iHotelAppViewController.m in Sources */,
+				AB529437138CDC0200E5F2C6 /* RESTfulEngine.m in Sources */,
+				AB52949D138D0D0B00E5F2C6 /* JSONModel.m in Sources */,
+				AB5294AA138D1D0500E5F2C6 /* MenuItem.m in Sources */,
+				AB27FD3B13908E5E00696D56 /* Review.m in Sources */,
+				AB27FD571390A78D00696D56 /* RESTfulOperation.m in Sources */,
+				AB1367AF13A5CBBB007D5996 /* RESTError.m in Sources */,
+				ABE85FCD1580895500C622FD /* NSAlert+MKNetworkKitAdditions.m in Sources */,
+				ABE85FCE1580895500C622FD /* NSData+Base64.m in Sources */,
+				ABE85FCF1580895500C622FD /* NSDate+RFC1123.m in Sources */,
+				ABE85FD01580895500C622FD /* NSDictionary+RequestEncoding.m in Sources */,
+				ABE85FD11580895500C622FD /* NSString+MKNetworkKitAdditions.m in Sources */,
+				ABE85FD21580895500C622FD /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				ABE85FD31580895500C622FD /* MKNetworkEngine.m in Sources */,
+				ABE85FD41580895500C622FD /* MKNetworkOperation.m in Sources */,
+				ABE85FD51580895500C622FD /* Reachability.m in Sources */,
+				AB45F0E0159C4E5600C03684 /* iHotelAppMenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB52941D138CDBDA00E5F2C6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB52941E138CDBDA00E5F2C6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AB529426138CDBDA00E5F2C6 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB529427138CDBDA00E5F2C6 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		AB52942C138CDBDA00E5F2C6 /* iHotelAppViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB52942D138CDBDA00E5F2C6 /* en */,
+			);
+			name = iHotelAppViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB52942F138CDBDA00E5F2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AB529430138CDBDA00E5F2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		AB529432138CDBDA00E5F2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iHotelApp/iHotelApp-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "iHotelApp/iHotelApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AB529433138CDBDA00E5F2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iHotelApp/iHotelApp-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "iHotelApp/iHotelApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB52940A138CDBDA00E5F2C6 /* Build configuration list for PBXProject "iHotelApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB52942F138CDBDA00E5F2C6 /* Debug */,
+				AB529430138CDBDA00E5F2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB529431138CDBDA00E5F2C6 /* Build configuration list for PBXNativeTarget "iHotelApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB529432138CDBDA00E5F2C6 /* Debug */,
+				AB529433138CDBDA00E5F2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB529407138CDBDA00E5F2C6 /* Project object */;
+}

@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB15EBBB13D622FD00977202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15EBBA13D622FD00977202 /* UIKit.framework */; };
+		FB15EBBD13D622FD00977202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15EBBC13D622FD00977202 /* Foundation.framework */; };
+		FB15EBBF13D622FD00977202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15EBBE13D622FD00977202 /* CoreGraphics.framework */; };
+		FB15EBC513D622FD00977202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB15EBC313D622FD00977202 /* InfoPlist.strings */; };
+		FB15EBC713D622FD00977202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15EBC613D622FD00977202 /* main.m */; };
+		FB15EBCB13D622FD00977202 /* BoxAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15EBCA13D622FD00977202 /* BoxAppDelegate.m */; };
+		FB15EBCE13D622FD00977202 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB15EBCC13D622FD00977202 /* MainStoryboard.storyboard */; };
+		FB15EBD113D622FD00977202 /* BoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15EBD013D622FD00977202 /* BoxViewController.m */; };
+		FB15EBD813D6233D00977202 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15EBD713D6233D00977202 /* QuartzCore.framework */; };
+		FB1BBF4D16419935002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF4C16419935002140CF /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB15EBB613D622FD00977202 /* Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Box.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB15EBBA13D622FD00977202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB15EBBC13D622FD00977202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB15EBBE13D622FD00977202 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB15EBC213D622FD00977202 /* Box-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Box-Info.plist"; sourceTree = "<group>"; };
+		FB15EBC413D622FD00977202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB15EBC613D622FD00977202 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB15EBC813D622FD00977202 /* Box-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Box-Prefix.pch"; sourceTree = "<group>"; };
+		FB15EBC913D622FD00977202 /* BoxAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxAppDelegate.h; sourceTree = "<group>"; };
+		FB15EBCA13D622FD00977202 /* BoxAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxAppDelegate.m; sourceTree = "<group>"; };
+		FB15EBCD13D622FD00977202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FB15EBCF13D622FD00977202 /* BoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BoxViewController.h; path = Box/BoxViewController.h; sourceTree = "<group>"; };
+		FB15EBD013D622FD00977202 /* BoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BoxViewController.m; path = Box/BoxViewController.m; sourceTree = "<group>"; };
+		FB15EBD713D6233D00977202 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB1BBF4C16419935002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB15EBB313D622FD00977202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB15EBD813D6233D00977202 /* QuartzCore.framework in Frameworks */,
+				FB15EBBB13D622FD00977202 /* UIKit.framework in Frameworks */,
+				FB15EBBD13D622FD00977202 /* Foundation.framework in Frameworks */,
+				FB15EBBF13D622FD00977202 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB15EBAB13D622FD00977202 = {
+			isa = PBXGroup;
+			children = (
+				FB1BBF4C16419935002140CF /* Default-568h@2x.png */,
+				FB15EBCF13D622FD00977202 /* BoxViewController.h */,
+				FB15EBD013D622FD00977202 /* BoxViewController.m */,
+				FB15EBC013D622FD00977202 /* Box */,
+				FB15EBB913D622FD00977202 /* Frameworks */,
+				FB15EBB713D622FD00977202 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB15EBB713D622FD00977202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB15EBB613D622FD00977202 /* Box.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB15EBB913D622FD00977202 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB15EBD713D6233D00977202 /* QuartzCore.framework */,
+				FB15EBBA13D622FD00977202 /* UIKit.framework */,
+				FB15EBBC13D622FD00977202 /* Foundation.framework */,
+				FB15EBBE13D622FD00977202 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB15EBC013D622FD00977202 /* Box */ = {
+			isa = PBXGroup;
+			children = (
+				FB15EBC913D622FD00977202 /* BoxAppDelegate.h */,
+				FB15EBCA13D622FD00977202 /* BoxAppDelegate.m */,
+				FB15EBCC13D622FD00977202 /* MainStoryboard.storyboard */,
+				FB15EBC113D622FD00977202 /* Supporting Files */,
+			);
+			path = Box;
+			sourceTree = "<group>";
+		};
+		FB15EBC113D622FD00977202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB15EBC213D622FD00977202 /* Box-Info.plist */,
+				FB15EBC313D622FD00977202 /* InfoPlist.strings */,
+				FB15EBC613D622FD00977202 /* main.m */,
+				FB15EBC813D622FD00977202 /* Box-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB15EBB513D622FD00977202 /* Box */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB15EBD413D622FD00977202 /* Build configuration list for PBXNativeTarget "Box" */;
+			buildPhases = (
+				FB15EBB213D622FD00977202 /* Sources */,
+				FB15EBB313D622FD00977202 /* Frameworks */,
+				FB15EBB413D622FD00977202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Box;
+			productName = Box;
+			productReference = FB15EBB613D622FD00977202 /* Box.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB15EBAD13D622FD00977202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FB15EBB013D622FD00977202 /* Build configuration list for PBXProject "Box" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB15EBAB13D622FD00977202;
+			productRefGroup = FB15EBB713D622FD00977202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB15EBB513D622FD00977202 /* Box */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB15EBB413D622FD00977202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB15EBC513D622FD00977202 /* InfoPlist.strings in Resources */,
+				FB15EBCE13D622FD00977202 /* MainStoryboard.storyboard in Resources */,
+				FB1BBF4D16419935002140CF /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB15EBB213D622FD00977202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB15EBC713D622FD00977202 /* main.m in Sources */,
+				FB15EBCB13D622FD00977202 /* BoxAppDelegate.m in Sources */,
+				FB15EBD113D622FD00977202 /* BoxViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB15EBC313D622FD00977202 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB15EBC413D622FD00977202 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB15EBCC13D622FD00977202 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB15EBCD13D622FD00977202 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB15EBD213D622FD00977202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB15EBD313D622FD00977202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB15EBD513D622FD00977202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Box/Box-Prefix.pch";
+				INFOPLIST_FILE = "Box/Box-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB15EBD613D622FD00977202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Box/Box-Prefix.pch";
+				INFOPLIST_FILE = "Box/Box-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB15EBB013D622FD00977202 /* Build configuration list for PBXProject "Box" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB15EBD213D622FD00977202 /* Debug */,
+				FB15EBD313D622FD00977202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB15EBD413D622FD00977202 /* Build configuration list for PBXNativeTarget "Box" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB15EBD513D622FD00977202 /* Debug */,
+				FB15EBD613D622FD00977202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB15EBAD13D622FD00977202 /* Project object */;
+}

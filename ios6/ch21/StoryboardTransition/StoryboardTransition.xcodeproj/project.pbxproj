@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABE420C015BE431A00E3258E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE420BF15BE431A00E3258E /* UIKit.framework */; };
+		ABE420C215BE431A00E3258E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE420C115BE431A00E3258E /* Foundation.framework */; };
+		ABE420C415BE431A00E3258E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE420C315BE431A00E3258E /* CoreGraphics.framework */; };
+		ABE420CA15BE431A00E3258E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABE420C815BE431A00E3258E /* InfoPlist.strings */; };
+		ABE420CC15BE431A00E3258E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE420CB15BE431A00E3258E /* main.m */; };
+		ABE420D015BE431A00E3258E /* MKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE420CF15BE431A00E3258E /* MKAppDelegate.m */; };
+		ABE420D315BE431A00E3258E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE420D115BE431A00E3258E /* MainStoryboard.storyboard */; };
+		ABE420D615BE431A00E3258E /* MKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE420D515BE431A00E3258E /* MKMasterViewController.m */; };
+		ABE420D915BE431A00E3258E /* MKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE420D815BE431A00E3258E /* MKDetailViewController.m */; };
+		ABE420E115BE434600E3258E /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE420E015BE434600E3258E /* CustomSegue.m */; };
+		ABE420E315BE444A00E3258E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE420E215BE444A00E3258E /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABE420BB15BE431A00E3258E /* StoryboardTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE420BF15BE431A00E3258E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABE420C115BE431A00E3258E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABE420C315BE431A00E3258E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABE420C715BE431A00E3258E /* StoryboardTransition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryboardTransition-Info.plist"; sourceTree = "<group>"; };
+		ABE420C915BE431A00E3258E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABE420CB15BE431A00E3258E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABE420CD15BE431A00E3258E /* StoryboardTransition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryboardTransition-Prefix.pch"; sourceTree = "<group>"; };
+		ABE420CE15BE431A00E3258E /* MKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
+		ABE420CF15BE431A00E3258E /* MKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKAppDelegate.m; sourceTree = "<group>"; };
+		ABE420D215BE431A00E3258E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		ABE420D415BE431A00E3258E /* MKMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKMasterViewController.h; sourceTree = "<group>"; };
+		ABE420D515BE431A00E3258E /* MKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKMasterViewController.m; sourceTree = "<group>"; };
+		ABE420D715BE431A00E3258E /* MKDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKDetailViewController.h; sourceTree = "<group>"; };
+		ABE420D815BE431A00E3258E /* MKDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKDetailViewController.m; sourceTree = "<group>"; };
+		ABE420DF15BE434600E3258E /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		ABE420E015BE434600E3258E /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
+		ABE420E215BE444A00E3258E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE420B815BE431A00E3258E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE420E315BE444A00E3258E /* QuartzCore.framework in Frameworks */,
+				ABE420C015BE431A00E3258E /* UIKit.framework in Frameworks */,
+				ABE420C215BE431A00E3258E /* Foundation.framework in Frameworks */,
+				ABE420C415BE431A00E3258E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE420B015BE431900E3258E = {
+			isa = PBXGroup;
+			children = (
+				ABE420C515BE431A00E3258E /* StoryboardTransition */,
+				ABE420BE15BE431A00E3258E /* Frameworks */,
+				ABE420BC15BE431A00E3258E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE420BC15BE431A00E3258E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE420BB15BE431A00E3258E /* StoryboardTransition.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE420BE15BE431A00E3258E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABE420E215BE444A00E3258E /* QuartzCore.framework */,
+				ABE420BF15BE431A00E3258E /* UIKit.framework */,
+				ABE420C115BE431A00E3258E /* Foundation.framework */,
+				ABE420C315BE431A00E3258E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABE420C515BE431A00E3258E /* StoryboardTransition */ = {
+			isa = PBXGroup;
+			children = (
+				ABE420CE15BE431A00E3258E /* MKAppDelegate.h */,
+				ABE420CF15BE431A00E3258E /* MKAppDelegate.m */,
+				ABE420D115BE431A00E3258E /* MainStoryboard.storyboard */,
+				ABE420D415BE431A00E3258E /* MKMasterViewController.h */,
+				ABE420D515BE431A00E3258E /* MKMasterViewController.m */,
+				ABE420D715BE431A00E3258E /* MKDetailViewController.h */,
+				ABE420D815BE431A00E3258E /* MKDetailViewController.m */,
+				ABE420C615BE431A00E3258E /* Supporting Files */,
+				ABE420DF15BE434600E3258E /* CustomSegue.h */,
+				ABE420E015BE434600E3258E /* CustomSegue.m */,
+			);
+			path = StoryboardTransition;
+			sourceTree = "<group>";
+		};
+		ABE420C615BE431A00E3258E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABE420C715BE431A00E3258E /* StoryboardTransition-Info.plist */,
+				ABE420C815BE431A00E3258E /* InfoPlist.strings */,
+				ABE420CB15BE431A00E3258E /* main.m */,
+				ABE420CD15BE431A00E3258E /* StoryboardTransition-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE420BA15BE431A00E3258E /* StoryboardTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE420DC15BE431A00E3258E /* Build configuration list for PBXNativeTarget "StoryboardTransition" */;
+			buildPhases = (
+				ABE420B715BE431A00E3258E /* Sources */,
+				ABE420B815BE431A00E3258E /* Frameworks */,
+				ABE420B915BE431A00E3258E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StoryboardTransition;
+			productName = StoryboardTransition;
+			productReference = ABE420BB15BE431A00E3258E /* StoryboardTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE420B215BE431900E3258E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MK;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Steinlogic Consulting and Training Pte Ltd";
+			};
+			buildConfigurationList = ABE420B515BE431900E3258E /* Build configuration list for PBXProject "StoryboardTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABE420B015BE431900E3258E;
+			productRefGroup = ABE420BC15BE431A00E3258E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE420BA15BE431A00E3258E /* StoryboardTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE420B915BE431A00E3258E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE420CA15BE431A00E3258E /* InfoPlist.strings in Resources */,
+				ABE420D315BE431A00E3258E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE420B715BE431A00E3258E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE420CC15BE431A00E3258E /* main.m in Sources */,
+				ABE420D015BE431A00E3258E /* MKAppDelegate.m in Sources */,
+				ABE420D615BE431A00E3258E /* MKMasterViewController.m in Sources */,
+				ABE420D915BE431A00E3258E /* MKDetailViewController.m in Sources */,
+				ABE420E115BE434600E3258E /* CustomSegue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABE420C815BE431A00E3258E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE420C915BE431A00E3258E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABE420D115BE431A00E3258E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE420D215BE431A00E3258E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABE420DA15BE431A00E3258E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABE420DB15BE431A00E3258E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABE420DD15BE431A00E3258E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StoryboardTransition/StoryboardTransition-Prefix.pch";
+				INFOPLIST_FILE = "StoryboardTransition/StoryboardTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABE420DE15BE431A00E3258E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StoryboardTransition/StoryboardTransition-Prefix.pch";
+				INFOPLIST_FILE = "StoryboardTransition/StoryboardTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE420B515BE431900E3258E /* Build configuration list for PBXProject "StoryboardTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE420DA15BE431A00E3258E /* Debug */,
+				ABE420DB15BE431A00E3258E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE420DC15BE431A00E3258E /* Build configuration list for PBXNativeTarget "StoryboardTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE420DD15BE431A00E3258E /* Debug */,
+				ABE420DE15BE431A00E3258E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE420B215BE431900E3258E /* Project object */;
+}

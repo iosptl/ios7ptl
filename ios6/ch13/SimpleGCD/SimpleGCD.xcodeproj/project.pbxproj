@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1BBFAB16419B7B002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBFAA16419B7B002140CF /* Default-568h@2x.png */; };
+		FBE30D0013F9BE6D002686F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE30CFF13F9BE6D002686F2 /* UIKit.framework */; };
+		FBE30D0213F9BE6D002686F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE30D0113F9BE6D002686F2 /* Foundation.framework */; };
+		FBE30D0813F9BE6D002686F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBE30D0613F9BE6D002686F2 /* InfoPlist.strings */; };
+		FBE30D0A13F9BE6D002686F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE30D0913F9BE6D002686F2 /* main.m */; };
+		FBE30D0E13F9BE6D002686F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE30D0D13F9BE6D002686F2 /* AppDelegate.m */; };
+		FBE30D1113F9BE6D002686F2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE30D0F13F9BE6D002686F2 /* MainStoryboard.storyboard */; };
+		FBE30D1413F9BE6D002686F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE30D1313F9BE6D002686F2 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB1BBFAA16419B7B002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FBE30CFB13F9BE6D002686F2 /* SimpleGCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE30CFF13F9BE6D002686F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FBE30D0113F9BE6D002686F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FBE30D0513F9BE6D002686F2 /* SimpleGCD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleGCD-Info.plist"; sourceTree = "<group>"; };
+		FBE30D0713F9BE6D002686F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FBE30D0913F9BE6D002686F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBE30D0B13F9BE6D002686F2 /* SimpleGCD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleGCD-Prefix.pch"; sourceTree = "<group>"; };
+		FBE30D0C13F9BE6D002686F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FBE30D0D13F9BE6D002686F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FBE30D1013F9BE6D002686F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FBE30D1213F9BE6D002686F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FBE30D1313F9BE6D002686F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBE30CF813F9BE6D002686F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE30D0013F9BE6D002686F2 /* UIKit.framework in Frameworks */,
+				FBE30D0213F9BE6D002686F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBE30CF013F9BE6D002686F2 = {
+			isa = PBXGroup;
+			children = (
+				FB1BBFAA16419B7B002140CF /* Default-568h@2x.png */,
+				FBE30D0313F9BE6D002686F2 /* SimpleGCD */,
+				FBE30CFE13F9BE6D002686F2 /* Frameworks */,
+				FBE30CFC13F9BE6D002686F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBE30CFC13F9BE6D002686F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBE30CFB13F9BE6D002686F2 /* SimpleGCD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBE30CFE13F9BE6D002686F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBE30CFF13F9BE6D002686F2 /* UIKit.framework */,
+				FBE30D0113F9BE6D002686F2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBE30D0313F9BE6D002686F2 /* SimpleGCD */ = {
+			isa = PBXGroup;
+			children = (
+				FBE30D0C13F9BE6D002686F2 /* AppDelegate.h */,
+				FBE30D0D13F9BE6D002686F2 /* AppDelegate.m */,
+				FBE30D0F13F9BE6D002686F2 /* MainStoryboard.storyboard */,
+				FBE30D1213F9BE6D002686F2 /* ViewController.h */,
+				FBE30D1313F9BE6D002686F2 /* ViewController.m */,
+				FBE30D0413F9BE6D002686F2 /* Supporting Files */,
+			);
+			path = SimpleGCD;
+			sourceTree = "<group>";
+		};
+		FBE30D0413F9BE6D002686F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBE30D0513F9BE6D002686F2 /* SimpleGCD-Info.plist */,
+				FBE30D0613F9BE6D002686F2 /* InfoPlist.strings */,
+				FBE30D0913F9BE6D002686F2 /* main.m */,
+				FBE30D0B13F9BE6D002686F2 /* SimpleGCD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBE30CFA13F9BE6D002686F2 /* SimpleGCD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBE30D1713F9BE6D002686F2 /* Build configuration list for PBXNativeTarget "SimpleGCD" */;
+			buildPhases = (
+				FBE30CF713F9BE6D002686F2 /* Sources */,
+				FBE30CF813F9BE6D002686F2 /* Frameworks */,
+				FBE30CF913F9BE6D002686F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleGCD;
+			productName = SimpleGCD;
+			productReference = FBE30CFB13F9BE6D002686F2 /* SimpleGCD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBE30CF213F9BE6D002686F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FBE30CF513F9BE6D002686F2 /* Build configuration list for PBXProject "SimpleGCD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FBE30CF013F9BE6D002686F2;
+			productRefGroup = FBE30CFC13F9BE6D002686F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBE30CFA13F9BE6D002686F2 /* SimpleGCD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBE30CF913F9BE6D002686F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE30D0813F9BE6D002686F2 /* InfoPlist.strings in Resources */,
+				FBE30D1113F9BE6D002686F2 /* MainStoryboard.storyboard in Resources */,
+				FB1BBFAB16419B7B002140CF /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBE30CF713F9BE6D002686F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE30D0A13F9BE6D002686F2 /* main.m in Sources */,
+				FBE30D0E13F9BE6D002686F2 /* AppDelegate.m in Sources */,
+				FBE30D1413F9BE6D002686F2 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBE30D0613F9BE6D002686F2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE30D0713F9BE6D002686F2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FBE30D0F13F9BE6D002686F2 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE30D1013F9BE6D002686F2 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBE30D1513F9BE6D002686F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FBE30D1613F9BE6D002686F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBE30D1813F9BE6D002686F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleGCD/SimpleGCD-Prefix.pch";
+				INFOPLIST_FILE = "SimpleGCD/SimpleGCD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FBE30D1913F9BE6D002686F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleGCD/SimpleGCD-Prefix.pch";
+				INFOPLIST_FILE = "SimpleGCD/SimpleGCD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBE30CF513F9BE6D002686F2 /* Build configuration list for PBXProject "SimpleGCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE30D1513F9BE6D002686F2 /* Debug */,
+				FBE30D1613F9BE6D002686F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBE30D1713F9BE6D002686F2 /* Build configuration list for PBXNativeTarget "SimpleGCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE30D1813F9BE6D002686F2 /* Debug */,
+				FBE30D1913F9BE6D002686F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBE30CF213F9BE6D002686F2 /* Project object */;
+}
