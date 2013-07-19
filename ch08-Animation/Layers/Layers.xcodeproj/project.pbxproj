@@ -16,8 +16,8 @@
 		FB49335413D277D10047529C /* LayersAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB49335313D277D10047529C /* LayersAppDelegate.m */; };
 		FB49335713D277D10047529C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB49335513D277D10047529C /* MainStoryboard.storyboard */; };
 		FB49335A13D277D10047529C /* LayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB49335913D277D10047529C /* LayersViewController.m */; };
-		FB49336713D283BC0047529C /* pushing.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49336613D283BC0047529C /* pushing.png */; };
 		FB49336A13D28A6A0047529C /* DelegateView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB49336913D28A6A0047529C /* DelegateView.m */; };
+		FB66B220179887DA005F97B8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB66B21F179887DA005F97B8 /* Media.xcassets */; };
 		FBAA2C6913D295020038FCA0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAA2C6813D295020038FCA0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +36,9 @@
 		FB49335613D277D10047529C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB49335813D277D10047529C /* LayersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LayersViewController.h; path = Layers/LayersViewController.h; sourceTree = "<group>"; };
 		FB49335913D277D10047529C /* LayersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LayersViewController.m; path = Layers/LayersViewController.m; sourceTree = "<group>"; };
-		FB49336613D283BC0047529C /* pushing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushing.png; sourceTree = "<group>"; };
 		FB49336813D28A6A0047529C /* DelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DelegateView.h; path = Layers/DelegateView.h; sourceTree = "<group>"; };
 		FB49336913D28A6A0047529C /* DelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DelegateView.m; path = Layers/DelegateView.m; sourceTree = "<group>"; };
+		FB66B21F179887DA005F97B8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Layers/Media.xcassets; sourceTree = "<group>"; };
 		FBAA2C6813D295020038FCA0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -60,14 +60,15 @@
 		FB49333413D277D10047529C = {
 			isa = PBXGroup;
 			children = (
-				FB1BBF651641997A002140CF /* Default-568h@2x.png */,
 				FB49335813D277D10047529C /* LayersViewController.h */,
 				FB49335913D277D10047529C /* LayersViewController.m */,
 				FB49336813D28A6A0047529C /* DelegateView.h */,
 				FB49336913D28A6A0047529C /* DelegateView.m */,
+				FB66B21F179887DA005F97B8 /* Media.xcassets */,
 				FB49334913D277D10047529C /* Layers */,
 				FB49334213D277D10047529C /* Frameworks */,
 				FB49334013D277D10047529C /* Products */,
+				FB1BBF651641997A002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,7 +105,6 @@
 		FB49334A13D277D10047529C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB49336613D283BC0047529C /* pushing.png */,
 				FB49334B13D277D10047529C /* Layers-Info.plist */,
 				FB49334C13D277D10047529C /* InfoPlist.strings */,
 				FB49334F13D277D10047529C /* main.m */,
@@ -139,7 +139,7 @@
 		FB49333613D277D10047529C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FB49333913D277D10047529C /* Build configuration list for PBXProject "Layers" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -163,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB66B220179887DA005F97B8 /* Media.xcassets in Resources */,
 				FB49334E13D277D10047529C /* InfoPlist.strings in Resources */,
 				FB49335713D277D10047529C /* MainStoryboard.storyboard in Resources */,
-				FB49336713D283BC0047529C /* pushing.png in Resources */,
 				FB1BBF661641997A002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +210,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -222,11 +221,11 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -235,16 +234,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

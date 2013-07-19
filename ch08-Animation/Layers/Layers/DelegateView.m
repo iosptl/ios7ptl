@@ -1,5 +1,5 @@
 //
-//  LayersViewController.m
+//  DelegateView.m
 //  Layers
 //
 //  Copyright (c) 2012 Rob Napier
@@ -23,29 +23,43 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 //  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 //  DEALINGS IN THE SOFTWARE.
+//
 
-#import "LayersViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #import "DelegateView.h"
+#import <QuartzCore/QuartzCore.h>
 
-@implementation LayersViewController
+@implementation DelegateView
 
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-  UIImage *image = [UIImage imageNamed:@"pushing.png"];
-  self.view.layer.contents = (__bridge id)[image CGImage];
-  
-  UIGestureRecognizer *g;
-  g = [[UITapGestureRecognizer alloc] 
-       initWithTarget:self
-       action:@selector(performFlip:)];
-  [self.view addGestureRecognizer:g];
+- (id)initWithFrame:(CGRect)frame {
+  self = [super initWithFrame:frame];
+  if (self) {
+    [self.layer setNeedsDisplay];
+    [self.layer setContentsScale:[[UIScreen mainScreen] scale]];
+  }
+  return self;
 }
 
-- (void)performFlip:(UIGestureRecognizer *)recognizer {
-  UIView *delegateView = [[DelegateView alloc] initWithFrame:self.view.frame];
-  [UIView transitionFromView:self.view toView:delegateView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:nil];
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
+  UIGraphicsPushContext(ctx);
+  [[UIColor whiteColor] set];
+  UIRectFill(layer.bounds);
+
+  UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline1];
+  UIColor *color = [UIColor blackColor];
+
+  NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
+  [style setAlignment:NSTextAlignmentCenter];
+  
+  NSDictionary *attribs = @{NSFontAttributeName: font,
+                            NSForegroundColorAttributeName: color,
+                            NSParagraphStyleAttributeName: style};
+
+  NSAttributedString *
+  text = [[NSAttributedString alloc] initWithString:@"Pushing The Limits"
+                                         attributes:attribs];
+
+  [text drawInRect:CGRectInset([layer bounds], 10, 100)];
+  UIGraphicsPopContext();
 }
 
 @end

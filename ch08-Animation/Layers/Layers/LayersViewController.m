@@ -1,5 +1,7 @@
 //
-//  CALayer+RNAnimation.h
+//  LayersViewController.m
+//  Layers
+//
 //  Copyright (c) 2012 Rob Napier
 //
 //  This code is licensed under the MIT License:
@@ -21,12 +23,30 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 //  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 //  DEALINGS IN THE SOFTWARE.
-//
 
+#import "LayersViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DelegateView.h"
 
-@interface CALayer (RNAnimation)
-- (void)setValue:(id)value forKeyPath:(NSString *)keyPath
-        duration:(CFTimeInterval)duration
-           delay:(CFTimeInterval)delay;
+@implementation LayersViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  UIImage *image = [UIImage imageNamed:@"pushing"];
+  self.view.layer.contentsScale = [[UIScreen mainScreen] scale];
+  self.view.layer.contentsGravity = kCAGravityCenter;
+  self.view.layer.contents = (id)[image CGImage];
+  
+  UIGestureRecognizer *g;
+  g = [[UITapGestureRecognizer alloc]
+       initWithTarget:self
+       action:@selector(performFlip:)];
+  [self.view addGestureRecognizer:g];
+}
+
+- (void)performFlip:(UIGestureRecognizer *)recognizer {
+  UIView *delegateView = [[DelegateView alloc] initWithFrame:self.view.frame];
+  [UIView transitionFromView:self.view toView:delegateView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:nil];
+}
+
 @end
