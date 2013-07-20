@@ -49,15 +49,13 @@ static CATransform3D MakeSideRotation(CGFloat x, CGFloat y, CGFloat z) {
   return CATransform3DMakeRotation(M_PI_2, x, y, z);
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
   CATransformLayer *contentLayer = [CATransformLayer layer];
   contentLayer.frame = self.view.layer.bounds;
   CGSize size = contentLayer.bounds.size;
-  contentLayer.transform = 
+  contentLayer.transform =
     CATransform3DMakeTranslation(size.width/2, size.height/2, 0);
-  contentLayer.anchorPoint = CGPointMake(0.5, 0.75);
   [self.view.layer addSublayer:contentLayer];
   
   self.contentLayer = contentLayer;
@@ -85,7 +83,6 @@ static CATransform3D MakeSideRotation(CGFloat x, CGFloat y, CGFloat z) {
   self.frontLayer = [self layerAtX:0 y:0 z:kSize/2
                              color:[UIColor magentaColor] 
                          transform:CATransform3DIdentity];
-  
   
   UIGestureRecognizer *g = [[UIPanGestureRecognizer alloc] 
                             initWithTarget:self
