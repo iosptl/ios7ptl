@@ -32,7 +32,8 @@
 const CGFloat kSize = 100.;
 const CGFloat kPanScale = 1./100.;
 
-- (CALayer *)layerWithColor:(UIColor *)color transform:(CATransform3D)transform {
+- (CALayer *)layerWithColor:(UIColor *)color
+                  transform:(CATransform3D)transform {
   CALayer *layer = [CALayer layer];
   layer.backgroundColor = [color CGColor];
   layer.bounds = CGRectMake(0, 0, kSize, kSize);
@@ -42,15 +43,13 @@ const CGFloat kPanScale = 1./100.;
   return layer;
 }
 
-CATransform3D MakePerspetiveTransform(void);
-CATransform3D MakePerspetiveTransform() {
+static CATransform3D MakePerspetiveTransform() {
   CATransform3D perspective = CATransform3DIdentity;
   perspective.m34 = -1./2000.;
   return perspective;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
 
   CATransform3D transform;
