@@ -32,7 +32,7 @@
   [super viewDidLoad];
   self.circleView = [[CircleView alloc] initWithFrame:
                      CGRectMake(0, 0, 20, 20)];
-  self.circleView.center = CGPointMake(100, 20);
+  self.circleView.center = CGPointMake(100, 40);
   [[self view] addSubview:self.circleView];
   
   UITapGestureRecognizer *g;
