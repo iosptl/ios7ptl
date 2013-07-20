@@ -33,8 +33,8 @@
 		FB1BD12313D3B82D00836033 /* ActionsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionsAppDelegate.h; sourceTree = "<group>"; };
 		FB1BD12413D3B82D00836033 /* ActionsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionsAppDelegate.m; sourceTree = "<group>"; };
 		FB1BD12713D3B82D00836033 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB1BD12913D3B82D00836033 /* ActionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
-		FB1BD12A13D3B82D00836033 /* ActionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionsViewController.m; sourceTree = "<group>"; };
+		FB1BD12913D3B82D00836033 /* ActionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ActionsViewController.h; path = Actions/ActionsViewController.h; sourceTree = "<group>"; };
+		FB1BD12A13D3B82D00836033 /* ActionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ActionsViewController.m; path = Actions/ActionsViewController.m; sourceTree = "<group>"; };
 		FB1BD13113D3B87200836033 /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleLayer.h; path = Actions/CircleLayer.h; sourceTree = "<group>"; };
 		FB1BD13213D3B87200836033 /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleLayer.m; path = Actions/CircleLayer.m; sourceTree = "<group>"; };
 		FB1BD13413D3B8CD00836033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -58,13 +58,14 @@
 		FB1BD10513D3B82D00836033 = {
 			isa = PBXGroup;
 			children = (
-				FB1BBF4516419928002140CF /* Default-568h@2x.png */,
 				FB1BD13113D3B87200836033 /* CircleLayer.h */,
 				FB1BD13213D3B87200836033 /* CircleLayer.m */,
-				FB1BD13413D3B8CD00836033 /* QuartzCore.framework */,
+				FB1BD12913D3B82D00836033 /* ActionsViewController.h */,
+				FB1BD12A13D3B82D00836033 /* ActionsViewController.m */,
 				FB1BD11A13D3B82D00836033 /* Actions */,
 				FB1BD11313D3B82D00836033 /* Frameworks */,
 				FB1BD11113D3B82D00836033 /* Products */,
+				FB1BBF4516419928002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +80,7 @@
 		FB1BD11313D3B82D00836033 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB1BD13413D3B8CD00836033 /* QuartzCore.framework */,
 				FB1BD11413D3B82D00836033 /* UIKit.framework */,
 				FB1BD11613D3B82D00836033 /* Foundation.framework */,
 				FB1BD11813D3B82D00836033 /* CoreGraphics.framework */,
@@ -92,8 +94,6 @@
 				FB1BD12313D3B82D00836033 /* ActionsAppDelegate.h */,
 				FB1BD12413D3B82D00836033 /* ActionsAppDelegate.m */,
 				FB1BD12613D3B82D00836033 /* MainStoryboard.storyboard */,
-				FB1BD12913D3B82D00836033 /* ActionsViewController.h */,
-				FB1BD12A13D3B82D00836033 /* ActionsViewController.m */,
 				FB1BD11B13D3B82D00836033 /* Supporting Files */,
 			);
 			path = Actions;
@@ -136,7 +136,7 @@
 		FB1BD10713D3B82D00836033 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FB1BD10A13D3B82D00836033 /* Build configuration list for PBXProject "Actions" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -206,8 +206,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -218,11 +223,14 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -231,16 +239,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
