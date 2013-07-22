@@ -39,12 +39,6 @@
     return self;
 }
 
-- (id)initWithLayer:(id)layer {
-  self = [super initWithLayer:layer];
-  [self setRadius:[layer radius]];
-  return self;
-}
-
 - (void)drawInContext:(CGContextRef)ctx {
   CGContextSetFillColorWithColor(ctx, 
                                  [[UIColor redColor] CGColor]);

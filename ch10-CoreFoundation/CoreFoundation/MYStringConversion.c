@@ -59,7 +59,7 @@ const char * MYCFStringGetUTF8String(CFStringRef aString,
     CFIndex length = CFStringGetLength(aString);
     CFIndex maxSize =
     CFStringGetMaximumSizeForEncoding(length,
-                                      kCFStringEncodingUTF8) + 1; // +1 for NULL
+                                      kCFStringEncodingUTF8) + 1; // +1 for \0
     if (maxSize > malloc_size(buffer)) {
       *buffer = realloc(*buffer, maxSize);
     }

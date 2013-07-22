@@ -50,10 +50,9 @@ static void testTypeMismatch() {
 static void testCString() {
   PrintFunction();
   const char *cstring = "Hello World!";
-  CFStringRef string = CFStringCreateWithCString(NULL, cstring, kCFStringEncodingUTF8);
-  
+  CFStringRef string = CFStringCreateWithCString(NULL, cstring,
+                                                 kCFStringEncodingUTF8);
   CFShow(string);
-  
   CFRelease(string);
 }
 
@@ -73,7 +72,6 @@ static void testPascalString() {
                                                       (ConstStr255Param)&buffer,
                                                       kCFStringEncodingUTF8);
   CFShow(string);
-  
   CFRelease(string);
 }
 
@@ -84,26 +82,20 @@ static void testCopyUTF8String() {
   PrintFunction();
   CFStringRef string = CFSTR("Hello");
   char * cstring = MYCFStringCopyUTF8String(string);	
-  
   printf("%s\n", cstring);
-  
   free(cstring);
 }
 
 static void testGetUTF8String() {
   PrintFunction();
-  CFStringRef strings[3] = { CFSTR("One"), CFSTR("Two"),
-    CFSTR("Three") };
+  CFStringRef strings[3] = { CFSTR("One"), CFSTR("Two"), CFSTR("Three") };
   char * buffer = NULL;
   const char * cstring = NULL;
-  char concat[128] = {0};
-  
+
   for (unsigned i = 0; i < 3; ++i) {
     cstring = MYCFStringGetUTF8String(strings[i], &buffer);
-    strcat(concat, cstring);
+    printf("%s\n", cstring);
   }
-  
-  printf("%s\n", concat);
   
   free(buffer);
 }
@@ -111,14 +103,14 @@ static void testGetUTF8String() {
 static void testFastUTF8Conversion() {
   PrintFunction();
   CFStringRef string = CFSTR("Hello");
+
   const CFIndex kBufferSize = 1024;
   char buffer[kBufferSize];
   CFStringEncoding encoding = kCFStringEncodingUTF8;
   const char *cstring;
   cstring = CFStringGetCStringPtr(string, encoding);
   if (cstring == NULL) {
-    if (CFStringGetCString(string, buffer, kBufferSize,
-                           encoding)) {
+    if (CFStringGetCString(string, buffer, kBufferSize, encoding)) {
       cstring = buffer;
     }
   }
@@ -135,13 +127,10 @@ static void testBytesNoCopy() {
   char *bytes = CFAllocatorAllocate(kCFAllocatorDefault,
                                     strlen(cstr) + 1, 0);
   strcpy(bytes, cstr);
-  CFStringRef str = CFStringCreateWithCStringNoCopy(kCFAllocatorDefault,
-                                                    bytes,
+  CFStringRef str = CFStringCreateWithCStringNoCopy(kCFAllocatorDefault, bytes,
                                                     kCFStringEncodingUTF8,
                                                     kCFAllocatorDefault);
-  
   CFShow(str);
-  
   CFRelease(str);
 }
 
@@ -151,8 +140,7 @@ static void testBytesNoCopyMalloc() {
   char *bytes = malloc(strlen(cstr) + 1);
   strcpy(bytes, cstr);
   CFStringRef str =
-  CFStringCreateWithCStringNoCopy(NULL, bytes,
-                                  kCFStringEncodingUTF8,
+  CFStringCreateWithCStringNoCopy(NULL, bytes, kCFStringEncodingUTF8,
                                   kCFAllocatorMalloc);
   
   CFShow(str);
@@ -166,8 +154,7 @@ static void testBytesNoCopyNull() {
   char *bytes = malloc(strlen(cstr) + 1);
   strcpy(bytes, cstr);
   CFStringRef str =
-  CFStringCreateWithCStringNoCopy(NULL, bytes,
-                                  kCFStringEncodingUTF8, 
+  CFStringCreateWithCStringNoCopy(NULL, bytes, kCFStringEncodingUTF8, 
                                   kCFAllocatorNull);
   CFShow(str);
   CFRelease(str);
@@ -186,8 +173,7 @@ static void testNRArray() {
   CFArrayCallBacks nrCallbacks = kCFTypeArrayCallBacks;
   nrCallbacks.retain = NULL;
   nrCallbacks.release = NULL;
-  CFMutableArrayRef nrArray = CFArrayCreateMutable(NULL, 0,
-                                                   &nrCallbacks);
+  CFMutableArrayRef nrArray = CFArrayCreateMutable(NULL, 0, &nrCallbacks);
   CFStringRef string = CFStringCreateWithCString(NULL, "Stuff", kCFStringEncodingUTF8);
   CFArrayAppendValue(nrArray, string);
   
@@ -204,9 +190,10 @@ static void testCFArray() {
   PrintFunction();
   CFStringRef strings[3] = { CFSTR("One"), CFSTR("Two"), CFSTR("Three") };
   
-  CFArrayRef array = CFArrayCreate(NULL, (void *)strings, 3, &kCFTypeArrayCallBacks);
+  CFArrayRef array = CFArrayCreate(NULL, (void *)strings, 3,
+                                   &kCFTypeArrayCallBacks);
   
-  NSArray *nsArray = [NSArray arrayWithObjects:@"One", @"Two", @"Three", nil];
+  NSArray *nsArray = @[@"One", @"Two", @"Three"];
   
   BOOL result = [(__bridge id)array isEqual:nsArray];
   printf("Arrays equal: %d\n", result);
@@ -230,11 +217,9 @@ static void testCFDictionary() {
                                             &kCFTypeDictionaryKeyCallBacks,
                                             &kCFTypeDictionaryValueCallBacks);
   
-  NSDictionary *nsDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                          @"Foo", @"One",
-                          @"Bar", @"Two",
-                          @"Baz", @"Three",
-                          nil];
+  NSDictionary *nsDict = @{@"One": @"Foo",
+                          @"Two": @"Bar",
+                          @"Three": @"Baz"};
 
   BOOL result = [(__bridge id)dict isEqual:nsDict];
   printf("Dicts equal: %d\n", result);
@@ -244,8 +229,7 @@ static void testCFDictionary() {
 
 static void testCFDictionaryNULL() {
   PrintFunction();
-  CFMutableDictionaryRef dict = CFDictionaryCreateMutable(NULL, 0, NULL,
-                                                          &kCFTypeDictionaryValueCallBacks);
+  CFMutableDictionaryRef dict = CFDictionaryCreateMutable(NULL, 0, NULL, &kCFTypeDictionaryValueCallBacks);
   CFDictionarySetValue(dict, NULL, CFSTR("Foo"));
   
   const void *value;
@@ -262,8 +246,8 @@ static void testCFDictionaryNULL() {
 
 static void testTollFree() {
   PrintFunction();
-  NSArray *nsArray = [NSArray arrayWithObject:@"Foo"];
-  CFIndex count = CFArrayGetCount((__bridge CFArrayRef)nsArray);
+  NSArray *nsArray = @[@"Foo"];
+  CFIndex count = CFArrayGetCount((CFArrayRef)nsArray);
   printf("count=%lu\n", count);
 }
 
@@ -273,7 +257,7 @@ static void testTollFreeReverse() {
                                                    &kCFTypeArrayCallBacks);
   
   CFArrayAppendValue(cfArray, CFSTR("Foo"));
-  
+
   NSUInteger count = [(__bridge id)cfArray count];
   printf("count=%u\n", count);
   
@@ -282,9 +266,10 @@ static void testTollFreeReverse() {
 
 static void testTreeInArray() {
   PrintFunction();
-  CFTreeContext ctx = {0, (void*)CFSTR("Info"), CFRetain, CFRelease, CFCopyDescription};
+  CFTreeContext ctx = {0, (void*)CFSTR("Info"), CFRetain,
+    CFRelease, CFCopyDescription};
   CFTreeRef tree = CFTreeCreate(NULL, &ctx);
-  NSArray *array = [NSArray arrayWithObject:(__bridge id)tree];
+  NSArray *array = @[(__bridge id)tree];
   
   CFRelease(tree);
 

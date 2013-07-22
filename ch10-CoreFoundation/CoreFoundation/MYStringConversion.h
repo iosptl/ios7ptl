@@ -24,5 +24,9 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
+CF_IMPLICIT_BRIDGING_ENABLED
+
 char * MYCFStringCopyUTF8String(CFStringRef aString);
 const char * MYCFStringGetUTF8String(CFStringRef aString, char **buffer);
+
+CF_IMPLICIT_BRIDGING_DISABLED
