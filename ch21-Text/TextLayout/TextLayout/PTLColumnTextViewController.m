@@ -10,7 +10,7 @@
 
 @interface PTLColumnTextViewController ()
 @property (nonatomic, readwrite, strong) NSLayoutManager *layoutManager;
-@property (nonatomic, readwrite, strong) NSTextContainer *textContainer;
+@property (nonatomic, readwrite, strong) NSTextStorage *textStorage;
 @property (nonatomic, readwrite, strong) NSMutableArray *textViews;
 @property (nonatomic, readwrite, strong) UIView *containerView;
 @property (nonatomic, readwrite, strong) UIButton *addExclusionButton;
@@ -31,12 +31,13 @@
     [button addTarget:self action:@selector(performAddExclusion:) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:button];
+    button.backgroundColor = [UIColor greenColor];
     button;
   });
 
   self.containerView = [UIView new];
   self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
-
+  self.containerView.backgroundColor = [UIColor redColor];
   [self.view addSubview:self.containerView];
 
   {
@@ -45,35 +46,35 @@
                             @"container": self.containerView
                             };
 
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button]-|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[container]-|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[button]-[container]-|" options:0 metrics:nil views:views]];
+    NSDictionary *metrics = @{
+                              @"buttonHeight": @([self.addExclusionButton intrinsicContentSize].height)
+                              };
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button]-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[container]-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[button(buttonHeight)]-[container]-|" options:0 metrics:metrics views:views]];
   }
 
   NSString *text = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Lorem" ofType:@"txt"]
                                              encoding:NSUTF8StringEncoding
                                                 error:nil];
 
-  NSTextStorage* textStorage = [[NSTextStorage alloc] initWithString:text];
-  self.layoutManager = ({
-    NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
-    [textStorage addLayoutManager:layoutManager];
-    self.textContainer = [[NSTextContainer alloc] initWithSize:self.view.bounds.size];
-    [layoutManager addTextContainer:self.textContainer];
-    layoutManager;
-  });
+  self.textStorage = [[NSTextStorage alloc] initWithString:text];
+  self.layoutManager = [[NSLayoutManager alloc] init];
 
-  UITextView* textView = [[UITextView alloc] initWithFrame:self.view.bounds
-                                             textContainer:self.textContainer];
+  [self.textStorage addLayoutManager:self.layoutManager];
+
+  UITextView* textView = [UITextView new];
   [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
   [textView scrollRangeToVisible:NSMakeRange(0, 0)];
-  textView.scrollEnabled = NO;
+//  textView.scrollEnabled = NO;
+  textView.backgroundColor = [UIColor blueColor];
 
   [self.containerView addSubview:textView];
 
-
   self.textViews = [NSMutableArray arrayWithObject:textView];
+  [self.layoutManager addTextContainer:textView.textContainer];
 
   {
     NSDictionary *views = NSDictionaryOfVariableBindings( textView );
