@@ -34,31 +34,6 @@
 
 @implementation ViewController
 
-UIFont * GetVariationOfFontWithTrait(UIFont *baseFont,
-                                     CTFontSymbolicTraits trait) {
-  CGFloat fontSize = [baseFont pointSize];
-  
-  CFStringRef
-  baseFontName = (__bridge CFStringRef)[baseFont fontName];
-  CTFontRef baseCTFont = CTFontCreateWithName(baseFontName,
-                                              fontSize, NULL);
-  
-  CTFontRef ctFont =
-  CTFontCreateCopyWithSymbolicTraits(baseCTFont, 0, NULL,
-                                     trait, trait);
-  
-  NSString *variantFontName =
-  CFBridgingRelease(CTFontCopyName(ctFont,
-                                   kCTFontPostScriptNameKey));
-  
-  UIFont *variantFont = [UIFont fontWithName:variantFontName
-                                       size:fontSize];
-  CFRelease(ctFont);
-  CFRelease(baseCTFont);
-  
-  return variantFont;
-}
-
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -88,11 +63,8 @@ UIFont * GetVariationOfFontWithTrait(UIFont *baseFont,
   [attrString addAttribute:NSFontAttributeName value:boldFont
                      range:[string rangeOfString:@"bold"]];
   
-  // Apply italics using Core Text to apply a trait
-  // (You could have used italicSystemFontOfSize: here, but
-  // this demonstrates a more flexible approach.)
-  UIFont *italicFont = GetVariationOfFontWithTrait(baseFont,
-                                                   kCTFontTraitItalic);
+  // Apply italics using the italic system font
+  UIFont *italicFont = [UIFont italicSystemFontOfSize:fontSize];
   [attrString addAttribute:NSFontAttributeName value:italicFont
                      range:[string rangeOfString:@"italics"]];
   
@@ -111,12 +83,6 @@ UIFont * GetVariationOfFontWithTrait(UIFont *baseFont,
                      range:NSMakeRange(0, 1)];
   
   self.textView.attributedText = attrString;
-}
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 @end
