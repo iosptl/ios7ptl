@@ -8,7 +8,7 @@
 
 #import "PTLColumnTextViewController.h"
 
-@interface PTLColumnTextViewController ()
+@interface PTLColumnTextViewController () <NSLayoutManagerDelegate>
 @property (nonatomic, readwrite, strong) NSLayoutManager *layoutManager;
 @property (nonatomic, readwrite, strong) NSTextStorage *textStorage;
 @property (nonatomic, readwrite, strong) NSMutableArray *textViews;
@@ -19,9 +19,37 @@
 
 @implementation PTLColumnTextViewController
 
+- (UITextView *)newTextView
+{
+  NSTextContainer *textContainer = [[NSTextContainer alloc]initWithSize:CGSizeZero];
+
+  [self.layoutManager addTextContainer:textContainer];
+  UITextView* textView = [[UITextView alloc] initWithFrame:CGRectZero textContainer:textContainer];
+  [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
+  [self.layoutManager addTextContainer:textContainer];
+//  textContainer.maximumNumberOfLines =10;
+  NSLog(@"textContainer:%@", textContainer);
+
+//  textContainer.heightTracksTextView = YES;
+//  textContainer.widthTracksTextView = YES;
+
+  return textView;
+}
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+
+  NSString *text = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Lorem" ofType:@"txt"]
+                                             encoding:NSUTF8StringEncoding
+                                                error:nil];
+
+  self.textStorage = [[NSTextStorage alloc] initWithString:text];
+  self.layoutManager = [[NSLayoutManager alloc] init];
+  self.layoutManager.delegate = self;
+
+  [self.textStorage addLayoutManager:self.layoutManager];
+
 
   // FIXME: Move to IB when IB stops crashing
   self.addExclusionButton = ({
@@ -31,13 +59,11 @@
     [button addTarget:self action:@selector(performAddExclusion:) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:button];
-    button.backgroundColor = [UIColor greenColor];
     button;
   });
 
   self.containerView = [UIView new];
   self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
-  self.containerView.backgroundColor = [UIColor redColor];
   [self.view addSubview:self.containerView];
 
   {
@@ -55,35 +81,32 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[button(buttonHeight)]-[container]-|" options:0 metrics:metrics views:views]];
   }
 
-  NSString *text = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Lorem" ofType:@"txt"]
-                                             encoding:NSUTF8StringEncoding
-                                                error:nil];
+  UITextView *textView1 = [self newTextView];
+//  [textView1 setScrollEnabled:NO];
+  [textView1 setBackgroundColor:[UIColor redColor]];
+  [self.containerView addSubview:textView1];
 
-  self.textStorage = [[NSTextStorage alloc] initWithString:text];
-  self.layoutManager = [[NSLayoutManager alloc] init];
+  UITextView *textView2 = [self newTextView];
+  [self.containerView addSubview:textView2];
+  [textView2 setBackgroundColor:[UIColor blueColor]];
 
-  [self.textStorage addLayoutManager:self.layoutManager];
-
-  UITextView* textView = [UITextView new];
-  [textView setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-  [textView scrollRangeToVisible:NSMakeRange(0, 0)];
-//  textView.scrollEnabled = NO;
-  textView.backgroundColor = [UIColor blueColor];
-
-  [self.containerView addSubview:textView];
-
-  self.textViews = [NSMutableArray arrayWithObject:textView];
-  [self.layoutManager addTextContainer:textView.textContainer];
+  self.textViews = [NSMutableArray arrayWithObjects:textView1, textView2, nil];
 
   {
-    NSDictionary *views = NSDictionaryOfVariableBindings( textView );
-    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[textView]-|" options:0 metrics:nil views:views]];
-    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[textView]-|" options:0 metrics:nil views:views]];
+    NSDictionary *views = NSDictionaryOfVariableBindings( textView1, textView2 );
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[textView1]-[textView2(==textView1)]-|" options:0 metrics:nil views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[textView1]-|" options:0 metrics:nil views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[textView2]-|" options:0 metrics:nil views:views]];
   }
 }
 
 - (IBAction)performAddExclusion:(id)sender {
 }
+
+- (void)layoutManager:(NSLayoutManager *)layoutManager didCompleteLayoutForTextContainer:(NSTextContainer *)textContainer atEnd:(BOOL)layoutFinishedFlag {
+  NSLog(@"didComplete(%d):%@", layoutFinishedFlag, textContainer );
+}
+
+
 
 @end
