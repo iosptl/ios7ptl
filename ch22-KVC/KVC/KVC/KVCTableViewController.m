@@ -54,7 +54,7 @@
   // Each row's object is an NSNumber representing that integer
   // Since each row has a different object (NSNumber), you set
   // it here, in the cell configuration section.
-  cell.object = [NSNumber numberWithInt:indexPath.row];
+  cell.object = @(indexPath.row);
   
   return cell;
 }
