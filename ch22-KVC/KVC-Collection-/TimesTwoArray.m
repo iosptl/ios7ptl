@@ -1,5 +1,5 @@
 //
-//  DataModel.h
+//  DataModel.m
 //
 //  Copyright (c) 2012 Rob Napier
 //
@@ -24,13 +24,24 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "TimesTwoArray.h"
 
-@interface DataModel : NSObject
+@interface TimesTwoArray ()
+@property (nonatomic, readwrite, assign) NSUInteger count;
+@end
 
-+ (DataModel*)sharedModel;
+@implementation TimesTwoArray
 
-- (void)addItem;
-- (NSUInteger)countOfItems;
-- (id)objectInItemsAtIndex:(NSUInteger)index;
+- (NSUInteger)countOfNumbers {
+  return self.count;
+}
+
+- (id)objectInNumbersAtIndex:(NSUInteger)index {
+  return @(index * 2);
+}
+
+- (void)incrementCount {
+  self.count++;
+}
+
 @end

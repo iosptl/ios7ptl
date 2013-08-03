@@ -25,16 +25,14 @@
 //
 
 #import "KVCTableViewController.h"
-#import "DataModel.h"
+#import "TimesTwoArray.h"
 
 @implementation KVCTableViewController
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-
-  // countOfItems is a KVC method, but you can call it directly
-  // rather than creating an "items" proxy.
-  return [[DataModel sharedModel] countOfItems];
+  // Demonstrating valueForKeyPath:.
+  return [[self valueForKeyPath:@"array.numbers"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
@@ -49,11 +47,12 @@
             initWithStyle:UITableViewCellStyleDefault 
             reuseIdentifier:CellIdentifier];
   }
-  
-  DataModel *model = [DataModel sharedModel];
-  id object = [model objectInItemsAtIndex:indexPath.row];
-  cell.textLabel.text = [object description];
-  
+
+  // This is inefficient since we fetch all the values just to read one of them,
+  // but demonstrates valueForKeyPath: on an array:
+  NSArray *descriptions = [self.array valueForKeyPath:@"numbers.description"];
+  cell.textLabel.text = descriptions[indexPath.row];
+
   return cell;
 }
 @end

@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB171B0317AD8EB700AB8A63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB171B0217AD8EB700AB8A63 /* Foundation.framework */; };
+		FB171B0517AD8EB700AB8A63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB171B0417AD8EB700AB8A63 /* CoreGraphics.framework */; };
+		FB171B0717AD8EB700AB8A63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB171B0617AD8EB700AB8A63 /* UIKit.framework */; };
+		FB171B0D17AD8EB700AB8A63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB171B0B17AD8EB700AB8A63 /* InfoPlist.strings */; };
+		FB171B0F17AD8EB700AB8A63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B0E17AD8EB700AB8A63 /* main.m */; };
+		FB171B1317AD8EB700AB8A63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B1217AD8EB700AB8A63 /* AppDelegate.m */; };
+		FB171B1617AD8EB700AB8A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB171B1417AD8EB700AB8A63 /* Main.storyboard */; };
+		FB171B1917AD8EB700AB8A63 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B1817AD8EB700AB8A63 /* DataViewController.m */; };
+		FB171B1C17AD8EB700AB8A63 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B1B17AD8EB700AB8A63 /* StatsViewController.m */; };
+		FB171B1E17AD8EB700AB8A63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB171B1D17AD8EB700AB8A63 /* Images.xcassets */; };
+		FB171B2517AD8EB700AB8A63 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB171B2417AD8EB700AB8A63 /* XCTest.framework */; };
+		FB171B2617AD8EB700AB8A63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB171B0217AD8EB700AB8A63 /* Foundation.framework */; };
+		FB171B2717AD8EB700AB8A63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB171B0617AD8EB700AB8A63 /* UIKit.framework */; };
+		FB171B2F17AD8EB700AB8A63 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB171B2D17AD8EB700AB8A63 /* InfoPlist.strings */; };
+		FB171B3117AD8EB700AB8A63 /* PersonKVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B3017AD8EB700AB8A63 /* PersonKVCTests.m */; };
+		FB171B8917AD924500AB8A63 /* PersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B8817AD924500AB8A63 /* PersonManager.m */; };
+		FB171B8C17AD94B700AB8A63 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B8B17AD94B700AB8A63 /* RootViewController.m */; };
+		FB171B8F17AD998200AB8A63 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FB171B8E17AD998200AB8A63 /* Person.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB171B2817AD8EB700AB8A63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB171AF717AD8EB700AB8A63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB171AFE17AD8EB700AB8A63;
+			remoteInfo = PersonKVC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB171AFF17AD8EB700AB8A63 /* PersonKVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonKVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB171B0217AD8EB700AB8A63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB171B0417AD8EB700AB8A63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB171B0617AD8EB700AB8A63 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB171B0A17AD8EB700AB8A63 /* PersonKVC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PersonKVC-Info.plist"; sourceTree = "<group>"; };
+		FB171B0C17AD8EB700AB8A63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB171B0E17AD8EB700AB8A63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB171B1017AD8EB700AB8A63 /* PersonKVC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonKVC-Prefix.pch"; sourceTree = "<group>"; };
+		FB171B1117AD8EB700AB8A63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB171B1217AD8EB700AB8A63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB171B1517AD8EB700AB8A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB171B1717AD8EB700AB8A63 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		FB171B1817AD8EB700AB8A63 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		FB171B1A17AD8EB700AB8A63 /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		FB171B1B17AD8EB700AB8A63 /* StatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		FB171B1D17AD8EB700AB8A63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB171B2317AD8EB700AB8A63 /* PersonKVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonKVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB171B2417AD8EB700AB8A63 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB171B2C17AD8EB700AB8A63 /* PersonKVCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PersonKVCTests-Info.plist"; sourceTree = "<group>"; };
+		FB171B2E17AD8EB700AB8A63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB171B3017AD8EB700AB8A63 /* PersonKVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonKVCTests.m; sourceTree = "<group>"; };
+		FB171B8717AD924500AB8A63 /* PersonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonManager.h; sourceTree = "<group>"; };
+		FB171B8817AD924500AB8A63 /* PersonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonManager.m; sourceTree = "<group>"; };
+		FB171B8A17AD94B700AB8A63 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FB171B8B17AD94B700AB8A63 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FB171B8D17AD998200AB8A63 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FB171B8E17AD998200AB8A63 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB171AFC17AD8EB700AB8A63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB171B0517AD8EB700AB8A63 /* CoreGraphics.framework in Frameworks */,
+				FB171B0717AD8EB700AB8A63 /* UIKit.framework in Frameworks */,
+				FB171B0317AD8EB700AB8A63 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB171B2017AD8EB700AB8A63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB171B2517AD8EB700AB8A63 /* XCTest.framework in Frameworks */,
+				FB171B2717AD8EB700AB8A63 /* UIKit.framework in Frameworks */,
+				FB171B2617AD8EB700AB8A63 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB171AF617AD8EB700AB8A63 = {
+			isa = PBXGroup;
+			children = (
+				FB171B0817AD8EB700AB8A63 /* PersonKVC */,
+				FB171B2A17AD8EB700AB8A63 /* PersonKVCTests */,
+				FB171B0117AD8EB700AB8A63 /* Frameworks */,
+				FB171B0017AD8EB700AB8A63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB171B0017AD8EB700AB8A63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB171AFF17AD8EB700AB8A63 /* PersonKVC.app */,
+				FB171B2317AD8EB700AB8A63 /* PersonKVCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB171B0117AD8EB700AB8A63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB171B0217AD8EB700AB8A63 /* Foundation.framework */,
+				FB171B0417AD8EB700AB8A63 /* CoreGraphics.framework */,
+				FB171B0617AD8EB700AB8A63 /* UIKit.framework */,
+				FB171B2417AD8EB700AB8A63 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB171B0817AD8EB700AB8A63 /* PersonKVC */ = {
+			isa = PBXGroup;
+			children = (
+				FB171B1417AD8EB700AB8A63 /* Main.storyboard */,
+				FB171B1117AD8EB700AB8A63 /* AppDelegate.h */,
+				FB171B1217AD8EB700AB8A63 /* AppDelegate.m */,
+				FB171B8A17AD94B700AB8A63 /* RootViewController.h */,
+				FB171B8B17AD94B700AB8A63 /* RootViewController.m */,
+				FB171B8717AD924500AB8A63 /* PersonManager.h */,
+				FB171B8817AD924500AB8A63 /* PersonManager.m */,
+				FB171B8D17AD998200AB8A63 /* Person.h */,
+				FB171B8E17AD998200AB8A63 /* Person.m */,
+				FB171B1717AD8EB700AB8A63 /* DataViewController.h */,
+				FB171B1817AD8EB700AB8A63 /* DataViewController.m */,
+				FB171B1A17AD8EB700AB8A63 /* StatsViewController.h */,
+				FB171B1B17AD8EB700AB8A63 /* StatsViewController.m */,
+				FB171B1D17AD8EB700AB8A63 /* Images.xcassets */,
+				FB171B0917AD8EB700AB8A63 /* Supporting Files */,
+			);
+			path = PersonKVC;
+			sourceTree = "<group>";
+		};
+		FB171B0917AD8EB700AB8A63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB171B0A17AD8EB700AB8A63 /* PersonKVC-Info.plist */,
+				FB171B0B17AD8EB700AB8A63 /* InfoPlist.strings */,
+				FB171B0E17AD8EB700AB8A63 /* main.m */,
+				FB171B1017AD8EB700AB8A63 /* PersonKVC-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB171B2A17AD8EB700AB8A63 /* PersonKVCTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB171B3017AD8EB700AB8A63 /* PersonKVCTests.m */,
+				FB171B2B17AD8EB700AB8A63 /* Supporting Files */,
+			);
+			path = PersonKVCTests;
+			sourceTree = "<group>";
+		};
+		FB171B2B17AD8EB700AB8A63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB171B2C17AD8EB700AB8A63 /* PersonKVCTests-Info.plist */,
+				FB171B2D17AD8EB700AB8A63 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB171AFE17AD8EB700AB8A63 /* PersonKVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB171B3417AD8EB700AB8A63 /* Build configuration list for PBXNativeTarget "PersonKVC" */;
+			buildPhases = (
+				FB171AFB17AD8EB700AB8A63 /* Sources */,
+				FB171AFC17AD8EB700AB8A63 /* Frameworks */,
+				FB171AFD17AD8EB700AB8A63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PersonKVC;
+			productName = PersonKVC;
+			productReference = FB171AFF17AD8EB700AB8A63 /* PersonKVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB171B2217AD8EB700AB8A63 /* PersonKVCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB171B3717AD8EB700AB8A63 /* Build configuration list for PBXNativeTarget "PersonKVCTests" */;
+			buildPhases = (
+				FB171B1F17AD8EB700AB8A63 /* Sources */,
+				FB171B2017AD8EB700AB8A63 /* Frameworks */,
+				FB171B2117AD8EB700AB8A63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB171B2917AD8EB700AB8A63 /* PBXTargetDependency */,
+			);
+			name = PersonKVCTests;
+			productName = PersonKVCTests;
+			productReference = FB171B2317AD8EB700AB8A63 /* PersonKVCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB171AF717AD8EB700AB8A63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Rob Napier";
+				TargetAttributes = {
+					FB171B2217AD8EB700AB8A63 = {
+						TestTargetID = FB171AFE17AD8EB700AB8A63;
+					};
+				};
+			};
+			buildConfigurationList = FB171AFA17AD8EB700AB8A63 /* Build configuration list for PBXProject "PersonKVC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB171AF617AD8EB700AB8A63;
+			productRefGroup = FB171B0017AD8EB700AB8A63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB171AFE17AD8EB700AB8A63 /* PersonKVC */,
+				FB171B2217AD8EB700AB8A63 /* PersonKVCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB171AFD17AD8EB700AB8A63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB171B1E17AD8EB700AB8A63 /* Images.xcassets in Resources */,
+				FB171B0D17AD8EB700AB8A63 /* InfoPlist.strings in Resources */,
+				FB171B1617AD8EB700AB8A63 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB171B2117AD8EB700AB8A63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB171B2F17AD8EB700AB8A63 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB171AFB17AD8EB700AB8A63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB171B1C17AD8EB700AB8A63 /* StatsViewController.m in Sources */,
+				FB171B8C17AD94B700AB8A63 /* RootViewController.m in Sources */,
+				FB171B8F17AD998200AB8A63 /* Person.m in Sources */,
+				FB171B1317AD8EB700AB8A63 /* AppDelegate.m in Sources */,
+				FB171B8917AD924500AB8A63 /* PersonManager.m in Sources */,
+				FB171B1917AD8EB700AB8A63 /* DataViewController.m in Sources */,
+				FB171B0F17AD8EB700AB8A63 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB171B1F17AD8EB700AB8A63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB171B3117AD8EB700AB8A63 /* PersonKVCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB171B2917AD8EB700AB8A63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB171AFE17AD8EB700AB8A63 /* PersonKVC */;
+			targetProxy = FB171B2817AD8EB700AB8A63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB171B0B17AD8EB700AB8A63 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB171B0C17AD8EB700AB8A63 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB171B1417AD8EB700AB8A63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB171B1517AD8EB700AB8A63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB171B2D17AD8EB700AB8A63 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB171B2E17AD8EB700AB8A63 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB171B3217AD8EB700AB8A63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB171B3317AD8EB700AB8A63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB171B3517AD8EB700AB8A63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonKVC/PersonKVC-Prefix.pch";
+				INFOPLIST_FILE = "PersonKVC/PersonKVC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB171B3617AD8EB700AB8A63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonKVC/PersonKVC-Prefix.pch";
+				INFOPLIST_FILE = "PersonKVC/PersonKVC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB171B3817AD8EB700AB8A63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PersonKVC.app/PersonKVC";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonKVC/PersonKVC-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PersonKVCTests/PersonKVCTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB171B3917AD8EB700AB8A63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PersonKVC.app/PersonKVC";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonKVC/PersonKVC-Prefix.pch";
+				INFOPLIST_FILE = "PersonKVCTests/PersonKVCTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB171AFA17AD8EB700AB8A63 /* Build configuration list for PBXProject "PersonKVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB171B3217AD8EB700AB8A63 /* Debug */,
+				FB171B3317AD8EB700AB8A63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB171B3417AD8EB700AB8A63 /* Build configuration list for PBXNativeTarget "PersonKVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB171B3517AD8EB700AB8A63 /* Debug */,
+				FB171B3617AD8EB700AB8A63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB171B3717AD8EB700AB8A63 /* Build configuration list for PBXNativeTarget "PersonKVCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB171B3817AD8EB700AB8A63 /* Debug */,
+				FB171B3917AD8EB700AB8A63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB171AF717AD8EB700AB8A63 /* Project object */;
+}

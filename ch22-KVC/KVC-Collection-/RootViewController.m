@@ -1,5 +1,5 @@
 //
-//  DataModel.m
+//  RootViewController.m
 //
 //  Copyright (c) 2012 Rob Napier
 //
@@ -24,31 +24,41 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import "DataModel.h"
+#import "RootViewController.h"
+#import "TimesTwoArray.h"
+#import "KVCTableViewController.h"
 
-@interface DataModel ()
-@property (nonatomic, readwrite, assign) NSUInteger count;
+@interface RootViewController ()
+@property (nonatomic, readwrite, strong) TimesTwoArray *array;
 @end
 
-@implementation DataModel
+@implementation RootViewController
 
-+ (DataModel*)sharedModel {
-  static DataModel *sharedModel;
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{ sharedModel = [DataModel new]; });
-  return sharedModel;
+- (void)awakeFromNib {
+  self.array = [TimesTwoArray new];
 }
 
-- (NSUInteger)countOfItems {
-  return self.count;
+- (void)refresh {
+  // There is no property called "numbers" in TimesTwoArray. KVC will
+  // automatically create a proxy for you.
+  NSArray *items = [self.array valueForKey:@"numbers"];
+  NSUInteger count = [items count];
+  self.countLabel.text = [NSString stringWithFormat:@"%d", count];
+  self.entryLabel.text = [[items lastObject] description];
 }
 
-- (id)objectInItemsAtIndex:(NSUInteger)index {
-  return [NSNumber numberWithInt:index * 2];
+- (void)viewWillAppear:(BOOL)animated {
+  [self refresh];
+  [super viewWillAppear:animated];
 }
 
-- (void)addItem {
-  self.count++;
+- (IBAction)performAdd {
+  [self.array incrementCount];
+  [self refresh];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  [(KVCTableViewController *)segue.destinationViewController setArray:self.array];
 }
 
 @end

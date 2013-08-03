@@ -26,6 +26,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KVCTableViewController : UITableViewController
+@class TimesTwoArray;
 
+@interface KVCTableViewController : UITableViewController
+@property (nonatomic, readwrite, strong) TimesTwoArray *array;
 @end
