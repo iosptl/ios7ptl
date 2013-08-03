@@ -8,5 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class Person;
 @interface PersonManager : NSObject
+
+- (NSUInteger)count;
+- (Person *)personAtIndex:(NSUInteger)index;
 @end

@@ -7,10 +7,15 @@
 //
 
 #import "DataViewController.h"
+#import "PersonManager.h"
+#import "TextDataCell.h"
+#import "Person.h"
+#import "HeadingView.h"
 
-@interface DataViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface DataViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource>
 @property (nonatomic, readwrite, strong) NSArray *allColumns;
 @property (nonatomic, readwrite, strong) NSMutableArray *displayColumns;
+@property (weak, nonatomic) IBOutlet UICollectionView *dataView;
 @end
 
 @implementation DataViewController
@@ -20,7 +25,12 @@
   [super viewDidLoad];
   self.allColumns = @[ @"firstName", @"lastName", @"age" ];
   self.displayColumns = [self.allColumns mutableCopy];
-  [self updateData];
+}
+
+- (void)updateItemSize {
+  UICollectionViewFlowLayout *layout = (id)self.dataView.collectionViewLayout;
+  layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds) / ([self.displayColumns count] + 1),
+                               layout.itemSize.height);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,7 +46,8 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
   }
 
-  [self updateData];
+  [self updateItemSize];
+  [self.dataView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -44,18 +55,28 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  static NSString *identifier = @"ColumnHeader";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-  if (! cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-  }
-
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ColumnHeader" forIndexPath:indexPath];
   cell.textLabel.text = self.allColumns[indexPath.row];
   return cell;
 }
 
-- (void)updateData {
-  NSLog(@"%@", self.displayColumns);
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+  return [self.personManager count] * [self.displayColumns count];
+
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+  TextDataCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Person" forIndexPath:indexPath];
+
+  NSUInteger personIndex = (int)(indexPath.row / [self.displayColumns count]);
+  Person *person = [self.personManager personAtIndex:personIndex];
+  cell.label.text = [[person valueForKey:self.displayColumns[indexPath.row % [self.displayColumns count]]] description];
+  return cell;
+}
+
+- (void)viewWillLayoutSubviews {
+  [self updateItemSize];
 }
 
 @end

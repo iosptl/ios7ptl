@@ -47,5 +47,12 @@
   return self;
 }
 
+- (NSUInteger)count {
+  return [self.persons count];
+}
+
+- (Person *)personAtIndex:(NSUInteger)index {
+  return self.persons[index];
+}
 
 @end
