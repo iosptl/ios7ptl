@@ -53,7 +53,7 @@
   if (self.isReady) {
     [self.object addObserver:self forKeyPath:self.property
                      options:0 
-                     context:(__bridge void*)self];
+                     context:(void*)self];
   }
 }
 
@@ -73,7 +73,9 @@
 
 - (void)dealloc {
   if (_object && [_property length] > 0) {
-    [_object removeObserver:self forKeyPath:_property];
+    [_object removeObserver:self
+                 forKeyPath:_property
+                    context:(void *)self];
   }
 }
 
