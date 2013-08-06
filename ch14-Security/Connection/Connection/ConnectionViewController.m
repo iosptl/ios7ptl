@@ -59,17 +59,14 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
   SecPolicyRef policy = SecPolicyCreateBasicX509();
   SecTrustRef newTrust;
   CFIndex numberOfCerts = SecTrustGetCertificateCount(trust);
-  CFMutableArrayRef certs;
-  certs = CFArrayCreateMutable(NULL,
-                               numberOfCerts,
-                               &kCFTypeArrayCallBacks);
+  NSMutableArray *certs = [NSMutableArray new];
   for (NSUInteger index = 0; index < numberOfCerts; ++index) {
     SecCertificateRef cert;
     cert = SecTrustGetCertificateAtIndex(trust, index);
-    CFArrayAppendValue(certs, cert);
+    [certs addObject:(__bridge id)cert];
   }
 
-  status = SecTrustCreateWithCertificates(certs,
+  status = SecTrustCreateWithCertificates((__bridge CFArrayRef)certs,
                                           policy,
                                           &newTrust);
   if (status == errSecSuccess) {
@@ -78,8 +75,7 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
 
   CFRelease(policy);
   CFRelease(newTrust);
-  CFRelease(certs);
-  
+
   return status;
 }
 
@@ -124,14 +120,13 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
       case kSecTrustResultOtherError:
 // We've tried everything:
       case kSecTrustResultRecoverableTrustFailure:  
-        NSLog(@"Failing due to result: %lu", result);
+        NSLog(@"Failing due to result: %u", result);
         [challenge.sender cancelAuthenticationChallenge:challenge];
         break;
         
       case kSecTrustResultProceed:
-      case kSecTrustResultConfirm:
       case kSecTrustResultUnspecified: {
-        NSLog(@"Success with result: %lu", result);
+        NSLog(@"Success with result: %u", result);
         NSURLCredential *cred;
         cred = [NSURLCredential credentialForTrust:trust];
         [challenge.sender useCredential:cred 
@@ -140,8 +135,7 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
         break;
         
       default:
-        NSAssert(NO, @"Unexpected result from trust evaluation:%ld", 
-                 result);
+        NSAssert(NO, @"Unexpected result from trust evaluation:%u", result);
         break;
     }
   }
