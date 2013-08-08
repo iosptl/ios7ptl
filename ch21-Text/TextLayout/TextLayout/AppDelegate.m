@@ -1,14 +1,14 @@
 //
-//  PTLAppDelegate.m
+//  AppDelegate.m
 //  TextLayout
 //
-//  Created by Rob Napier on 7/26/13.
+//  Created by Rob Napier on 8/8/13.
 //  Copyright (c) 2013 Rob Napier. All rights reserved.
 //
 
-#import "PTLAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation PTLAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

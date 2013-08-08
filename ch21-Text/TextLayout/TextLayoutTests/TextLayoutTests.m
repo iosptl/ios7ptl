@@ -2,7 +2,7 @@
 //  TextLayoutTests.m
 //  TextLayoutTests
 //
-//  Created by Rob Napier on 7/26/13.
+//  Created by Rob Napier on 8/8/13.
 //  Copyright (c) 2013 Rob Napier. All rights reserved.
 //
 
@@ -17,14 +17,12 @@
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 

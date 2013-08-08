@@ -1,14 +1,14 @@
 //
-//  PTLAppDelegate.h
+//  AppDelegate.h
 //  TextLayout
 //
-//  Created by Rob Napier on 7/26/13.
+//  Created by Rob Napier on 8/8/13.
 //  Copyright (c) 2013 Rob Napier. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PTLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
