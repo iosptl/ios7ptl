@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DataViewController : UIViewController
-
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
-@property (strong, nonatomic) id dataObject;
-
+@property (nonatomic, readwrite, assign) NSUInteger pageNumber;
 @end

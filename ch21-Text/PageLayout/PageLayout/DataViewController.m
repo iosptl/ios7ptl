@@ -9,7 +9,8 @@
 #import "DataViewController.h"
 
 @interface DataViewController ()
-
+@property (readwrite, weak, nonatomic) IBOutlet UITextView *textView;
+@property (readwrite, weak, nonatomic) IBOutlet UILabel *pageLabel;
 @end
 
 @implementation DataViewController
@@ -29,7 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
+    self.pageLabel.text = [NSString stringWithFormat:@"Page: %d", self.pageNumber];
 }
 
 @end

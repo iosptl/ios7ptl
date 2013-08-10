@@ -52,6 +52,7 @@
 
   // Create a new view controller and pass suitable data.
   DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+  dataViewController.pageNumber = index + 1;
 //  dataViewController.dataObject = self.pageData[index];
   self.pageViewControllers[index] = dataViewController;
 
@@ -84,9 +85,9 @@
   }
 
   index++;
-  if (index == [self.pageViewControllers count]) {
-    return nil;
-  }
+//  if (index == [self.pageViewControllers count]) {
+//    return nil;
+//  }
   return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
 
