@@ -20,7 +20,6 @@
  */
 
 @interface ModelController() <NSLayoutManagerDelegate>
-//@property (readonly, strong, nonatomic) NSArray *pageData;
 @property (nonatomic, readonly) NSLayoutManager *layoutManager;
 @property (nonatomic, readonly) NSMutableArray *pageViewControllers;
 @end
@@ -53,7 +52,6 @@
   // Create a new view controller and pass suitable data.
   DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
   dataViewController.pageNumber = index + 1;
-//  dataViewController.dataObject = self.pageData[index];
   self.pageViewControllers[index] = dataViewController;
 
   return dataViewController;
