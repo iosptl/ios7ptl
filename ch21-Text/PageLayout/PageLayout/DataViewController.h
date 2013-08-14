@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DataViewController : UIViewController
-@property (nonatomic, readwrite, assign) NSUInteger pageNumber;
+
+- (instancetype)initWithLayoutManager:(NSLayoutManaer *)layoutManager pageNumber:(NSUInteger)pageNumber;
 @end

@@ -83,6 +83,15 @@
                      range:NSMakeRange(0, 1)];
   
   self.textView.attributedText = attrString;
+
+  NSDictionary *attributes = @{NSDocumentTypeDocumentAttribute:
+                                 NSHTMLTextDocumentType};
+  NSData *data = [attrString dataFromRange:NSMakeRange(0, attrString.length)
+                        documentAttributes:attributes
+                                     error:NULL];
+  NSString *s = [[NSString alloc] initWithData:data
+                                      encoding:NSUTF8StringEncoding];
+
 }
 
 @end

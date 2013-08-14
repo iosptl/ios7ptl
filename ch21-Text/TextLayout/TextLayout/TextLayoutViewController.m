@@ -8,7 +8,7 @@
 
 #import "TextLayoutViewController.h"
 
-@interface TextLayoutViewController ()
+@interface TextLayoutViewController () <NSLayoutManagerDelegate>
 @property (nonatomic, readwrite, strong) UIScrollView *scrollView;
 @property (nonatomic, readwrite, strong) NSLayoutManager *layoutManager;
 @property (nonatomic, readwrite, strong) NSArray *lastConstraints;
@@ -20,6 +20,7 @@
   [super viewDidLoad];
 
   self.layoutManager = [NSLayoutManager new];
+  self.layoutManager.delegate = self;
 
   NSString *path = [[NSBundle mainBundle] pathForResource:@"sample.txt" ofType:nil];
   NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
@@ -28,7 +29,7 @@
 
   UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
   [scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
-  scrollView.scrollEnabled = YES;
+  scrollView.pagingEnabled = YES;
   self.scrollView = scrollView;
   [self.view addSubview:scrollView];
 
@@ -36,11 +37,11 @@
   [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[scrollView]-|" options:0 metrics:nil views:views]];
   [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[scrollView]-|" options:0 metrics:nil views:views]];
 
-  [self layoutPage:0];
-  [self layoutPage:1];
+  [self layoutAnotherPage];
 }
 
-- (void)layoutPage:(NSUInteger)page {
+- (void)layoutAnotherPage {
+  NSLog(@"layout page");
   UIView *pageView = [[UIView alloc] initWithFrame:CGRectZero];
   [pageView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
@@ -59,15 +60,17 @@
   [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[textView1]-|" options:0 metrics:nil views:views]];
   [pageView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[textView2]-|" options:0 metrics:nil views:views]];
 
+  UIView *previousView = self.scrollView.subviews.lastObject;
   [self.scrollView addSubview:pageView];
 
-  if (page == 0) {
+  if (previousView == 0) {
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[page]" options:0 metrics:nil views:views]];
   }
   else {
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[previousPage][page]" options:0 metrics:nil views:
                                      @{@"page": pageView,
-                                       @"previousPage": self.scrollView.subviews[page-1]}]];
+                                       @"previousPage": previousView
+                                       }]];
   }
   [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[page(==scrollview)]" options:0 metrics:nil views:views]];
   [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[page(==scrollview)]|" options:0 metrics:nil views:views]];
@@ -77,7 +80,6 @@
   }
   self.lastConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[page]|" options:0 metrics:nil views:views];
   [self.scrollView addConstraints:self.lastConstraints];
-
 }
 
 - (UITextView *)newViewWithLayoutManager:(NSLayoutManager *)layoutManager {
@@ -89,6 +91,15 @@
   [textView setScrollEnabled:NO];
   [textView setEditable:NO];
   return textView;
+}
+
+- (void)layoutManager:(NSLayoutManager *)layoutManager didCompleteLayoutForTextContainer:(NSTextContainer *)textContainer atEnd:(BOOL)layoutFinishedFlag {
+  NSLog(@"%d: %@", layoutFinishedFlag, textContainer);
+  if (! textContainer) {
+    [self layoutAnotherPage];
+  }
+  else if (layoutFinishedFlag) {
+  }
 }
 
 @end

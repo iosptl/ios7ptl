@@ -9,28 +9,24 @@
 #import "DataViewController.h"
 
 @interface DataViewController ()
-@property (readwrite, weak, nonatomic) IBOutlet UITextView *textView;
-@property (readwrite, weak, nonatomic) IBOutlet UILabel *pageLabel;
+@property (readwrite, strong, nonatomic) UITextView *textView;
+@property (nonatomic, readwrite, strong) NSLayoutManager *layoutManager;
+@property (nonatomic, readwrite, assign) NSUInteger pageNumber;
 @end
 
 @implementation DataViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (instancetype)initWithLayoutManager:(NSLayoutManager *)layoutManager pageNumber:(NSUInteger)pageNumber {
+  self = [super init];
+  if (self) {
+    _layoutManager = layoutManager;
+    _pageNumber = pageNumber;
+  }
+  return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.pageLabel.text = [NSString stringWithFormat:@"Page: %d", self.pageNumber];
+- (void)loadView {
+  self.textView
 }
 
 @end
