@@ -25,12 +25,12 @@ static NSString * const kSpotKey = @"kSpotKey";
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
   
-  [coder RN_encodeSpot:self.spot forKey:kSpotKey];
+  [coder ptl_encodeSpot:self.spot forKey:kSpotKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
-  _spot = [coder RN_decodeSpotForKey:kSpotKey];
+  _spot = [coder ptl_decodeSpotForKey:kSpotKey];
 }
 
 - (void)setSpot:(Spot *)spot {

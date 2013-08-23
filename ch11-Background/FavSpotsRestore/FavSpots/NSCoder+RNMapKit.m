@@ -8,9 +8,9 @@
 
 #import "NSCoder+RNMapKit.h"
 
-@implementation NSCoder (RNMapKit)
+@implementation NSCoder (PTLMapKit)
 
-- (void)RN_encodeMKCoordinateRegion:(MKCoordinateRegion)region
+- (void)ptl_encodeMKCoordinateRegion:(MKCoordinateRegion)region
                              forKey:(NSString *)key {
   [self encodeObject:@[ @(region.center.latitude),
    @(region.center.longitude),
@@ -19,7 +19,7 @@
               forKey:key];
 }
 
-- (MKCoordinateRegion)RN_decodeMKCoordinateRegionForKey:(NSString *)key {
+- (MKCoordinateRegion)ptl_decodeMKCoordinateRegionForKey:(NSString *)key {
   NSArray *array = [self decodeObjectForKey:key];
   MKCoordinateRegion region;
   region.center.latitude = [array[0] doubleValue];

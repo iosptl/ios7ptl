@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface NSCoder (RNMapKit)
-- (void)RN_encodeMKCoordinateRegion:(MKCoordinateRegion)region
+@interface NSCoder (PTLMapKit)
+- (void)ptl_encodeMKCoordinateRegion:(MKCoordinateRegion)region
                              forKey:(NSString *)key;
-- (MKCoordinateRegion)RN_decodeMKCoordinateRegionForKey:(NSString *)key;
+- (MKCoordinateRegion)ptl_decodeMKCoordinateRegionForKey:(NSString *)key;
 @end

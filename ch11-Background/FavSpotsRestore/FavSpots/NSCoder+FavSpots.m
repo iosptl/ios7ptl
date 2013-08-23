@@ -12,7 +12,7 @@
 
 @implementation NSCoder (FavSpots)
 
-- (void)RN_encodeSpot:(Spot *)spot forKey:(NSString *)key {
+- (void)ptl_encodeSpot:(Spot *)spot forKey:(NSString *)key {
   NSManagedObjectID *spotID = spot.objectID;
   NSAssert(! [spotID isTemporaryID],
            @"Spot must not be temporary during state saving. %@",
@@ -21,7 +21,7 @@
   [self encodeObject:[spotID URIRepresentation] forKey:key];
 }
 
-- (Spot *)RN_decodeSpotForKey:(NSString *)key {
+- (Spot *)ptl_decodeSpotForKey:(NSString *)key {
   Spot *spot = nil;
   NSURL *spotURI = [self decodeObjectForKey:key];
   
