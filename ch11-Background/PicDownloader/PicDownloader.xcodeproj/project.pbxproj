@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2A23E317C7FD42003E0FBB /* PTLDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A23E217C7FD42003E0FBB /* PTLDownloadManager.m */; };
+		FB2A23E617C7FEA2003E0FBB /* PictureCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A23E517C7FEA2003E0FBB /* PictureCollection.m */; };
+		FB2C829817C915E7001BD504 /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2C829717C915E7001BD504 /* PictureCell.m */; };
+		FB2C829B17C91EB4001BD504 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2C829A17C91EB4001BD504 /* Picture.m */; };
 		FB2DDAC417C7CB4000D8717F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC317C7CB4000D8717F /* Foundation.framework */; };
 		FB2DDAC617C7CB4000D8717F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC517C7CB4000D8717F /* CoreGraphics.framework */; };
 		FB2DDAC817C7CB4000D8717F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC717C7CB4000D8717F /* UIKit.framework */; };
@@ -14,7 +18,7 @@
 		FB2DDAD017C7CB4000D8717F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDACF17C7CB4000D8717F /* main.m */; };
 		FB2DDAD417C7CB4000D8717F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDAD317C7CB4000D8717F /* AppDelegate.m */; };
 		FB2DDAD717C7CB4000D8717F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2DDAD517C7CB4000D8717F /* Main.storyboard */; };
-		FB2DDADA17C7CB4000D8717F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDAD917C7CB4000D8717F /* ViewController.m */; };
+		FB2DDADA17C7CB4000D8717F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDAD917C7CB4000D8717F /* MainViewController.m */; };
 		FB2DDADC17C7CB4000D8717F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2DDADB17C7CB4000D8717F /* Images.xcassets */; };
 		FB2DDAE317C7CB4000D8717F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAE217C7CB4000D8717F /* XCTest.framework */; };
 		FB2DDAE417C7CB4000D8717F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC317C7CB4000D8717F /* Foundation.framework */; };
@@ -34,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2A23E117C7FD42003E0FBB /* PTLDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTLDownloadManager.h; path = PicDownloader/PTLDownloadManager.h; sourceTree = "<group>"; };
+		FB2A23E217C7FD42003E0FBB /* PTLDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTLDownloadManager.m; path = PicDownloader/PTLDownloadManager.m; sourceTree = "<group>"; };
+		FB2A23E417C7FEA2003E0FBB /* PictureCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollection.h; sourceTree = "<group>"; };
+		FB2A23E517C7FEA2003E0FBB /* PictureCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollection.m; sourceTree = "<group>"; };
+		FB2C829617C915E7001BD504 /* PictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCell.h; sourceTree = "<group>"; };
+		FB2C829717C915E7001BD504 /* PictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCell.m; sourceTree = "<group>"; };
+		FB2C829917C91EB4001BD504 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		FB2C829A17C91EB4001BD504 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		FB2DDAC017C7CB4000D8717F /* PicDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2DDAC317C7CB4000D8717F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB2DDAC517C7CB4000D8717F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,11 +54,11 @@
 		FB2DDACD17C7CB4000D8717F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB2DDACF17C7CB4000D8717F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB2DDAD117C7CB4000D8717F /* PicDownloader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PicDownloader-Prefix.pch"; sourceTree = "<group>"; };
-		FB2DDAD217C7CB4000D8717F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FB2DDAD317C7CB4000D8717F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB2DDAD217C7CB4000D8717F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PicDownloader/AppDelegate.h; sourceTree = "<group>"; };
+		FB2DDAD317C7CB4000D8717F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PicDownloader/AppDelegate.m; sourceTree = "<group>"; };
 		FB2DDAD617C7CB4000D8717F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB2DDAD817C7CB4000D8717F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB2DDAD917C7CB4000D8717F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB2DDAD817C7CB4000D8717F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FB2DDAD917C7CB4000D8717F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		FB2DDADB17C7CB4000D8717F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB2DDAE117C7CB4000D8717F /* PicDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2DDAE217C7CB4000D8717F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,6 +94,10 @@
 		FB2DDAB717C7CB4000D8717F = {
 			isa = PBXGroup;
 			children = (
+				FB2DDAD217C7CB4000D8717F /* AppDelegate.h */,
+				FB2DDAD317C7CB4000D8717F /* AppDelegate.m */,
+				FB2A23E117C7FD42003E0FBB /* PTLDownloadManager.h */,
+				FB2A23E217C7FD42003E0FBB /* PTLDownloadManager.m */,
 				FB2DDAC917C7CB4000D8717F /* PicDownloader */,
 				FB2DDAE817C7CB4000D8717F /* PicDownloaderTests */,
 				FB2DDAC217C7CB4000D8717F /* Frameworks */,
@@ -112,11 +128,15 @@
 		FB2DDAC917C7CB4000D8717F /* PicDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				FB2DDAD217C7CB4000D8717F /* AppDelegate.h */,
-				FB2DDAD317C7CB4000D8717F /* AppDelegate.m */,
 				FB2DDAD517C7CB4000D8717F /* Main.storyboard */,
-				FB2DDAD817C7CB4000D8717F /* ViewController.h */,
-				FB2DDAD917C7CB4000D8717F /* ViewController.m */,
+				FB2DDAD817C7CB4000D8717F /* MainViewController.h */,
+				FB2DDAD917C7CB4000D8717F /* MainViewController.m */,
+				FB2C829617C915E7001BD504 /* PictureCell.h */,
+				FB2C829717C915E7001BD504 /* PictureCell.m */,
+				FB2A23E417C7FEA2003E0FBB /* PictureCollection.h */,
+				FB2A23E517C7FEA2003E0FBB /* PictureCollection.m */,
+				FB2C829917C91EB4001BD504 /* Picture.h */,
+				FB2C829A17C91EB4001BD504 /* Picture.m */,
 				FB2DDADB17C7CB4000D8717F /* Images.xcassets */,
 				FB2DDACA17C7CB4000D8717F /* Supporting Files */,
 			);
@@ -196,9 +216,17 @@
 		FB2DDAB817C7CB4000D8717F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Rob Napier";
 				TargetAttributes = {
+					FB2DDABF17C7CB4000D8717F = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					FB2DDAE017C7CB4000D8717F = {
 						TestTargetID = FB2DDABF17C7CB4000D8717F;
 					};
@@ -249,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2DDADA17C7CB4000D8717F /* ViewController.m in Sources */,
+				FB2C829817C915E7001BD504 /* PictureCell.m in Sources */,
+				FB2C829B17C91EB4001BD504 /* Picture.m in Sources */,
+				FB2DDADA17C7CB4000D8717F /* MainViewController.m in Sources */,
+				FB2A23E617C7FEA2003E0FBB /* PictureCollection.m in Sources */,
 				FB2DDAD417C7CB4000D8717F /* AppDelegate.m in Sources */,
+				FB2A23E317C7FD42003E0FBB /* PTLDownloadManager.m in Sources */,
 				FB2DDAD017C7CB4000D8717F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +488,7 @@
 				FB2DDAF417C7CB4000D8717F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB2DDAF517C7CB4000D8717F /* Build configuration list for PBXNativeTarget "PicDownloaderTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +497,7 @@
 				FB2DDAF717C7CB4000D8717F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

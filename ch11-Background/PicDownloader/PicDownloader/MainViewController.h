@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class PictureCollection;
 
+@interface MainViewController : UICollectionViewController
+@property (nonatomic, readwrite, strong) PictureCollection *pictureCollection;
 @end
