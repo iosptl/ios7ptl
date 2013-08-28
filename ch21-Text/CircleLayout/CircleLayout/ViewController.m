@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PathTextContainer.h"
+#import "LayoutView.h"
 
 @interface ViewController ()
 @end
@@ -24,7 +25,10 @@
   [style setAlignment:NSTextAlignmentJustified];
 
   NSTextStorage *text = [[NSTextStorage alloc] initWithString:string
-                                                   attributes:@{NSParagraphStyleAttributeName: style}];
+                                                   attributes:@{
+                                                                NSParagraphStyleAttributeName: style,
+                                                                NSFontAttributeName: [UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+                                                                }];
   NSLayoutManager *layoutManager = [NSLayoutManager new];
   [text addLayoutManager:layoutManager];
 
@@ -42,7 +46,7 @@
 
   textContainer.inclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:firstCircle],
                                     [UIBezierPath bezierPathWithOvalInRect:secondCircle]];
-//  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
+  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
 
   [layoutManager addTextContainer:textContainer];
 

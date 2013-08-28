@@ -23,6 +23,7 @@
 		FB69254217CD6046004D081C /* CircleLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69254117CD6046004D081C /* CircleLayoutTests.m */; };
 		FB69254C17CD604E004D081C /* sample.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB69254B17CD604E004D081C /* sample.txt */; };
 		FB69255217CD63BD004D081C /* PathTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69255117CD63BD004D081C /* PathTextContainer.m */; };
+		FB69255817CE56D1004D081C /* LayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69255717CE56D1004D081C /* LayoutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		FB69254B17CD604E004D081C /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.txt; sourceTree = "<group>"; };
 		FB69255017CD63BD004D081C /* PathTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathTextContainer.h; path = CircleLayout/PathTextContainer.h; sourceTree = "<group>"; };
 		FB69255117CD63BD004D081C /* PathTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathTextContainer.m; path = CircleLayout/PathTextContainer.m; sourceTree = "<group>"; };
+		FB69255617CE56D1004D081C /* LayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutView.h; path = CircleLayout/LayoutView.h; sourceTree = "<group>"; };
+		FB69255717CE56D1004D081C /* LayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayoutView.m; path = CircleLayout/LayoutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				FB69254B17CD604E004D081C /* sample.txt */,
 				FB69255017CD63BD004D081C /* PathTextContainer.h */,
 				FB69255117CD63BD004D081C /* PathTextContainer.m */,
+				FB69255617CE56D1004D081C /* LayoutView.h */,
+				FB69255717CE56D1004D081C /* LayoutView.m */,
 				FB69251C17CD6046004D081C /* CircleLayout */,
 				FB69253B17CD6046004D081C /* CircleLayoutTests */,
 				FB69251517CD6046004D081C /* Frameworks */,
@@ -261,6 +266,7 @@
 				FB69252D17CD6046004D081C /* ViewController.m in Sources */,
 				FB69252717CD6046004D081C /* AppDelegate.m in Sources */,
 				FB69255217CD63BD004D081C /* PathTextContainer.m in Sources */,
+				FB69255817CE56D1004D081C /* LayoutView.m in Sources */,
 				FB69252317CD6046004D081C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

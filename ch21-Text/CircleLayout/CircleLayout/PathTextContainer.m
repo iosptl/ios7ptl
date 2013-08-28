@@ -11,8 +11,8 @@
 @implementation PathTextContainer
 
 CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
-  size_t width = floorf(rect.size.width);
-  size_t height = floorf(rect.size.height);
+  size_t width = ceilf(rect.size.width);
+  size_t height = ceilf(rect.size.height);
   uint8_t *bits = calloc(width * height, sizeof(*bits));
   CGContextRef bitmapContext =
   CGBitmapContextCreate(bits,
@@ -54,9 +54,35 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
     range.length = rect.origin.x + column - range.location - 1;
 
     if (remainingRect) {
-      *remainingRect = CGRectMake(rect.origin.x + column, CGRectGetMinY(rect),
-                                  CGRectGetWidth(rect) - NSMaxRange(range) - 1,
-                                  CGRectGetHeight(rect));
+      // Find next open area
+      column++;
+      NSUInteger nextOpenColumn = NSNotFound;
+      for (; column < width; ++column) {
+        BOOL isGoodColumn = YES;
+        for (NSUInteger y = 0; y < height; ++y) {
+          if (bits[y * width + column] < 128) {
+            isGoodColumn = NO;
+            break;
+          }
+        }
+
+        if (isGoodColumn) {
+          nextOpenColumn = column;
+          break;
+        }
+      }
+
+      if (nextOpenColumn != NSNotFound) {
+        CGRect newRemainder = CGRectMake(rect.origin.x + column, rect.origin.y,
+                                        ceilf(CGRectGetMaxX(rect) - NSMaxRange(range) - 1),
+                                        CGRectGetHeight(rect));
+        if (! CGRectIsEmpty(newRemainder)) {
+          if (! CGRectIsEmpty(*remainingRect)) {
+            newRemainder = CGRectUnion(newRemainder, *remainingRect);
+          }
+          *remainingRect = newRemainder;
+        }
+      }
     }
   }
 
@@ -89,6 +115,11 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
       rect = clipRectToPath(rect, path, remainingRect);
     }
   }
+  rect = CGRectIntersection(rect, proposedRect);
+  NSLog(@"p:%@,f:%@,rr:%@", NSStringFromCGRect(proposedRect),
+        NSStringFromCGRect(rect),
+        NSStringFromCGRect(*remainingRect));
+
 
   return rect;
 }
