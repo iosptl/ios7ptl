@@ -22,9 +22,7 @@
 		FB69254017CD6046004D081C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB69253E17CD6046004D081C /* InfoPlist.strings */; };
 		FB69254217CD6046004D081C /* CircleLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69254117CD6046004D081C /* CircleLayoutTests.m */; };
 		FB69254C17CD604E004D081C /* sample.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB69254B17CD604E004D081C /* sample.txt */; };
-		FB69254F17CD62E5004D081C /* CircleTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69254E17CD62E5004D081C /* CircleTextContainer.m */; };
 		FB69255217CD63BD004D081C /* PathTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69255117CD63BD004D081C /* PathTextContainer.m */; };
-		FB69255517CE37F4004D081C /* LayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69255417CE37F4004D081C /* LayoutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +56,8 @@
 		FB69253F17CD6046004D081C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB69254117CD6046004D081C /* CircleLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleLayoutTests.m; sourceTree = "<group>"; };
 		FB69254B17CD604E004D081C /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.txt; sourceTree = "<group>"; };
-		FB69254D17CD62E5004D081C /* CircleTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTextContainer.h; sourceTree = "<group>"; };
-		FB69254E17CD62E5004D081C /* CircleTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTextContainer.m; sourceTree = "<group>"; };
 		FB69255017CD63BD004D081C /* PathTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathTextContainer.h; path = CircleLayout/PathTextContainer.h; sourceTree = "<group>"; };
 		FB69255117CD63BD004D081C /* PathTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathTextContainer.m; path = CircleLayout/PathTextContainer.m; sourceTree = "<group>"; };
-		FB69255317CE37F4004D081C /* LayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutView.h; path = CircleLayout/LayoutView.h; sourceTree = "<group>"; };
-		FB69255417CE37F4004D081C /* LayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayoutView.m; path = CircleLayout/LayoutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +90,6 @@
 				FB69254B17CD604E004D081C /* sample.txt */,
 				FB69255017CD63BD004D081C /* PathTextContainer.h */,
 				FB69255117CD63BD004D081C /* PathTextContainer.m */,
-				FB69254D17CD62E5004D081C /* CircleTextContainer.h */,
-				FB69254E17CD62E5004D081C /* CircleTextContainer.m */,
-				FB69255317CE37F4004D081C /* LayoutView.h */,
-				FB69255417CE37F4004D081C /* LayoutView.m */,
 				FB69251C17CD6046004D081C /* CircleLayout */,
 				FB69253B17CD6046004D081C /* CircleLayoutTests */,
 				FB69251517CD6046004D081C /* Frameworks */,
@@ -270,8 +260,6 @@
 			files = (
 				FB69252D17CD6046004D081C /* ViewController.m in Sources */,
 				FB69252717CD6046004D081C /* AppDelegate.m in Sources */,
-				FB69255517CE37F4004D081C /* LayoutView.m in Sources */,
-				FB69254F17CD62E5004D081C /* CircleTextContainer.m in Sources */,
 				FB69255217CD63BD004D081C /* PathTextContainer.m in Sources */,
 				FB69252317CD6046004D081C /* main.m in Sources */,
 			);

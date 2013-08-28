@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-//#import "CircleTextContainer.h"
 #import "PathTextContainer.h"
-#import "LayoutView.h"
 
 @interface ViewController ()
 @end
@@ -32,7 +30,13 @@
 
   CGRect textViewFrame = CGRectMake(40, 40, 400, 400);
   PathTextContainer *textContainer = [[PathTextContainer alloc] initWithSize:textViewFrame.size];
-  textContainer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 400, 400)];
+  CGRect textViewBounds = {
+    .origin = CGPointZero,
+    .size = textViewFrame.size
+  };
+  
+  textContainer.path = [UIBezierPath bezierPathWithOvalInRect:textViewBounds];
+  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
 
   [layoutManager addTextContainer:textContainer];
 
