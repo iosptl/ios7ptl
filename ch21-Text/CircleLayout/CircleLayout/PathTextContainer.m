@@ -8,32 +8,29 @@
 
 #import "PathTextContainer.h"
 
+@interface PathTextContainer ()
+@property (nonatomic, readwrite, strong) NSMutableData *inclusionPathBitmap;
+@property (nonatomic, readwrite, assign) CGSize inclusionPathBitmapSize;
+@property (nonatomic, readwrite, assign) CGRect inclusionPathBoundingBox;
+
+@end
 @implementation PathTextContainer
 
-CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
-  size_t width = ceilf(rect.size.width);
-  size_t height = ceilf(rect.size.height);
-  uint8_t *bits = calloc(width * height, sizeof(*bits));
-  CGContextRef bitmapContext =
-  CGBitmapContextCreate(bits,
-                        width,
-                        height,
-                        sizeof(*bits) * 8,
-                        width,
-                        NULL,
-                        (CGBitmapInfo)kCGImageAlphaOnly);
-  CGContextSetAllowsAntialiasing(bitmapContext, NO);
+- (CGRect)clipRectToInclusionPaths:(CGRect)rect remainingRect:(CGRect *)remainingRect {
+  const uint8_t *bits = self.inclusionPathBitmap.bytes;
 
-  CGContextTranslateCTM(bitmapContext, -rect.origin.x, -rect.origin.y);
-  CGContextAddPath(bitmapContext, path);
-  CGContextFillPath(bitmapContext);
+  NSUInteger minX = CGRectGetMinX(rect);
+  NSUInteger minY = CGRectGetMinY(rect);
+  NSUInteger maxX = CGRectGetMaxX(rect);
+  NSUInteger maxY = CGRectGetMaxY(rect);
+  NSUInteger width = (NSUInteger)self.inclusionPathBitmapSize.width;
 
   BOOL foundStart = NO;
   NSRange range = NSMakeRange(0, 0);
-  NSUInteger column = 0;
-  for (; column < width; ++column) {
+  NSUInteger column = minX;
+  for (; column < maxX; ++column) {
     BOOL isGoodColumn = YES;
-    for (NSUInteger y = 0; y < height; ++y) {
+    for (NSUInteger y = minY; y < maxY; ++y) {
       if (bits[y * width + column] < 128) {
         isGoodColumn = NO;
         break;
@@ -42,7 +39,7 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
 
     if (isGoodColumn && ! foundStart) {
       foundStart = YES;
-      range.location = rect.origin.x + column;
+      range.location = column;
     }
     else if (!isGoodColumn && foundStart) {
       break;
@@ -51,15 +48,15 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
 
   if (foundStart) {
     // x is 1 past the last full-height column
-    range.length = rect.origin.x + column - range.location - 1;
+    range.length = column - range.location - 1;
 
     if (remainingRect) {
       // Find next open area
       column++;
       NSUInteger nextOpenColumn = NSNotFound;
-      for (; column < width; ++column) {
+      for (; column < maxX; ++column) {
         BOOL isGoodColumn = YES;
-        for (NSUInteger y = 0; y < height; ++y) {
+        for (NSUInteger y = minY; y < maxY; ++y) {
           if (bits[y * width + column] < 128) {
             isGoodColumn = NO;
             break;
@@ -73,7 +70,7 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
       }
 
       if (nextOpenColumn != NSNotFound) {
-        CGRect newRemainder = CGRectMake(rect.origin.x + column, rect.origin.y,
+        CGRect newRemainder = CGRectMake(column, rect.origin.y,
                                         ceilf(CGRectGetMaxX(rect) - NSMaxRange(range) - 1),
                                         CGRectGetHeight(rect));
         if (! CGRectIsEmpty(newRemainder)) {
@@ -86,13 +83,40 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
     }
   }
 
-  CGContextRelease(bitmapContext);
-  free(bits);
-
   CGRect clipRect =
   CGRectMake(range.location, rect.origin.y,
              range.length, rect.size.height);
   return clipRect;
+}
+
+- (void)setInclusionPaths:(NSArray *)inclusionPaths {
+  CGMutablePathRef path = CGPathCreateMutable();
+  for (UIBezierPath *inclusionPath in inclusionPaths) {
+    CGPathAddPath(path, NULL, inclusionPath.CGPath);
+  }
+
+  CGRect boundingBox = CGPathGetPathBoundingBox(path);
+  self.inclusionPathBoundingBox = boundingBox;
+  CGRect bounds = CGRectMake(0, 0, CGRectGetMaxX(boundingBox), CGRectGetMaxY(boundingBox));
+
+  size_t width = ceilf(bounds.size.width);
+  size_t height = ceilf(bounds.size.height);
+  self.inclusionPathBitmapSize = CGSizeMake(width, height);
+  self.inclusionPathBitmap = [NSMutableData dataWithLength:width * height];
+  uint8_t *bits = self.inclusionPathBitmap.mutableBytes;
+  CGContextRef bitmapContext =
+  CGBitmapContextCreate(bits,
+                        width,
+                        height,
+                        sizeof(*bits) * 8,
+                        width,
+                        NULL,
+                        (CGBitmapInfo)kCGImageAlphaOnly);
+  CGContextSetAllowsAntialiasing(bitmapContext, NO);
+  CGContextAddPath(bitmapContext, path);
+  CGContextFillPath(bitmapContext);
+  CGPathRelease(path);
+  CGContextRelease(bitmapContext);
 }
 
 - (CGRect)lineFragmentRectForProposedRect:(CGRect)proposedRect
@@ -103,20 +127,18 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
                                                atIndex:characterIndex
                                       writingDirection:baseWritingDirection
                                          remainingRect:remainingRect];
-  if (self.inclusionPaths) {
-    CGMutablePathRef path = CGPathCreateMutable();
-    for (UIBezierPath *inclusionPath in self.inclusionPaths) {
-      CGPathAddPath(path, NULL, inclusionPath.CGPath);
-    }
-
-    CGRect boundingBox = CGPathGetPathBoundingBox(path);
-    rect = CGRectIntersection(boundingBox, rect);
+  if (self.inclusionPathBitmap) {
+    rect = CGRectIntersection(self.inclusionPathBoundingBox, rect);
     if (! CGRectIsEmpty(rect)) {
-      rect = clipRectToPath(rect, path, remainingRect);
+      rect = [self clipRectToInclusionPaths:rect remainingRect:remainingRect];
     }
-    CGPathRelease(path);
   }
   rect = CGRectIntersection(rect, proposedRect);
+
+//NSLog(@"p:%@, f:%@, r:%@",
+//      NSStringFromCGRect(proposedRect),
+//      NSStringFromCGRect(rect),
+//      NSStringFromCGRect(*remainingRect));
 
   return rect;
 }

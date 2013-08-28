@@ -22,26 +22,28 @@
   NSTextStorage *text = [[NSTextStorage alloc] initWithString:string
                                                    attributes:@{
                                                                 NSParagraphStyleAttributeName: style,
-                                                                NSFontAttributeName: [UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+                                                                NSFontAttributeName: [UIFont preferredFontForTextStyle:UIFontTextStyleCaption2]
                                                                 }];
   NSLayoutManager *layoutManager = [NSLayoutManager new];
   [text addLayoutManager:layoutManager];
 
-  CGRect textViewFrame = CGRectMake(30, 40, 708, 344);
+  CGRect textViewFrame = CGRectMake(30, 40, 708, 400);
   PathTextContainer *textContainer = [[PathTextContainer alloc] initWithSize:textViewFrame.size];
 
-  CGRect firstCircle = CGRectMake(0, 0,
+  CGRect firstArea = CGRectMake(0, 0,
                                   CGRectGetWidth(textViewFrame) / 2,
                                   CGRectGetHeight(textViewFrame));
 
-  CGRect secondCircle = CGRectMake(CGRectGetMaxX(firstCircle),
-                                   CGRectGetMinY(firstCircle),
-                                   CGRectGetWidth(firstCircle),
-                                   CGRectGetHeight(firstCircle));
+  CGRect secondArea = CGRectMake(CGRectGetMaxX(firstArea),
+                                   CGRectGetMinY(firstArea),
+                                   CGRectGetWidth(firstArea),
+                                   CGRectGetHeight(firstArea));
 
-  textContainer.inclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:firstCircle],
-                                    [UIBezierPath bezierPathWithOvalInRect:secondCircle]];
-  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(125, 75, 100, 100)]];
+  textContainer.inclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:firstArea],
+                                    [UIBezierPath bezierPathWithRoundedRect:secondArea
+                                                               cornerRadius:100]
+                                    ];
+  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 75, 125, 125)]];
 
   [layoutManager addTextContainer:textContainer];
 
