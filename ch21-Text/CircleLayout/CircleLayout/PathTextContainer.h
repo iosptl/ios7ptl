@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PathTextContainer.h
 //  CircleLayout
 //
 //  Created by Rob Napier on 8/27/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PathTextContainer : NSTextContainer
+@property (nonatomic, readwrite, copy) UIBezierPath *path;
 @end
