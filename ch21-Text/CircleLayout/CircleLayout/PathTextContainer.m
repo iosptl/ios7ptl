@@ -22,7 +22,7 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
                         width,
                         NULL,
                         (CGBitmapInfo)kCGImageAlphaOnly);
-  CGContextSetShouldAntialias(bitmapContext, NO);
+  CGContextSetAllowsAntialiasing(bitmapContext, NO);
 
   CGContextTranslateCTM(bitmapContext, -rect.origin.x, -rect.origin.y);
   CGContextAddPath(bitmapContext, path);
@@ -114,12 +114,9 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
     if (! CGRectIsEmpty(rect)) {
       rect = clipRectToPath(rect, path, remainingRect);
     }
+    CGPathRelease(path);
   }
   rect = CGRectIntersection(rect, proposedRect);
-  NSLog(@"p:%@,f:%@,rr:%@", NSStringFromCGRect(proposedRect),
-        NSStringFromCGRect(rect),
-        NSStringFromCGRect(*remainingRect));
-
 
   return rect;
 }

@@ -8,15 +8,10 @@
 
 #import "ViewController.h"
 #import "PathTextContainer.h"
-#import "LayoutView.h"
-
-@interface ViewController ()
-@end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
   NSString *path = [[NSBundle mainBundle] pathForResource:@"sample.txt" ofType:nil];
   NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
@@ -46,13 +41,17 @@
 
   textContainer.inclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:firstCircle],
                                     [UIBezierPath bezierPathWithOvalInRect:secondCircle]];
-  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
+  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(125, 75, 100, 100)]];
 
   [layoutManager addTextContainer:textContainer];
 
   UITextView *textView = [[UITextView alloc] initWithFrame:textViewFrame
                                              textContainer:textContainer];
+  textView.allowsEditingTextAttributes = YES;
 
+  // These kinds of settings must be applied after assigning to the UITextView, since UITextView will try to override them.
+  layoutManager.allowsNonContiguousLayout = NO; // Otherwise UITextView may get confused during editing.
+  layoutManager.hyphenationFactor = 1.0;
 
   [self.view addSubview:textView];
 }
