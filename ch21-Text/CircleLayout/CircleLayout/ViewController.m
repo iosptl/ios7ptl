@@ -28,15 +28,21 @@
   NSLayoutManager *layoutManager = [NSLayoutManager new];
   [text addLayoutManager:layoutManager];
 
-  CGRect textViewFrame = CGRectMake(40, 40, 400, 400);
+  CGRect textViewFrame = CGRectMake(30, 40, 708, 344);
   PathTextContainer *textContainer = [[PathTextContainer alloc] initWithSize:textViewFrame.size];
-  CGRect textViewBounds = {
-    .origin = CGPointZero,
-    .size = textViewFrame.size
-  };
-  
-  textContainer.inclusionPaths = @[[UIBezierPath bezierPathWithOvalInRect:textViewBounds]];
-  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
+
+  CGRect firstCircle = CGRectMake(0, 0,
+                                  CGRectGetWidth(textViewFrame) / 2,
+                                  CGRectGetHeight(textViewFrame));
+
+  CGRect secondCircle = CGRectMake(CGRectGetMaxX(firstCircle),
+                                   CGRectGetMinY(firstCircle),
+                                   CGRectGetWidth(firstCircle),
+                                   CGRectGetHeight(firstCircle));
+
+  textContainer.inclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:firstCircle],
+                                    [UIBezierPath bezierPathWithOvalInRect:secondCircle]];
+//  textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
 
   [layoutManager addTextContainer:textContainer];
 

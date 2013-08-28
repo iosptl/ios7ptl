@@ -30,11 +30,11 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
 
   BOOL foundStart = NO;
   NSRange range = NSMakeRange(0, 0);
-  NSUInteger x = 0;
-  for (; x < width; ++x) {
+  NSUInteger column = 0;
+  for (; column < width; ++column) {
     BOOL isGoodColumn = YES;
     for (NSUInteger y = 0; y < height; ++y) {
-      if (bits[y * width + x] < 128) {
+      if (bits[y * width + column] < 128) {
         isGoodColumn = NO;
         break;
       }
@@ -42,22 +42,29 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
 
     if (isGoodColumn && ! foundStart) {
       foundStart = YES;
-      range.location = x;
+      range.location = rect.origin.x + column;
     }
     else if (!isGoodColumn && foundStart) {
       break;
     }
   }
+
   if (foundStart) {
     // x is 1 past the last full-height column
-    range.length = x - range.location - 1;
+    range.length = rect.origin.x + column - range.location - 1;
+
+    if (remainingRect) {
+      *remainingRect = CGRectMake(rect.origin.x + column, CGRectGetMinY(rect),
+                                  CGRectGetWidth(rect) - NSMaxRange(range) - 1,
+                                  CGRectGetHeight(rect));
+    }
   }
 
   CGContextRelease(bitmapContext);
   free(bits);
 
   CGRect clipRect =
-  CGRectMake(rect.origin.x + range.location, rect.origin.y,
+  CGRectMake(range.location, rect.origin.y,
              range.length, rect.size.height);
   return clipRect;
 }
