@@ -70,11 +70,16 @@ CGRect clipRectToPath(CGRect rect, CGPathRef path, CGRect *remainingRect) {
                                                atIndex:characterIndex
                                       writingDirection:baseWritingDirection
                                          remainingRect:remainingRect];
-  if (self.path) {
-    CGRect boundingBox = self.path.bounds;
+  if (self.inclusionPaths) {
+    CGMutablePathRef path = CGPathCreateMutable();
+    for (UIBezierPath *inclusionPath in self.inclusionPaths) {
+      CGPathAddPath(path, NULL, inclusionPath.CGPath);
+    }
+
+    CGRect boundingBox = CGPathGetPathBoundingBox(path);
     rect = CGRectIntersection(boundingBox, rect);
     if (! CGRectIsEmpty(rect)) {
-      rect = clipRectToPath(rect, self.path.CGPath, remainingRect);
+      rect = clipRectToPath(rect, path, remainingRect);
     }
   }
 

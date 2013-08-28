@@ -35,7 +35,7 @@
     .size = textViewFrame.size
   };
   
-  textContainer.path = [UIBezierPath bezierPathWithOvalInRect:textViewBounds];
+  textContainer.inclusionPaths = @[[UIBezierPath bezierPathWithOvalInRect:textViewBounds]];
   textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(200, 100, 100, 100)]];
 
   [layoutManager addTextContainer:textContainer];

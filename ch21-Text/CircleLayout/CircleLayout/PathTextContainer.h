@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PathTextContainer : NSTextContainer
-@property (nonatomic, readwrite, copy) UIBezierPath *path;
+@property (nonatomic, readwrite, copy) NSArray *inclusionPaths;
 @end
