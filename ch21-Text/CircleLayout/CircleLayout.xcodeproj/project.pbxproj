@@ -208,7 +208,7 @@
 				ORGANIZATIONNAME = "Rob Napier";
 				TargetAttributes = {
 					FB69253317CD6046004D081C = {
-						TestTargetID = FB69251217CD6046004D081C;
+						TestTargetID = FB69251217CD6046004D081C /* CircleLayout */;
 					};
 				};
 			};

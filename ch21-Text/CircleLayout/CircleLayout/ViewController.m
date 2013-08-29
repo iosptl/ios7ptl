@@ -43,6 +43,7 @@
                                     [UIBezierPath bezierPathWithRoundedRect:secondArea
                                                                cornerRadius:100]
                                     ];
+
   textContainer.exclusionPaths = @[ [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 75, 125, 125)]];
 
   [layoutManager addTextContainer:textContainer];
