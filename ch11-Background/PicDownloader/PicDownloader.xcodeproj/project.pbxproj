@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB2A23E317C7FD42003E0FBB /* PTLDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A23E217C7FD42003E0FBB /* PTLDownloadManager.m */; };
+		FB2A23E617C7FEA2003E0FBB /* PictureCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A23E517C7FEA2003E0FBB /* PictureCollection.m */; };
+		FB2C829817C915E7001BD504 /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2C829717C915E7001BD504 /* PictureCell.m */; };
+		FB2C829B17C91EB4001BD504 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2C829A17C91EB4001BD504 /* Picture.m */; };
+		FB2DDAC417C7CB4000D8717F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC317C7CB4000D8717F /* Foundation.framework */; };
+		FB2DDAC617C7CB4000D8717F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC517C7CB4000D8717F /* CoreGraphics.framework */; };
+		FB2DDAC817C7CB4000D8717F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC717C7CB4000D8717F /* UIKit.framework */; };
+		FB2DDACE17C7CB4000D8717F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB2DDACC17C7CB4000D8717F /* InfoPlist.strings */; };
+		FB2DDAD017C7CB4000D8717F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDACF17C7CB4000D8717F /* main.m */; };
+		FB2DDAD417C7CB4000D8717F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDAD317C7CB4000D8717F /* AppDelegate.m */; };
+		FB2DDAD717C7CB4000D8717F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2DDAD517C7CB4000D8717F /* Main.storyboard */; };
+		FB2DDADA17C7CB4000D8717F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDAD917C7CB4000D8717F /* MainViewController.m */; };
+		FB2DDADC17C7CB4000D8717F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2DDADB17C7CB4000D8717F /* Images.xcassets */; };
+		FB2DDAE317C7CB4000D8717F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAE217C7CB4000D8717F /* XCTest.framework */; };
+		FB2DDAE417C7CB4000D8717F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC317C7CB4000D8717F /* Foundation.framework */; };
+		FB2DDAE517C7CB4000D8717F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DDAC717C7CB4000D8717F /* UIKit.framework */; };
+		FB2DDAED17C7CB4000D8717F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB2DDAEB17C7CB4000D8717F /* InfoPlist.strings */; };
+		FB2DDAEF17C7CB4000D8717F /* PicDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DDAEE17C7CB4000D8717F /* PicDownloaderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB2DDAE617C7CB4000D8717F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB2DDAB817C7CB4000D8717F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB2DDABF17C7CB4000D8717F;
+			remoteInfo = PicDownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB2A23E117C7FD42003E0FBB /* PTLDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTLDownloadManager.h; path = PicDownloader/PTLDownloadManager.h; sourceTree = "<group>"; };
+		FB2A23E217C7FD42003E0FBB /* PTLDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTLDownloadManager.m; path = PicDownloader/PTLDownloadManager.m; sourceTree = "<group>"; };
+		FB2A23E417C7FEA2003E0FBB /* PictureCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollection.h; sourceTree = "<group>"; };
+		FB2A23E517C7FEA2003E0FBB /* PictureCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollection.m; sourceTree = "<group>"; };
+		FB2C829617C915E7001BD504 /* PictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCell.h; sourceTree = "<group>"; };
+		FB2C829717C915E7001BD504 /* PictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCell.m; sourceTree = "<group>"; };
+		FB2C829917C91EB4001BD504 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		FB2C829A17C91EB4001BD504 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		FB2DDAC017C7CB4000D8717F /* PicDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2DDAC317C7CB4000D8717F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB2DDAC517C7CB4000D8717F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB2DDAC717C7CB4000D8717F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB2DDACB17C7CB4000D8717F /* PicDownloader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PicDownloader-Info.plist"; sourceTree = "<group>"; };
+		FB2DDACD17C7CB4000D8717F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB2DDACF17C7CB4000D8717F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB2DDAD117C7CB4000D8717F /* PicDownloader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PicDownloader-Prefix.pch"; sourceTree = "<group>"; };
+		FB2DDAD217C7CB4000D8717F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PicDownloader/AppDelegate.h; sourceTree = "<group>"; };
+		FB2DDAD317C7CB4000D8717F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PicDownloader/AppDelegate.m; sourceTree = "<group>"; };
+		FB2DDAD617C7CB4000D8717F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB2DDAD817C7CB4000D8717F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FB2DDAD917C7CB4000D8717F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FB2DDADB17C7CB4000D8717F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB2DDAE117C7CB4000D8717F /* PicDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2DDAE217C7CB4000D8717F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB2DDAEA17C7CB4000D8717F /* PicDownloaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PicDownloaderTests-Info.plist"; sourceTree = "<group>"; };
+		FB2DDAEC17C7CB4000D8717F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB2DDAEE17C7CB4000D8717F /* PicDownloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicDownloaderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB2DDABD17C7CB4000D8717F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2DDAC617C7CB4000D8717F /* CoreGraphics.framework in Frameworks */,
+				FB2DDAC817C7CB4000D8717F /* UIKit.framework in Frameworks */,
+				FB2DDAC417C7CB4000D8717F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2DDADE17C7CB4000D8717F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2DDAE317C7CB4000D8717F /* XCTest.framework in Frameworks */,
+				FB2DDAE517C7CB4000D8717F /* UIKit.framework in Frameworks */,
+				FB2DDAE417C7CB4000D8717F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB2DDAB717C7CB4000D8717F = {
+			isa = PBXGroup;
+			children = (
+				FB2DDAD217C7CB4000D8717F /* AppDelegate.h */,
+				FB2DDAD317C7CB4000D8717F /* AppDelegate.m */,
+				FB2A23E117C7FD42003E0FBB /* PTLDownloadManager.h */,
+				FB2A23E217C7FD42003E0FBB /* PTLDownloadManager.m */,
+				FB2DDAC917C7CB4000D8717F /* PicDownloader */,
+				FB2DDAE817C7CB4000D8717F /* PicDownloaderTests */,
+				FB2DDAC217C7CB4000D8717F /* Frameworks */,
+				FB2DDAC117C7CB4000D8717F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB2DDAC117C7CB4000D8717F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DDAC017C7CB4000D8717F /* PicDownloader.app */,
+				FB2DDAE117C7CB4000D8717F /* PicDownloaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB2DDAC217C7CB4000D8717F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DDAC317C7CB4000D8717F /* Foundation.framework */,
+				FB2DDAC517C7CB4000D8717F /* CoreGraphics.framework */,
+				FB2DDAC717C7CB4000D8717F /* UIKit.framework */,
+				FB2DDAE217C7CB4000D8717F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB2DDAC917C7CB4000D8717F /* PicDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DDAD517C7CB4000D8717F /* Main.storyboard */,
+				FB2DDAD817C7CB4000D8717F /* MainViewController.h */,
+				FB2DDAD917C7CB4000D8717F /* MainViewController.m */,
+				FB2C829617C915E7001BD504 /* PictureCell.h */,
+				FB2C829717C915E7001BD504 /* PictureCell.m */,
+				FB2A23E417C7FEA2003E0FBB /* PictureCollection.h */,
+				FB2A23E517C7FEA2003E0FBB /* PictureCollection.m */,
+				FB2C829917C91EB4001BD504 /* Picture.h */,
+				FB2C829A17C91EB4001BD504 /* Picture.m */,
+				FB2DDADB17C7CB4000D8717F /* Images.xcassets */,
+				FB2DDACA17C7CB4000D8717F /* Supporting Files */,
+			);
+			path = PicDownloader;
+			sourceTree = "<group>";
+		};
+		FB2DDACA17C7CB4000D8717F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DDACB17C7CB4000D8717F /* PicDownloader-Info.plist */,
+				FB2DDACC17C7CB4000D8717F /* InfoPlist.strings */,
+				FB2DDACF17C7CB4000D8717F /* main.m */,
+				FB2DDAD117C7CB4000D8717F /* PicDownloader-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB2DDAE817C7CB4000D8717F /* PicDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DDAEE17C7CB4000D8717F /* PicDownloaderTests.m */,
+				FB2DDAE917C7CB4000D8717F /* Supporting Files */,
+			);
+			path = PicDownloaderTests;
+			sourceTree = "<group>";
+		};
+		FB2DDAE917C7CB4000D8717F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DDAEA17C7CB4000D8717F /* PicDownloaderTests-Info.plist */,
+				FB2DDAEB17C7CB4000D8717F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB2DDABF17C7CB4000D8717F /* PicDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2DDAF217C7CB4000D8717F /* Build configuration list for PBXNativeTarget "PicDownloader" */;
+			buildPhases = (
+				FB2DDABC17C7CB4000D8717F /* Sources */,
+				FB2DDABD17C7CB4000D8717F /* Frameworks */,
+				FB2DDABE17C7CB4000D8717F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicDownloader;
+			productName = PicDownloader;
+			productReference = FB2DDAC017C7CB4000D8717F /* PicDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB2DDAE017C7CB4000D8717F /* PicDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2DDAF517C7CB4000D8717F /* Build configuration list for PBXNativeTarget "PicDownloaderTests" */;
+			buildPhases = (
+				FB2DDADD17C7CB4000D8717F /* Sources */,
+				FB2DDADE17C7CB4000D8717F /* Frameworks */,
+				FB2DDADF17C7CB4000D8717F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB2DDAE717C7CB4000D8717F /* PBXTargetDependency */,
+			);
+			name = PicDownloaderTests;
+			productName = PicDownloaderTests;
+			productReference = FB2DDAE117C7CB4000D8717F /* PicDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB2DDAB817C7CB4000D8717F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Rob Napier";
+				TargetAttributes = {
+					FB2DDABF17C7CB4000D8717F = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+					FB2DDAE017C7CB4000D8717F = {
+						TestTargetID = FB2DDABF17C7CB4000D8717F;
+					};
+				};
+			};
+			buildConfigurationList = FB2DDABB17C7CB4000D8717F /* Build configuration list for PBXProject "PicDownloader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB2DDAB717C7CB4000D8717F;
+			productRefGroup = FB2DDAC117C7CB4000D8717F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB2DDABF17C7CB4000D8717F /* PicDownloader */,
+				FB2DDAE017C7CB4000D8717F /* PicDownloaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB2DDABE17C7CB4000D8717F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2DDADC17C7CB4000D8717F /* Images.xcassets in Resources */,
+				FB2DDACE17C7CB4000D8717F /* InfoPlist.strings in Resources */,
+				FB2DDAD717C7CB4000D8717F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2DDADF17C7CB4000D8717F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2DDAED17C7CB4000D8717F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB2DDABC17C7CB4000D8717F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2C829817C915E7001BD504 /* PictureCell.m in Sources */,
+				FB2C829B17C91EB4001BD504 /* Picture.m in Sources */,
+				FB2DDADA17C7CB4000D8717F /* MainViewController.m in Sources */,
+				FB2A23E617C7FEA2003E0FBB /* PictureCollection.m in Sources */,
+				FB2DDAD417C7CB4000D8717F /* AppDelegate.m in Sources */,
+				FB2A23E317C7FD42003E0FBB /* PTLDownloadManager.m in Sources */,
+				FB2DDAD017C7CB4000D8717F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2DDADD17C7CB4000D8717F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2DDAEF17C7CB4000D8717F /* PicDownloaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB2DDAE717C7CB4000D8717F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB2DDABF17C7CB4000D8717F /* PicDownloader */;
+			targetProxy = FB2DDAE617C7CB4000D8717F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB2DDACC17C7CB4000D8717F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2DDACD17C7CB4000D8717F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB2DDAD517C7CB4000D8717F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2DDAD617C7CB4000D8717F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB2DDAEB17C7CB4000D8717F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2DDAEC17C7CB4000D8717F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB2DDAF017C7CB4000D8717F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FB2DDAF117C7CB4000D8717F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB2DDAF317C7CB4000D8717F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PicDownloader/PicDownloader-Prefix.pch";
+				INFOPLIST_FILE = "PicDownloader/PicDownloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB2DDAF417C7CB4000D8717F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PicDownloader/PicDownloader-Prefix.pch";
+				INFOPLIST_FILE = "PicDownloader/PicDownloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB2DDAF617C7CB4000D8717F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PicDownloader.app/PicDownloader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PicDownloader/PicDownloader-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PicDownloaderTests/PicDownloaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB2DDAF717C7CB4000D8717F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PicDownloader.app/PicDownloader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PicDownloader/PicDownloader-Prefix.pch";
+				INFOPLIST_FILE = "PicDownloaderTests/PicDownloaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB2DDABB17C7CB4000D8717F /* Build configuration list for PBXProject "PicDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2DDAF017C7CB4000D8717F /* Debug */,
+				FB2DDAF117C7CB4000D8717F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB2DDAF217C7CB4000D8717F /* Build configuration list for PBXNativeTarget "PicDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2DDAF317C7CB4000D8717F /* Debug */,
+				FB2DDAF417C7CB4000D8717F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB2DDAF517C7CB4000D8717F /* Build configuration list for PBXNativeTarget "PicDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2DDAF617C7CB4000D8717F /* Debug */,
+				FB2DDAF717C7CB4000D8717F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB2DDAB817C7CB4000D8717F /* Project object */;
+}

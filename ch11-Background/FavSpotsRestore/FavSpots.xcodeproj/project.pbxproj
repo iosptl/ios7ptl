@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF9316419A1B002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB1BBF9316419A1B002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB23EDCB15D6995000DFA486 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FB3D5E9A15D7133800E05249 /* NSCoder+FavSpots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+FavSpots.h"; sourceTree = "<group>"; };
@@ -113,9 +113,6 @@
 		FB6DC6C815D69710000FDEC1 = {
 			isa = PBXGroup;
 			children = (
-				FB1BBF9316419A1B002140CF /* Default-568h@2x.png */,
-				FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */,
-				FB23EDCB15D6995000DFA486 /* MapKit.framework */,
 				FB6DC6DF15D69710000FDEC1 /* FavSpots */,
 				FB6DC6D615D69710000FDEC1 /* Frameworks */,
 				FB6DC6D415D69710000FDEC1 /* Products */,
@@ -133,6 +130,8 @@
 		FB6DC6D615D69710000FDEC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */,
+				FB23EDCB15D6995000DFA486 /* MapKit.framework */,
 				FB6DC6D715D69710000FDEC1 /* UIKit.framework */,
 				FB6DC6D915D69710000FDEC1 /* Foundation.framework */,
 				FB6DC6DB15D69710000FDEC1 /* CoreGraphics.framework */,
@@ -164,6 +163,7 @@
 		FB6DC6E015D69710000FDEC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF9316419A1B002140CF /* Default-568h@2x.png */,
 				FB6DC6E115D69710000FDEC1 /* FavSpots-Info.plist */,
 				FB6DC6E215D69710000FDEC1 /* InfoPlist.strings */,
 				FB6DC6E515D69710000FDEC1 /* main.m */,

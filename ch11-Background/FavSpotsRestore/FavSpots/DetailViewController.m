@@ -25,18 +25,18 @@ static NSString * const kNameKey = @"kNameKey";
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
 
-  [coder RN_encodeSpot:self.spot forKey:kSpotKey];
-  [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
+  [coder ptl_encodeSpot:self.spot forKey:kSpotKey];
+  [coder ptl_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
   [coder encodeObject:self.nameTextField.text forKey:kNameKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
   
-  _spot = [coder RN_decodeSpotForKey:kSpotKey];
+  _spot = [coder ptl_decodeSpotForKey:kSpotKey];
   
   if ([coder containsValueForKey:kRegionKey]) {
-    _mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
+    _mapView.region = [coder ptl_decodeMKCoordinateRegionForKey:kRegionKey];
   }
 
   _nameTextField.text = [coder decodeObjectForKey:kNameKey];

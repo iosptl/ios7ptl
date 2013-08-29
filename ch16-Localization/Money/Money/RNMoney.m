@@ -29,8 +29,7 @@ static NSString * const kRNMoneyCurrencyCodeKey =
                       currencyCode:(NSString *)aCode {
     return [self initWithAmount:
             [NSDecimalNumber decimalNumberWithDecimal:
-             [[NSNumber numberWithInteger:anAmount]
-              decimalValue]]
+             [@(anAmount) decimalValue]]
                    currencyCode:aCode];
 }
 
