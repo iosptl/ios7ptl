@@ -33,6 +33,17 @@
   self.navigationItem.rightBarButtonItem = addButton;
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+  
+  NSLog(@"Will");
+  [super viewWillAppear:animated];
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+  
+  NSLog(@"Did");
+  [super viewDidAppear:animated];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,35 +55,22 @@
   return 1.0f;
 }
 
-- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
-  
+-(void) animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+
   UIViewController *src = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
   UIViewController *dest = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
   
-  CGRect f = src.view.frame;
-  CGRect originalSourceRect = src.view.frame;
-  f.origin.y = f.size.height;
-  
-  [UIView animateWithDuration:0.5 animations:^{
-    src.view.frame = f;
+  CGPoint centerPoint = src.view.center;
+  dest.view.frame = CGRectMake(centerPoint.x, centerPoint.y, 10, 10);
+  [[src.view superview] addSubview:dest.view];
+  [UIView animateWithDuration:1.0 animations:^{
     
-  } completion:^(BOOL finished){
-    src.view.alpha = 0;
-    dest.view.frame = f;
-    dest.view.alpha = 0.0f;
-    [[src.view superview] addSubview:dest.view];
-    [UIView animateWithDuration:0.5 animations:^{
-      
-      dest.view.frame = originalSourceRect;
-      dest.view.alpha = 1.0f;
-    } completion:^(BOOL finished) {
-      
-      [dest.view removeFromSuperview];
-      src.view.alpha = 1.0f;
-      [transitionContext completeTransition:YES];
-    }];
+    dest.view.frame = CGRectMake(10, 10, 300, src.view.frame.size.height - 20);
+    dest.view.center = centerPoint;
+  } completion:^(BOOL finished) {
+    [dest.view removeFromSuperview];
+    [transitionContext completeTransition:YES];
   }];
-  
 }
 
 - (void)insertNewObject:(id)sender
@@ -94,14 +92,6 @@
   
   return self;
 }
-
-//- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
-//  
-//}
-//
-//- (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
-//  
-//}
 
 #pragma mark - Table View
 
