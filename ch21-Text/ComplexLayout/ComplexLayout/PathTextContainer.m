@@ -16,6 +16,7 @@
 @end
 @implementation PathTextContainer
 
+// See http://robnapier.net/blog/clipping-cgrect-cgpath-531 for discussion of this method.
 - (CGRect)clipRectToInclusionPaths:(CGRect)rect remainingRect:(CGRect *)remainingRect {
   const uint8_t *bits = self.inclusionPathBitmap.bytes;
 
