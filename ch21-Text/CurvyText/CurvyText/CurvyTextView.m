@@ -76,12 +76,12 @@ static const CGFloat kControlPointSize = 13.;
       [self updateControlPoints];
       self.backgroundColor = [UIColor whiteColor];
       
-      CGAffineTransform 
-      transform = CGAffineTransformMakeScale(1, -1);
-      CGAffineTransformTranslate(transform, 
-                                 0,
-                                 -self.bounds.size.height);
-      self.transform = transform;
+//      CGAffineTransform 
+//      transform = CGAffineTransformMakeScale(1, -1);
+//      CGAffineTransformTranslate(transform, 
+//                                 0,
+//                                 -self.bounds.size.height);
+//      self.transform = transform;
 
     }
     return self;
@@ -147,7 +147,7 @@ static double Distance(CGPoint a, CGPoint b) {
 // of guesses, but this is tricky since if we go too far out, the
 // curve might loop back on leading to incorrect results. Tuning
 // kStep is good start.
-- (double)offsetAtDistance:(double)aDistance 
+- (double)offsetAtDistance:(double)aDistance
                  fromPoint:(CGPoint)aPoint
                     offset:(double)anOffset {
   const double kStep = 0.001; // 0.0001 - 0.001 work well
@@ -213,71 +213,39 @@ static double Distance(CGPoint a, CGPoint b) {
 
 - (void)drawText {
   if ([self.attributedString length] == 0) { return; }
-  
-  // Initialize the text matrix (transform). This isn't reset
-  // automatically, so it might be in any state.  
+
   CGContextRef context = UIGraphicsGetCurrentContext();
-  CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+  NSLayoutManager *layoutManager = [NSLayoutManager new];
+  NSTextContainer *textContainer = [[NSTextContainer alloc] init];
+  NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:self.attributedString];
 
-  // Create a typeset line object
-  CTLineRef line = CTLineCreateWithAttributedString(
-                        (__bridge CFTypeRef)self.attributedString);
-  
-  // The offset is where you are in the curve, from [0, 1]
+  [layoutManager addTextContainer:textContainer];
+  [textStorage addLayoutManager:layoutManager];
+
+  NSRange glyphRange = [layoutManager glyphRangeForTextContainer:textContainer];
+
+  CGRect lineRect = [layoutManager lineFragmentRectForGlyphAtIndex:0 effectiveRange:&glyphRange];
+
   double offset = 0.;
-  
-  // Fetch the runs and process one at a time
-  CFArrayRef runs = CTLineGetGlyphRuns(line);
-  CFIndex runCount = CFArrayGetCount(runs);
-  for (CFIndex runIndex = 0; runIndex < runCount; ++runIndex) {
-    CTRunRef run = CFArrayGetValueAtIndex(runs, runIndex);
+  for (NSUInteger glyphIndex = glyphRange.location; glyphIndex < NSMaxRange(glyphRange); ++glyphIndex) {
 
-    // Apply the attributes from the run to the current context
-    [self prepareContext:context forRun:run];
-    
-    // Fetch the glyphs as a CGGlyph* array
-    NSMutableData *glyphsData = [self glyphDataForRun:run];
-    CGGlyph *glyphs = [glyphsData mutableBytes];
+    CGContextSaveGState(context);
+    CGPoint location = [layoutManager locationForGlyphAtIndex:glyphIndex];
 
-    // Fetch the advances as a CGSize* array. An advance is the
-    // distance from one glyph to another.
-    NSMutableData *advancesData = [self advanceDataForRun:run];
-    CGSize *advances = [advancesData mutableBytes];
-    
-    // Loop through the glyphs and display them
-    CFIndex glyphCount = CTRunGetGlyphCount(run);
-    for (CFIndex glyphIndex = 0;
-         glyphIndex < glyphCount && offset < 1.0; 
-         ++glyphIndex) {
+    CGFloat distance = location.x;
+    offset = [self offsetAtDistance:distance fromPoint:self.P0 offset:0];
 
-      // You're going to modify the transform, so save the state
-      CGContextSaveGState(context);
+    CGPoint glyphPoint = [self pointForOffset:offset];
+    double angle = [self angleForOffset:offset];
 
-      // Calculate the location and angle. This could be any
-      // function, but here you use a Bezier curve
-      CGPoint glyphPoint = [self pointForOffset:offset];      
-      double angle = [self angleForOffset:offset];
-      
-      // Rotate the context
-      CGContextRotateCTM(context, angle);
+    CGContextTranslateCTM(context, glyphPoint.x, glyphPoint.y);
+    CGContextRotateCTM(context, angle);
 
-      // Translate the context after accounting for rotation
-      CGPoint 
-      translatedPoint = CGPointApplyAffineTransform(glyphPoint,
-                            CGAffineTransformMakeRotation(-angle));
-      CGContextTranslateCTM(context,
-                            translatedPoint.x, translatedPoint.y);      
+    [layoutManager drawGlyphsForGlyphRange:NSMakeRange(glyphIndex, 1) atPoint:CGPointMake(-(lineRect.origin.x + location.x), -(lineRect.origin.y + location.y))];
 
-      // Draw the glyph
-      CGContextShowGlyphsAtPoint(context, 0, 0,
-                                 &glyphs[glyphIndex], 1);
-      
-      // Move along the curve in proportion to the advance.
-      offset = [self offsetAtDistance:advances[glyphIndex].width
-                            fromPoint:glyphPoint offset:offset];
-      CGContextRestoreGState(context);
-    }
+    CGContextRestoreGState(context);
   }
+
 }
 
 - (void)drawRect:(CGRect)rect {
