@@ -25,7 +25,7 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-static const CGFloat kControlPointSize = 13.;
+static const CGFloat kControlPointSize = 13;
 
 #import "CurvyTextView.h"
 #import <QuartzCore/QuartzCore.h>
@@ -36,6 +36,8 @@ static const CGFloat kControlPointSize = 13.;
 @property (nonatomic, assign) CGPoint P1;
 @property (nonatomic, assign) CGPoint P2;
 @property (nonatomic, assign) CGPoint P3;
+@property (nonatomic, readwrite) NSLayoutManager *layoutManager;
+@property (nonatomic, readwrite) NSTextStorage *textStorage;
 @end
 
 @implementation CurvyTextView
@@ -50,14 +52,16 @@ static const CGFloat kControlPointSize = 13.;
 }
 
 - (void)addControlPoint:(CGPoint)point color:(UIColor *)color {
-  CGRect rect = CGRectMake(0, 0, kControlPointSize, kControlPointSize);
+  // Make the actual view 3x the size of the point, so it's easy to hit.
+  CGRect fullRect = CGRectMake(0, 0, kControlPointSize*3, kControlPointSize*3);
+  CGRect rect = CGRectInset(fullRect, kControlPointSize, kControlPointSize);
   CAShapeLayer *shapeLayer = [CAShapeLayer layer];
   CGPathRef path = CGPathCreateWithEllipseInRect(rect, NULL);
   shapeLayer.path = path;
   shapeLayer.fillColor = color.CGColor;
   CGPathRelease(path);
 
-  UIView *view = [[UIView alloc] initWithFrame:rect];
+  UIView *view = [[UIView alloc] initWithFrame:fullRect];
   [view.layer addSublayer:shapeLayer];
   
   UIGestureRecognizer *g = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
@@ -74,15 +78,15 @@ static const CGFloat kControlPointSize = 13.;
       [self addControlPoint:CGPointMake(400, 700) color:[UIColor blackColor]];
       [self addControlPoint:CGPointMake(650, 500) color:[UIColor redColor]];
       [self updateControlPoints];
-      self.backgroundColor = [UIColor whiteColor];
-      
-//      CGAffineTransform 
-//      transform = CGAffineTransformMakeScale(1, -1);
-//      CGAffineTransformTranslate(transform, 
-//                                 0,
-//                                 -self.bounds.size.height);
-//      self.transform = transform;
 
+      _layoutManager = [NSLayoutManager new];
+      NSTextContainer *textContainer = [NSTextContainer new]; // Inifinite-sized container.
+      _textStorage = [[NSTextStorage alloc] init];
+
+      [_layoutManager addTextContainer:textContainer];
+      [_textStorage addLayoutManager:_layoutManager];
+
+      self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -92,6 +96,13 @@ static const CGFloat kControlPointSize = 13.;
   [self updateControlPoints];
 }
 
+- (NSAttributedString *)attributedString {
+  return self.textStorage;
+}
+
+- (void)setAttributedString:(NSAttributedString *)attributedString {
+  [self.textStorage setAttributedString:attributedString];
+}
 
 - (void)drawPath {
   UIBezierPath *path = [UIBezierPath bezierPath];
@@ -149,7 +160,7 @@ static double Distance(CGPoint a, CGPoint b) {
 // kStep is good start.
 - (double)offsetAtDistance:(double)aDistance
                  fromPoint:(CGPoint)aPoint
-                    offset:(double)anOffset {
+                 andOffset:(double)anOffset {
   const double kStep = 0.001; // 0.0001 - 0.001 work well
   double newDistance = 0;
   double newOffset = anOffset + kStep;
@@ -161,91 +172,41 @@ static double Distance(CGPoint a, CGPoint b) {
   return newOffset;
 }
 
-- (void)prepareContext:(CGContextRef)context forRun:(CTRunRef)run {
-  CFDictionaryRef attributes = CTRunGetAttributes(run);
-
-  // Set font
-  CTFontRef runFont = CFDictionaryGetValue(attributes, 
-                                           kCTFontAttributeName);
-  CGFontRef cgFont = CTFontCopyGraphicsFont(runFont, NULL);
-  CGContextSetFont(context, cgFont);
-  CGContextSetFontSize(context, CTFontGetSize(runFont));
-  CFRelease(cgFont);
-  
-  // Set color
-  UIColor *color = CFDictionaryGetValue(attributes,
-                                  NSForegroundColorAttributeName);
-  CGContextSetFillColorWithColor(context, color.CGColor);
-}
-
-- (NSMutableData *)glyphDataForRun:(CTRunRef)run {
-  NSMutableData *data;
-  CFIndex glyphsCount = CTRunGetGlyphCount(run);
-  const CGGlyph *glyphs = CTRunGetGlyphsPtr(run);
-  size_t dataLength = glyphsCount * sizeof(*glyphs);
-  if (glyphs) {
-    data = [NSMutableData dataWithBytesNoCopy:(void*)glyphs 
-                                length:dataLength freeWhenDone:NO];
-  }
-  else {
-    data = [NSMutableData dataWithLength:dataLength];
-    CTRunGetGlyphs(run, CFRangeMake(0, 0), data.mutableBytes);
-  }
-  return data;
-}
-
-- (NSMutableData *)advanceDataForRun:(CTRunRef)run {
-  NSMutableData *data;
-  CFIndex glyphsCount = CTRunGetGlyphCount(run);
-  const CGSize *advances = CTRunGetAdvancesPtr(run);
-  size_t dataLength = glyphsCount * sizeof(*advances);
-  if (advances) {
-    data = [NSMutableData dataWithBytesNoCopy:(void*)advances
-                                       length:dataLength
-                                 freeWhenDone:NO];
-  }
-  else {
-    data = [NSMutableData dataWithLength:dataLength];
-    CTRunGetAdvances(run, CFRangeMake(0, 0), data.mutableBytes);
-  }
-  return data;
-}
-
 - (void)drawText {
   if ([self.attributedString length] == 0) { return; }
 
+  NSLayoutManager *layoutManager = self.layoutManager;
+
   CGContextRef context = UIGraphicsGetCurrentContext();
-  NSLayoutManager *layoutManager = [NSLayoutManager new];
-  NSTextContainer *textContainer = [[NSTextContainer alloc] init];
-  NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:self.attributedString];
-
-  [layoutManager addTextContainer:textContainer];
-  [textStorage addLayoutManager:layoutManager];
-
-  NSRange glyphRange = [layoutManager glyphRangeForTextContainer:textContainer];
-
+  NSRange glyphRange;
   CGRect lineRect = [layoutManager lineFragmentRectForGlyphAtIndex:0 effectiveRange:&glyphRange];
 
-  double offset = 0.;
+  double offset = 0;
+  CGPoint lastGlyphPoint = self.P0;
+  CGFloat lastX = 0;
   for (NSUInteger glyphIndex = glyphRange.location; glyphIndex < NSMaxRange(glyphRange); ++glyphIndex) {
-
     CGContextSaveGState(context);
+
     CGPoint location = [layoutManager locationForGlyphAtIndex:glyphIndex];
 
-    CGFloat distance = location.x;
-    offset = [self offsetAtDistance:distance fromPoint:self.P0 offset:0];
-
+    CGFloat distance = location.x - lastX;  // Assume that this is a single line
+    offset = [self offsetAtDistance:distance
+                          fromPoint:lastGlyphPoint
+                          andOffset:offset];
     CGPoint glyphPoint = [self pointForOffset:offset];
     double angle = [self angleForOffset:offset];
+
+    lastGlyphPoint = glyphPoint;
+    lastX = location.x;
 
     CGContextTranslateCTM(context, glyphPoint.x, glyphPoint.y);
     CGContextRotateCTM(context, angle);
 
-    [layoutManager drawGlyphsForGlyphRange:NSMakeRange(glyphIndex, 1) atPoint:CGPointMake(-(lineRect.origin.x + location.x), -(lineRect.origin.y + location.y))];
+    [layoutManager drawGlyphsForGlyphRange:NSMakeRange(glyphIndex, 1)
+                                   atPoint:CGPointMake(-(lineRect.origin.x + location.x), -(lineRect.origin.y + location.y))];
 
     CGContextRestoreGState(context);
   }
-
 }
 
 - (void)drawRect:(CGRect)rect {
