@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB64C01217D1571200834E39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C01117D1571200834E39 /* Foundation.framework */; };
+		FB64C01417D1571200834E39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C01317D1571200834E39 /* CoreGraphics.framework */; };
+		FB64C01617D1571200834E39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C01517D1571200834E39 /* UIKit.framework */; };
+		FB64C01C17D1571200834E39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB64C01A17D1571200834E39 /* InfoPlist.strings */; };
+		FB64C01E17D1571200834E39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C01D17D1571200834E39 /* main.m */; };
+		FB64C02217D1571200834E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C02117D1571200834E39 /* AppDelegate.m */; };
+		FB64C02517D1571200834E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB64C02317D1571200834E39 /* Main.storyboard */; };
+		FB64C02817D1571300834E39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C02717D1571300834E39 /* ViewController.m */; };
+		FB64C02A17D1571300834E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB64C02917D1571300834E39 /* Images.xcassets */; };
+		FB64C03117D1571300834E39 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C03017D1571300834E39 /* XCTest.framework */; };
+		FB64C03217D1571300834E39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C01117D1571200834E39 /* Foundation.framework */; };
+		FB64C03317D1571300834E39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C01517D1571200834E39 /* UIKit.framework */; };
+		FB64C03B17D1571300834E39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB64C03917D1571300834E39 /* InfoPlist.strings */; };
+		FB64C03D17D1571300834E39 /* ScribbleLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C03C17D1571300834E39 /* ScribbleLayoutTests.m */; };
+		FB64C04817D1572800834E39 /* ScribbleLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C04717D1572800834E39 /* ScribbleLayoutManager.m */; };
+		FB64C04A17D1576F00834E39 /* sample.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB64C04917D1576F00834E39 /* sample.txt */; };
+		FB64C04D17D15A2000834E39 /* ScribbleTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C04C17D15A2000834E39 /* ScribbleTextStorage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB64C03417D1571300834E39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB64C00617D1571200834E39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB64C00D17D1571200834E39;
+			remoteInfo = ScribbleLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB64C00E17D1571200834E39 /* ScribbleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScribbleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB64C01117D1571200834E39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB64C01317D1571200834E39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB64C01517D1571200834E39 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB64C01917D1571200834E39 /* ScribbleLayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScribbleLayout-Info.plist"; sourceTree = "<group>"; };
+		FB64C01B17D1571200834E39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB64C01D17D1571200834E39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB64C01F17D1571200834E39 /* ScribbleLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScribbleLayout-Prefix.pch"; sourceTree = "<group>"; };
+		FB64C02017D1571200834E39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB64C02117D1571200834E39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB64C02417D1571200834E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB64C02617D1571300834E39 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB64C02717D1571300834E39 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB64C02917D1571300834E39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB64C02F17D1571300834E39 /* ScribbleLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbleLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB64C03017D1571300834E39 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB64C03817D1571300834E39 /* ScribbleLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScribbleLayoutTests-Info.plist"; sourceTree = "<group>"; };
+		FB64C03A17D1571300834E39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB64C03C17D1571300834E39 /* ScribbleLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleLayoutTests.m; sourceTree = "<group>"; };
+		FB64C04617D1572800834E39 /* ScribbleLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleLayoutManager.h; sourceTree = "<group>"; };
+		FB64C04717D1572800834E39 /* ScribbleLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleLayoutManager.m; sourceTree = "<group>"; };
+		FB64C04917D1576F00834E39 /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.txt; sourceTree = "<group>"; };
+		FB64C04B17D15A2000834E39 /* ScribbleTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleTextStorage.h; sourceTree = "<group>"; };
+		FB64C04C17D15A2000834E39 /* ScribbleTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleTextStorage.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB64C00B17D1571200834E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C01417D1571200834E39 /* CoreGraphics.framework in Frameworks */,
+				FB64C01617D1571200834E39 /* UIKit.framework in Frameworks */,
+				FB64C01217D1571200834E39 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB64C02C17D1571300834E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C03117D1571300834E39 /* XCTest.framework in Frameworks */,
+				FB64C03317D1571300834E39 /* UIKit.framework in Frameworks */,
+				FB64C03217D1571300834E39 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB64C00517D1571200834E39 = {
+			isa = PBXGroup;
+			children = (
+				FB64C01717D1571200834E39 /* ScribbleLayout */,
+				FB64C03617D1571300834E39 /* ScribbleLayoutTests */,
+				FB64C01017D1571200834E39 /* Frameworks */,
+				FB64C00F17D1571200834E39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB64C00F17D1571200834E39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB64C00E17D1571200834E39 /* ScribbleLayout.app */,
+				FB64C02F17D1571300834E39 /* ScribbleLayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB64C01017D1571200834E39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB64C01117D1571200834E39 /* Foundation.framework */,
+				FB64C01317D1571200834E39 /* CoreGraphics.framework */,
+				FB64C01517D1571200834E39 /* UIKit.framework */,
+				FB64C03017D1571300834E39 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB64C01717D1571200834E39 /* ScribbleLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FB64C04917D1576F00834E39 /* sample.txt */,
+				FB64C02017D1571200834E39 /* AppDelegate.h */,
+				FB64C02117D1571200834E39 /* AppDelegate.m */,
+				FB64C02317D1571200834E39 /* Main.storyboard */,
+				FB64C02617D1571300834E39 /* ViewController.h */,
+				FB64C02717D1571300834E39 /* ViewController.m */,
+				FB64C02917D1571300834E39 /* Images.xcassets */,
+				FB64C01817D1571200834E39 /* Supporting Files */,
+				FB64C04617D1572800834E39 /* ScribbleLayoutManager.h */,
+				FB64C04717D1572800834E39 /* ScribbleLayoutManager.m */,
+				FB64C04B17D15A2000834E39 /* ScribbleTextStorage.h */,
+				FB64C04C17D15A2000834E39 /* ScribbleTextStorage.m */,
+			);
+			path = ScribbleLayout;
+			sourceTree = "<group>";
+		};
+		FB64C01817D1571200834E39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB64C01917D1571200834E39 /* ScribbleLayout-Info.plist */,
+				FB64C01A17D1571200834E39 /* InfoPlist.strings */,
+				FB64C01D17D1571200834E39 /* main.m */,
+				FB64C01F17D1571200834E39 /* ScribbleLayout-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB64C03617D1571300834E39 /* ScribbleLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB64C03C17D1571300834E39 /* ScribbleLayoutTests.m */,
+				FB64C03717D1571300834E39 /* Supporting Files */,
+			);
+			path = ScribbleLayoutTests;
+			sourceTree = "<group>";
+		};
+		FB64C03717D1571300834E39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB64C03817D1571300834E39 /* ScribbleLayoutTests-Info.plist */,
+				FB64C03917D1571300834E39 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB64C00D17D1571200834E39 /* ScribbleLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB64C04017D1571300834E39 /* Build configuration list for PBXNativeTarget "ScribbleLayout" */;
+			buildPhases = (
+				FB64C00A17D1571200834E39 /* Sources */,
+				FB64C00B17D1571200834E39 /* Frameworks */,
+				FB64C00C17D1571200834E39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScribbleLayout;
+			productName = ScribbleLayout;
+			productReference = FB64C00E17D1571200834E39 /* ScribbleLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB64C02E17D1571300834E39 /* ScribbleLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB64C04317D1571300834E39 /* Build configuration list for PBXNativeTarget "ScribbleLayoutTests" */;
+			buildPhases = (
+				FB64C02B17D1571300834E39 /* Sources */,
+				FB64C02C17D1571300834E39 /* Frameworks */,
+				FB64C02D17D1571300834E39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB64C03517D1571300834E39 /* PBXTargetDependency */,
+			);
+			name = ScribbleLayoutTests;
+			productName = ScribbleLayoutTests;
+			productReference = FB64C02F17D1571300834E39 /* ScribbleLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB64C00617D1571200834E39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Rob Napier";
+				TargetAttributes = {
+					FB64C02E17D1571300834E39 = {
+						TestTargetID = FB64C00D17D1571200834E39;
+					};
+				};
+			};
+			buildConfigurationList = FB64C00917D1571200834E39 /* Build configuration list for PBXProject "ScribbleLayout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB64C00517D1571200834E39;
+			productRefGroup = FB64C00F17D1571200834E39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB64C00D17D1571200834E39 /* ScribbleLayout */,
+				FB64C02E17D1571300834E39 /* ScribbleLayoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB64C00C17D1571200834E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C02A17D1571300834E39 /* Images.xcassets in Resources */,
+				FB64C01C17D1571200834E39 /* InfoPlist.strings in Resources */,
+				FB64C04A17D1576F00834E39 /* sample.txt in Resources */,
+				FB64C02517D1571200834E39 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB64C02D17D1571300834E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C03B17D1571300834E39 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB64C00A17D1571200834E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C02817D1571300834E39 /* ViewController.m in Sources */,
+				FB64C04817D1572800834E39 /* ScribbleLayoutManager.m in Sources */,
+				FB64C02217D1571200834E39 /* AppDelegate.m in Sources */,
+				FB64C01E17D1571200834E39 /* main.m in Sources */,
+				FB64C04D17D15A2000834E39 /* ScribbleTextStorage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB64C02B17D1571300834E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C03D17D1571300834E39 /* ScribbleLayoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB64C03517D1571300834E39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB64C00D17D1571200834E39 /* ScribbleLayout */;
+			targetProxy = FB64C03417D1571300834E39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB64C01A17D1571200834E39 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB64C01B17D1571200834E39 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB64C02317D1571200834E39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB64C02417D1571200834E39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB64C03917D1571300834E39 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB64C03A17D1571300834E39 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB64C03E17D1571300834E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FB64C03F17D1571300834E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB64C04117D1571300834E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScribbleLayout/ScribbleLayout-Prefix.pch";
+				INFOPLIST_FILE = "ScribbleLayout/ScribbleLayout-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB64C04217D1571300834E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScribbleLayout/ScribbleLayout-Prefix.pch";
+				INFOPLIST_FILE = "ScribbleLayout/ScribbleLayout-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB64C04417D1571300834E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScribbleLayout.app/ScribbleLayout";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScribbleLayout/ScribbleLayout-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ScribbleLayoutTests/ScribbleLayoutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB64C04517D1571300834E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScribbleLayout.app/ScribbleLayout";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScribbleLayout/ScribbleLayout-Prefix.pch";
+				INFOPLIST_FILE = "ScribbleLayoutTests/ScribbleLayoutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB64C00917D1571200834E39 /* Build configuration list for PBXProject "ScribbleLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB64C03E17D1571300834E39 /* Debug */,
+				FB64C03F17D1571300834E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB64C04017D1571300834E39 /* Build configuration list for PBXNativeTarget "ScribbleLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB64C04117D1571300834E39 /* Debug */,
+				FB64C04217D1571300834E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB64C04317D1571300834E39 /* Build configuration list for PBXNativeTarget "ScribbleLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB64C04417D1571300834E39 /* Debug */,
+				FB64C04517D1571300834E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB64C00617D1571200834E39 /* Project object */;
+}
