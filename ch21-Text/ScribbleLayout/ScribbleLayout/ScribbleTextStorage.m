@@ -71,10 +71,8 @@ changeInLength:0];
   [self applyTokenAttributesToRange:extendedRange];
 }
 
--(void)processEditing
-{
-  if(self.dynamicTextNeedsUpdate)
-  {
+-(void)processEditing {
+  if(self.dynamicTextNeedsUpdate) {
     self.dynamicTextNeedsUpdate = NO;
     [self performReplacementsForCharacterChangeInRange:[self editedRange]];
   }
@@ -93,10 +91,9 @@ changeInLength:0];
                                                   attributesForToken = defaultAttributes;
                                                 
                                                 if(attributesForToken)
-                                                  [self addAttributes:attributesForToken range:substringRange];
+                                                  [self setAttributes:attributesForToken range:substringRange];
                                               }];
 }
-
 
 
 @end

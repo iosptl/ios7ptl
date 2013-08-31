@@ -21,7 +21,6 @@
                             usingBlock:^(id value, NSRange highlightedCharacterRange, BOOL *stop) {
                               if (value) {
                                 CGContextSaveGState(UIGraphicsGetCurrentContext());
-//                                NSLog(@"Filling:%@", NSStringFromRange(range));
                                 UIColor *color = value;
                                 [color setFill];
                                 CGContextTranslateCTM(UIGraphicsGetCurrentContext(), origin.x, origin.y);
@@ -31,22 +30,49 @@
 
                                 [self enumerateEnclosingRectsForGlyphRange:highlightedGlyphRange
                                                   withinSelectedGlyphRange:NSMakeRange(NSNotFound, 0)
-                                                           inTextContainer:container usingBlock:^(CGRect highlightRect, BOOL *stop){
-                                                             [self fillBackgroundRectArray:&highlightRect
-                                                                                     count:1
-                                                                         forCharacterRange:characterRange // Informational
-                                                                                     color:color]; // Informational
+                                                           inTextContainer:container usingBlock:^(CGRect rect, BOOL *stop){
+                                                             CGRect highlightRect = CGRectInset(rect, -3, -3);
+                                                             UIRectFill(highlightRect);
+                                                             [[UIBezierPath bezierPathWithOvalInRect:highlightRect] stroke];
                                                            }];
                                 CGContextRestoreGState(UIGraphicsGetCurrentContext());
                               }
                             }];
 }
 
+- (void)drawGlyphsForGlyphRange:(NSRange)glyphsToShow atPoint:(CGPoint)origin {
+  NSRange characterRange = [self characterRangeForGlyphRange:glyphsToShow actualGlyphRange:NULL];
+  [self.textStorage enumerateAttribute:RedactStyleAttributeName
+                               inRange:characterRange
+                               options:0
+                            usingBlock:^(id value, NSRange attributeCharacterRange, BOOL *stop) {
+                              NSRange glyphRange = [self glyphRangeForCharacterRange:attributeCharacterRange actualCharacterRange:NULL];
+                              if (value) {
+                                CGContextSaveGState(UIGraphicsGetCurrentContext());
+                                UIColor *color = [UIColor colorWithWhite:.75 alpha:.5];
+                                [color setFill];
+                                [[UIColor blackColor] setStroke];
 
-- (void)fillBackgroundRectArray:(const CGRect *)rectArray count:(NSUInteger)rectCount forCharacterRange:(NSRange)charRange color:(UIColor *)color {
-  [super fillBackgroundRectArray:rectArray count:rectCount forCharacterRange:charRange color:color];
-
+                                NSTextContainer *container = [self textContainerForGlyphAtIndex:glyphRange.location effectiveRange:NULL];
+                                CGContextTranslateCTM(UIGraphicsGetCurrentContext(), origin.x, origin.y);
+                                [self enumerateEnclosingRectsForGlyphRange:glyphRange
+                                                  withinSelectedGlyphRange:NSMakeRange(NSNotFound, 0)
+                                                           inTextContainer:container usingBlock:^(CGRect rect, BOOL *stop){
+                                                             UIBezierPath *path = [UIBezierPath bezierPathWithRect:rect];
+                                                             [path moveToPoint:CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect))];
+                                                             [path addLineToPoint:CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect))];
+                                                             [path moveToPoint:CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect))];
+                                                             [path addLineToPoint:CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect))];
+                                                             [path stroke];
+                                                           }];
+                                CGContextRestoreGState(UIGraphicsGetCurrentContext());
+                              }
+                              else {
+                                [super drawGlyphsForGlyphRange:glyphRange atPoint:origin];
+                              }
+                            }];
+  
+  
 }
-
 
 @end

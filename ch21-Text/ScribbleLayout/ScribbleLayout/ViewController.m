@@ -28,7 +28,7 @@
   ScribbleTextStorage *text = [[ScribbleTextStorage alloc] init];
   text.tokens = @{ @"France" : @{ NSForegroundColorAttributeName : [UIColor blueColor] },
                    @"England" : @{ NSForegroundColorAttributeName : [UIColor redColor] },
-                   @"King" : @{RedactStyleAttributeName : @YES },
+                   @"season" : @{ RedactStyleAttributeName : @YES },
                    @"and" : @{ HighlightColorAttributeName : [UIColor yellowColor] },
 
                    DefaultTokenName : @{
