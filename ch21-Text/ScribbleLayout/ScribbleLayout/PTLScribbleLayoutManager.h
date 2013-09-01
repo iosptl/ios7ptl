@@ -1,5 +1,5 @@
 //
-//  ScribbleLayoutManager.h
+//  PTLScribbleLayoutManager.h
 //  ScribbleLayout
 //
 //  Created by Rob Napier on 8/30/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScribbleLayoutManager : NSLayoutManager
+@interface PTLScribbleLayoutManager : NSLayoutManager
 
 @end

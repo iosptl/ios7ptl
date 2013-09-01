@@ -21,9 +21,9 @@
 		FB64C03317D1571300834E39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64C01517D1571200834E39 /* UIKit.framework */; };
 		FB64C03B17D1571300834E39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB64C03917D1571300834E39 /* InfoPlist.strings */; };
 		FB64C03D17D1571300834E39 /* ScribbleLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C03C17D1571300834E39 /* ScribbleLayoutTests.m */; };
-		FB64C04817D1572800834E39 /* ScribbleLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C04717D1572800834E39 /* ScribbleLayoutManager.m */; };
+		FB64C04817D1572800834E39 /* PTLScribbleLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */; };
 		FB64C04A17D1576F00834E39 /* sample.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB64C04917D1576F00834E39 /* sample.txt */; };
-		FB64C04D17D15A2000834E39 /* ScribbleTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C04C17D15A2000834E39 /* ScribbleTextStorage.m */; };
+		FB64C04D17D15A2000834E39 /* PTLScribbleTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		FB64C03817D1571300834E39 /* ScribbleLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScribbleLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		FB64C03A17D1571300834E39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB64C03C17D1571300834E39 /* ScribbleLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleLayoutTests.m; sourceTree = "<group>"; };
-		FB64C04617D1572800834E39 /* ScribbleLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleLayoutManager.h; sourceTree = "<group>"; };
-		FB64C04717D1572800834E39 /* ScribbleLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleLayoutManager.m; sourceTree = "<group>"; };
+		FB64C04617D1572800834E39 /* PTLScribbleLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLScribbleLayoutManager.h; sourceTree = "<group>"; };
+		FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLScribbleLayoutManager.m; sourceTree = "<group>"; };
 		FB64C04917D1576F00834E39 /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.txt; sourceTree = "<group>"; };
-		FB64C04B17D15A2000834E39 /* ScribbleTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleTextStorage.h; sourceTree = "<group>"; };
-		FB64C04C17D15A2000834E39 /* ScribbleTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleTextStorage.m; sourceTree = "<group>"; };
+		FB64C04B17D15A2000834E39 /* PTLScribbleTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLScribbleTextStorage.h; sourceTree = "<group>"; };
+		FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLScribbleTextStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +128,10 @@
 				FB64C02717D1571300834E39 /* ViewController.m */,
 				FB64C02917D1571300834E39 /* Images.xcassets */,
 				FB64C01817D1571200834E39 /* Supporting Files */,
-				FB64C04617D1572800834E39 /* ScribbleLayoutManager.h */,
-				FB64C04717D1572800834E39 /* ScribbleLayoutManager.m */,
-				FB64C04B17D15A2000834E39 /* ScribbleTextStorage.h */,
-				FB64C04C17D15A2000834E39 /* ScribbleTextStorage.m */,
+				FB64C04617D1572800834E39 /* PTLScribbleLayoutManager.h */,
+				FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */,
+				FB64C04B17D15A2000834E39 /* PTLScribbleTextStorage.h */,
+				FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */,
 			);
 			path = ScribbleLayout;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 				ORGANIZATIONNAME = "Rob Napier";
 				TargetAttributes = {
 					FB64C02E17D1571300834E39 = {
-						TestTargetID = FB64C00D17D1571200834E39;
+						TestTargetID = FB64C00D17D1571200834E39 /* ScribbleLayout */;
 					};
 				};
 			};
@@ -264,10 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB64C02817D1571300834E39 /* ViewController.m in Sources */,
-				FB64C04817D1572800834E39 /* ScribbleLayoutManager.m in Sources */,
+				FB64C04817D1572800834E39 /* PTLScribbleLayoutManager.m in Sources */,
 				FB64C02217D1571200834E39 /* AppDelegate.m in Sources */,
 				FB64C01E17D1571200834E39 /* main.m in Sources */,
-				FB64C04D17D15A2000834E39 /* ScribbleTextStorage.m in Sources */,
+				FB64C04D17D15A2000834E39 /* PTLScribbleTextStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
