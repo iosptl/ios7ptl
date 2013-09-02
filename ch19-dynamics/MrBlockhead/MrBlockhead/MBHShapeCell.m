@@ -16,8 +16,9 @@
 
 - (void)awakeFromNib {
   _shapeLayer = [[CAShapeLayer alloc] init];
-  _shapeLayer.fillColor = [[UIColor clearColor] CGColor];
+//  _shapeLayer.fillColor = [[UIColor clearColor] CGColor];
   _shapeLayer.strokeColor = [[UIColor blackColor] CGColor];
+  _shapeLayer.fillRule = kCAFillRuleEvenOdd;
   [self.contentView.layer addSublayer:_shapeLayer];
 }
 

@@ -8,6 +8,7 @@
 
 #import "MBHShapeBinViewController.h"
 #import "MBHShapeCell.h"
+#import "UIBezierPath+MBH.h"
 
 @interface MBHShapeBinViewController ()
 @property (nonatomic, readwrite, strong) NSArray *shapes;
@@ -23,9 +24,12 @@
   CGRect layerFrame = { .origin = CGPointZero, .size = kShapeSize };
   CGRect shapeFrame = CGRectInset(layerFrame, kShapeInset, kShapeInset);
 
-  self.shapes = @[ [UIBezierPath bezierPathWithOvalInRect:shapeFrame],
-                   [UIBezierPath bezierPathWithRect:shapeFrame]
-                  ];
+  self.shapes = [UIBezierPath mbh_assortedBezierPathsInRect:shapeFrame
+                                              withSelectors:
+                 @selector(bezierPathWithOvalInRect:),
+                 @selector(bezierPathWithRect:),
+                 @selector(mbh_bezierPathWithTriangleInRect:),
+                 nil];
 
   [(UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout setItemSize:kShapeSize];
 }
