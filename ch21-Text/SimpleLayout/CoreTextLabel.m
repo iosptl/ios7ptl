@@ -11,7 +11,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation CoreTextLabel
-@synthesize attributedString=attributedString_;
 
 - (id)initWithFrame:(CGRect)frame {
   if ((self = [super initWithFrame:frame])) {
@@ -27,8 +26,8 @@
 }
 
 - (void)setAttributedString:(NSAttributedString *)anAttributedString {
-  if (anAttributedString != attributedString_) {
-    attributedString_ = [anAttributedString copy];
+  if (anAttributedString != _attributedString) {
+    _attributedString = [anAttributedString copy];
     [self setNeedsDisplay];
   }
 }

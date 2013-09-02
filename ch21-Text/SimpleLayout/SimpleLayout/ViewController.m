@@ -110,7 +110,8 @@
                                                     10)];
   label.attributedString = (__bridge id)attrString;
   [self.view addSubview:label];
-  
+
+  CFRelease(style);
   CFRelease(attrString);
   CFRelease(baseFont);
   CFRelease(boldFont);

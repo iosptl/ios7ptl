@@ -2,7 +2,7 @@
 //  CurvyTextView.m
 //  CurvyText
 //
-//  Copyright (c) 2012 Rob Napier
+//  Copyright (c) 2012, 2013 Rob Napier
 //
 //  This code is licensed under the MIT License:
 //
@@ -179,17 +179,20 @@ static double Distance(CGPoint a, CGPoint b) {
 
   CGContextRef context = UIGraphicsGetCurrentContext();
   NSRange glyphRange;
-  CGRect lineRect = [layoutManager lineFragmentRectForGlyphAtIndex:0 effectiveRange:&glyphRange];
+  CGRect lineRect = [layoutManager lineFragmentRectForGlyphAtIndex:0
+                                                    effectiveRange:&glyphRange];
 
   double offset = 0;
   CGPoint lastGlyphPoint = self.P0;
   CGFloat lastX = 0;
-  for (NSUInteger glyphIndex = glyphRange.location; glyphIndex < NSMaxRange(glyphRange); ++glyphIndex) {
+  for (NSUInteger glyphIndex = glyphRange.location;
+       glyphIndex < NSMaxRange(glyphRange);
+       ++glyphIndex) {
     CGContextSaveGState(context);
 
     CGPoint location = [layoutManager locationForGlyphAtIndex:glyphIndex];
 
-    CGFloat distance = location.x - lastX;  // Assume that this is a single line
+    CGFloat distance = location.x - lastX;  // Assume single line
     offset = [self offsetAtDistance:distance
                           fromPoint:lastGlyphPoint
                           andOffset:offset];
@@ -203,7 +206,8 @@ static double Distance(CGPoint a, CGPoint b) {
     CGContextRotateCTM(context, angle);
 
     [layoutManager drawGlyphsForGlyphRange:NSMakeRange(glyphIndex, 1)
-                                   atPoint:CGPointMake(-(lineRect.origin.x + location.x), -(lineRect.origin.y + location.y))];
+                                   atPoint:CGPointMake(-(lineRect.origin.x + location.x),
+                                                       -(lineRect.origin.y + location.y))];
 
     CGContextRestoreGState(context);
   }
