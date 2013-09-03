@@ -9,9 +9,11 @@
 #import "MBHShapeBinViewController.h"
 #import "MBHShapeCell.h"
 #import "UIBezierPath+MBH.h"
+#import "MBHShapeBinLayout.h"
 
 @interface MBHShapeBinViewController ()
 @property (nonatomic, readwrite, strong) NSArray *shapes;
+@property (nonatomic, readonly) MBHShapeBinLayout *binLayout;
 @end
 
 @implementation MBHShapeBinViewController
@@ -31,33 +33,49 @@
                  @selector(mbh_bezierPathWithTriangleInRect:),
                  nil];
 
-  [(UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout setItemSize:kShapeSize];
+  [(MBHShapeBinLayout *)self.binLayout setItemSize:kShapeSize];
 }
 
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+- (MBHShapeBinLayout *)binLayout {
+  return (MBHShapeBinLayout *)self.collectionView.collectionViewLayout;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
   return [self.shapes count];
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   MBHShapeCell* newCell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"MBHShapeCell"
                                                                          forIndexPath:indexPath];
-
   newCell.path = self.shapes[indexPath.row];
   return newCell;
 }
 
+- (IBAction)handlePan:(id)sender {
+  UIPanGestureRecognizer *g = sender;
+
+  CGPoint point = [g locationInView:self.view];
+
+  NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
+  if (indexPath) {
+    switch (g.state) {
+      case UIGestureRecognizerStateBegan:
+        NSLog(@"switch StartDragging: %@", self.binLayout);
+        [self.binLayout startDraggingIndexPath:indexPath fromPoint:point];
+        break;
+      case UIGestureRecognizerStateChanged:
+        [self.binLayout updateDragLocation:point];
+        break;
+      case UIGestureRecognizerStateEnded:
+        [self.binLayout clearDraggedIndexPath];
+        break;
+      case UIGestureRecognizerStateCancelled:
+        [self.binLayout clearDraggedIndexPath];
+        break;
+      default:
+        break;
+    }
+  }
+}
 
 @end

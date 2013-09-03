@@ -24,6 +24,8 @@
 		FB60E9FD17D4E18F00199616 /* MBHShapeBinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB60E9FC17D4E18F00199616 /* MBHShapeBinViewController.m */; };
 		FB60EA0017D4E28900199616 /* MBHShapeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB60E9FF17D4E28900199616 /* MBHShapeCell.m */; };
 		FB60EA0617D4EF3B00199616 /* UIBezierPath+MBH.m in Sources */ = {isa = PBXBuildFile; fileRef = FB60EA0517D4EF3B00199616 /* UIBezierPath+MBH.m */; };
+		FBF1C64D17D624E3004E42FA /* MBHShapeBinLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF1C64C17D624E3004E42FA /* MBHShapeBinLayout.m */; };
+		FBF1C65017D6254D004E42FA /* MBHTearOffBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF1C64F17D6254D004E42FA /* MBHTearOffBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		FB60E9FF17D4E28900199616 /* MBHShapeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBHShapeCell.m; path = "../../ch19-Dynamics/MrBlockhead/MrBlockhead/MBHShapeCell.m"; sourceTree = "<group>"; };
 		FB60EA0417D4EF3B00199616 /* UIBezierPath+MBH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+MBH.h"; path = "../../../ch19-Dynamics/MrBlockhead/MrBlockhead/UIBezierPath+MBH.h"; sourceTree = "<group>"; };
 		FB60EA0517D4EF3B00199616 /* UIBezierPath+MBH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+MBH.m"; path = "../../../ch19-Dynamics/MrBlockhead/MrBlockhead/UIBezierPath+MBH.m"; sourceTree = "<group>"; };
+		FBF1C64B17D624E3004E42FA /* MBHShapeBinLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBHShapeBinLayout.h; path = MrBlockhead/MBHShapeBinLayout.h; sourceTree = "<group>"; };
+		FBF1C64C17D624E3004E42FA /* MBHShapeBinLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBHShapeBinLayout.m; path = MrBlockhead/MBHShapeBinLayout.m; sourceTree = "<group>"; };
+		FBF1C64E17D6254D004E42FA /* MBHTearOffBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBHTearOffBehavior.h; path = MrBlockhead/MBHTearOffBehavior.h; sourceTree = "<group>"; };
+		FBF1C64F17D6254D004E42FA /* MBHTearOffBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBHTearOffBehavior.m; path = MrBlockhead/MBHTearOffBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				FB60E9FC17D4E18F00199616 /* MBHShapeBinViewController.m */,
 				FB60E9FE17D4E28900199616 /* MBHShapeCell.h */,
 				FB60E9FF17D4E28900199616 /* MBHShapeCell.m */,
+				FBF1C64B17D624E3004E42FA /* MBHShapeBinLayout.h */,
+				FBF1C64C17D624E3004E42FA /* MBHShapeBinLayout.m */,
+				FBF1C64E17D6254D004E42FA /* MBHTearOffBehavior.h */,
+				FBF1C64F17D6254D004E42FA /* MBHTearOffBehavior.m */,
 				FB60E9CC17D4E03D00199616 /* MrBlockhead */,
 				FB60E9EB17D4E03D00199616 /* MrBlockheadTests */,
 				FB60E9C517D4E03D00199616 /* Frameworks */,
@@ -266,9 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB60E9D717D4E03D00199616 /* MBHAppDelegate.m in Sources */,
+				FBF1C64D17D624E3004E42FA /* MBHShapeBinLayout.m in Sources */,
 				FB60E9DD17D4E03D00199616 /* MBHViewController.m in Sources */,
 				FB60EA0017D4E28900199616 /* MBHShapeCell.m in Sources */,
 				FB60EA0617D4EF3B00199616 /* UIBezierPath+MBH.m in Sources */,
+				FBF1C65017D6254D004E42FA /* MBHTearOffBehavior.m in Sources */,
 				FB60E9FD17D4E18F00199616 /* MBHShapeBinViewController.m in Sources */,
 				FB60E9D317D4E03D00199616 /* main.m in Sources */,
 			);
@@ -475,6 +487,7 @@
 				FB60E9F717D4E03D00199616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB60E9F817D4E03D00199616 /* Build configuration list for PBXNativeTarget "MrBlockheadTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +496,7 @@
 				FB60E9FA17D4E03D00199616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
