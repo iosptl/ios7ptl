@@ -54,7 +54,7 @@
 - (IBAction)handlePan:(id)sender {
   UIPanGestureRecognizer *g = sender;
 
-  CGPoint point = [g locationInView:self.view];
+  CGPoint point = [g locationInView:self.collectionView];
 
   NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
   if (indexPath) {

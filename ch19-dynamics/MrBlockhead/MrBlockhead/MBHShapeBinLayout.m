@@ -13,9 +13,13 @@
 @property (nonatomic, readwrite, strong) UIDynamicAnimator *animator;
 @property (nonatomic, readwrite, strong) NSIndexPath *draggedIndexPath;
 @property (nonatomic, readwrite, strong) MBHTearOffBehavior *behavior;
-
 @end
+
 @implementation MBHShapeBinLayout
+
+- (void)awakeFromNib {
+  self.sectionInset = UIEdgeInsetsMake(50, 0, 0, 0);
+}
 
 - (void)startDraggingIndexPath:(NSIndexPath *)indexPath fromPoint:(CGPoint)p {
   NSLog(@"startDragging");
@@ -26,6 +30,7 @@
   attributes.zIndex = 1;
 
   self.behavior = [[MBHTearOffBehavior alloc] initWithItem:attributes attachedToAnchor:p];
+  
   [self.animator addBehavior:self.behavior];
 }
 
@@ -35,6 +40,7 @@
 
 - (void)clearDraggedIndexPath {
   self.animator = nil;
+  self.behavior = nil;
   self.draggedIndexPath = nil;
 }
 
