@@ -21,6 +21,7 @@
 		FBFD1BB017E5130600CB9C84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD1B9217E5130600CB9C84 /* UIKit.framework */; };
 		FBFD1BB817E5130600CB9C84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBFD1BB617E5130600CB9C84 /* InfoPlist.strings */; };
 		FBFD1BBA17E5130600CB9C84 /* TearOffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD1BB917E5130600CB9C84 /* TearOffTests.m */; };
+		FBFD1BC517E5142600CB9C84 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD1BC417E5142600CB9C84 /* DraggableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		FBFD1B9D17E5130600CB9C84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FBFD1B9E17E5130600CB9C84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FBFD1BA117E5130600CB9C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FBFD1BA317E5130600CB9C84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FBFD1BA417E5130600CB9C84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBFD1BA317E5130600CB9C84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = TearOff/ViewController.h; sourceTree = "<group>"; };
+		FBFD1BA417E5130600CB9C84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = TearOff/ViewController.m; sourceTree = "<group>"; };
 		FBFD1BA617E5130600CB9C84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBFD1BAC17E5130600CB9C84 /* TearOffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TearOffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFD1BAD17E5130600CB9C84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FBFD1BB517E5130600CB9C84 /* TearOffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TearOffTests-Info.plist"; sourceTree = "<group>"; };
 		FBFD1BB717E5130600CB9C84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FBFD1BB917E5130600CB9C84 /* TearOffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TearOffTests.m; sourceTree = "<group>"; };
+		FBFD1BC317E5142600CB9C84 /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DraggableView.h; path = TearOff/DraggableView.h; sourceTree = "<group>"; };
+		FBFD1BC417E5142600CB9C84 /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DraggableView.m; path = TearOff/DraggableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,10 @@
 		FBFD1B8217E5130600CB9C84 = {
 			isa = PBXGroup;
 			children = (
+				FBFD1BC317E5142600CB9C84 /* DraggableView.h */,
+				FBFD1BC417E5142600CB9C84 /* DraggableView.m */,
+				FBFD1BA317E5130600CB9C84 /* ViewController.h */,
+				FBFD1BA417E5130600CB9C84 /* ViewController.m */,
 				FBFD1B9417E5130600CB9C84 /* TearOff */,
 				FBFD1BB317E5130600CB9C84 /* TearOffTests */,
 				FBFD1B8D17E5130600CB9C84 /* Frameworks */,
@@ -115,8 +122,6 @@
 				FBFD1B9D17E5130600CB9C84 /* AppDelegate.h */,
 				FBFD1B9E17E5130600CB9C84 /* AppDelegate.m */,
 				FBFD1BA017E5130600CB9C84 /* Main.storyboard */,
-				FBFD1BA317E5130600CB9C84 /* ViewController.h */,
-				FBFD1BA417E5130600CB9C84 /* ViewController.m */,
 				FBFD1BA617E5130600CB9C84 /* Images.xcassets */,
 				FBFD1B9517E5130600CB9C84 /* Supporting Files */,
 			);
@@ -251,6 +256,7 @@
 			files = (
 				FBFD1BA517E5130600CB9C84 /* ViewController.m in Sources */,
 				FBFD1B9F17E5130600CB9C84 /* AppDelegate.m in Sources */,
+				FBFD1BC517E5142600CB9C84 /* DraggableView.m in Sources */,
 				FBFD1B9B17E5130600CB9C84 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
