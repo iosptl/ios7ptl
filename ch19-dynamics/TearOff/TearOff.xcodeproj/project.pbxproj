@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2DE97F17EA6D3300C16885 /* TearOffBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE97E17EA6D3300C16885 /* TearOffBehavior.m */; };
+		FB2DE98217EBADB700C16885 /* DefaultBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE98117EBADB700C16885 /* DefaultBehavior.m */; };
 		FBFD1B8F17E5130600CB9C84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD1B8E17E5130600CB9C84 /* Foundation.framework */; };
 		FBFD1B9117E5130600CB9C84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD1B9017E5130600CB9C84 /* CoreGraphics.framework */; };
 		FBFD1B9317E5130600CB9C84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD1B9217E5130600CB9C84 /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2DE97D17EA6D3300C16885 /* TearOffBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TearOffBehavior.h; path = TearOff/TearOffBehavior.h; sourceTree = "<group>"; };
+		FB2DE97E17EA6D3300C16885 /* TearOffBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TearOffBehavior.m; path = TearOff/TearOffBehavior.m; sourceTree = "<group>"; };
+		FB2DE98017EBADB700C16885 /* DefaultBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultBehavior.h; path = TearOff/DefaultBehavior.h; sourceTree = "<group>"; };
+		FB2DE98117EBADB700C16885 /* DefaultBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultBehavior.m; path = TearOff/DefaultBehavior.m; sourceTree = "<group>"; };
 		FBFD1B8B17E5130600CB9C84 /* TearOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TearOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBFD1B8E17E5130600CB9C84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FBFD1B9017E5130600CB9C84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +95,10 @@
 				FBFD1BC417E5142600CB9C84 /* DraggableView.m */,
 				FBFD1BA317E5130600CB9C84 /* ViewController.h */,
 				FBFD1BA417E5130600CB9C84 /* ViewController.m */,
+				FB2DE97D17EA6D3300C16885 /* TearOffBehavior.h */,
+				FB2DE97E17EA6D3300C16885 /* TearOffBehavior.m */,
+				FB2DE98017EBADB700C16885 /* DefaultBehavior.h */,
+				FB2DE98117EBADB700C16885 /* DefaultBehavior.m */,
 				FBFD1B9417E5130600CB9C84 /* TearOff */,
 				FBFD1BB317E5130600CB9C84 /* TearOffTests */,
 				FBFD1B8D17E5130600CB9C84 /* Frameworks */,
@@ -256,6 +266,8 @@
 			files = (
 				FBFD1BA517E5130600CB9C84 /* ViewController.m in Sources */,
 				FBFD1B9F17E5130600CB9C84 /* AppDelegate.m in Sources */,
+				FB2DE97F17EA6D3300C16885 /* TearOffBehavior.m in Sources */,
+				FB2DE98217EBADB700C16885 /* DefaultBehavior.m in Sources */,
 				FBFD1BC517E5142600CB9C84 /* DraggableView.m in Sources */,
 				FBFD1B9B17E5130600CB9C84 /* main.m in Sources */,
 			);
@@ -468,6 +480,7 @@
 				FBFD1BBF17E5130600CB9C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBFD1BC017E5130600CB9C84 /* Build configuration list for PBXNativeTarget "TearOffTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +489,7 @@
 				FBFD1BC217E5130600CB9C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
