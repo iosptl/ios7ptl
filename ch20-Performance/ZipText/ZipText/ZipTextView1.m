@@ -85,8 +85,9 @@ static const CGFloat kFontSize = 16.0;
     prevCharacter = [self.text
                      substringWithRange:NSMakeRange(index-1,1)];
     CGSize
-    prevCharacterSize = [prevCharacter sizeWithFont:
-                         [UIFont systemFontOfSize:fontSize]];
+    prevCharacterSize = [prevCharacter
+                         sizeWithAttributes:@{ NSFontAttributeName:
+                                                 [UIFont systemFontOfSize:fontSize]}];
     origin.x += prevCharacterSize.width;
     if (origin.x > CGRectGetWidth(self.bounds)) {
       origin.x = 0;

@@ -25,4 +25,7 @@
   [self.view addSubview:ztView];
 }
 
+- (BOOL)prefersStatusBarHidden {
+  return YES;
+}
 @end
