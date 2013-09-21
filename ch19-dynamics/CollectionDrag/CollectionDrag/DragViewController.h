@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DragViewController.h
 //  CollectionDrag
 //
 //  Created by Rob Napier on 9/20/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DragViewController : UICollectionViewController
 
 @end

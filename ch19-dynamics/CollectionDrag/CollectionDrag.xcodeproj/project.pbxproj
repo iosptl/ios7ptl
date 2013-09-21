@@ -14,13 +14,14 @@
 		FB2DE99C17EC9B1300C16885 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE99B17EC9B1300C16885 /* main.m */; };
 		FB2DE9A017EC9B1300C16885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE99F17EC9B1300C16885 /* AppDelegate.m */; };
 		FB2DE9A317EC9B1300C16885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2DE9A117EC9B1300C16885 /* Main.storyboard */; };
-		FB2DE9A617EC9B1300C16885 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE9A517EC9B1300C16885 /* ViewController.m */; };
 		FB2DE9A817EC9B1300C16885 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2DE9A717EC9B1300C16885 /* Images.xcassets */; };
 		FB2DE9AF17EC9B1300C16885 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DE9AE17EC9B1300C16885 /* XCTest.framework */; };
 		FB2DE9B017EC9B1300C16885 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DE98F17EC9B1300C16885 /* Foundation.framework */; };
 		FB2DE9B117EC9B1300C16885 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2DE99317EC9B1300C16885 /* UIKit.framework */; };
 		FB2DE9B917EC9B1300C16885 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB2DE9B717EC9B1300C16885 /* InfoPlist.strings */; };
 		FB2DE9BB17EC9B1300C16885 /* CollectionDragTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE9BA17EC9B1300C16885 /* CollectionDragTests.m */; };
+		FB2DE9C617EC9B7300C16885 /* DragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE9C517EC9B7300C16885 /* DragViewController.m */; };
+		FB2DE9C917EC9CBC00C16885 /* DragLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DE9C817EC9CBC00C16885 /* DragLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		FB2DE99E17EC9B1300C16885 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB2DE99F17EC9B1300C16885 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB2DE9A217EC9B1300C16885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB2DE9A417EC9B1300C16885 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB2DE9A517EC9B1300C16885 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB2DE9A717EC9B1300C16885 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB2DE9AD17EC9B1300C16885 /* CollectionDragTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionDragTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2DE9AE17EC9B1300C16885 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FB2DE9B617EC9B1300C16885 /* CollectionDragTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionDragTests-Info.plist"; sourceTree = "<group>"; };
 		FB2DE9B817EC9B1300C16885 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB2DE9BA17EC9B1300C16885 /* CollectionDragTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionDragTests.m; sourceTree = "<group>"; };
+		FB2DE9C417EC9B7300C16885 /* DragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragViewController.h; sourceTree = "<group>"; };
+		FB2DE9C517EC9B7300C16885 /* DragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragViewController.m; sourceTree = "<group>"; };
+		FB2DE9C717EC9CBC00C16885 /* DragLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragLayout.h; sourceTree = "<group>"; };
+		FB2DE9C817EC9CBC00C16885 /* DragLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +118,12 @@
 				FB2DE99E17EC9B1300C16885 /* AppDelegate.h */,
 				FB2DE99F17EC9B1300C16885 /* AppDelegate.m */,
 				FB2DE9A117EC9B1300C16885 /* Main.storyboard */,
-				FB2DE9A417EC9B1300C16885 /* ViewController.h */,
-				FB2DE9A517EC9B1300C16885 /* ViewController.m */,
 				FB2DE9A717EC9B1300C16885 /* Images.xcassets */,
 				FB2DE99617EC9B1300C16885 /* Supporting Files */,
+				FB2DE9C417EC9B7300C16885 /* DragViewController.h */,
+				FB2DE9C517EC9B7300C16885 /* DragViewController.m */,
+				FB2DE9C717EC9CBC00C16885 /* DragLayout.h */,
+				FB2DE9C817EC9CBC00C16885 /* DragLayout.m */,
 			);
 			path = CollectionDrag;
 			sourceTree = "<group>";
@@ -249,9 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2DE9A617EC9B1300C16885 /* ViewController.m in Sources */,
+				FB2DE9C617EC9B7300C16885 /* DragViewController.m in Sources */,
 				FB2DE9A017EC9B1300C16885 /* AppDelegate.m in Sources */,
 				FB2DE99C17EC9B1300C16885 /* main.m in Sources */,
+				FB2DE9C917EC9CBC00C16885 /* DragLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
