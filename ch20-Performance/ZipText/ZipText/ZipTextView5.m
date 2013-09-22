@@ -77,9 +77,9 @@ static const CGFloat kFontSize = 16.0;
                              NSMakeRange(i, 1)];
       CGPoint origin = [self originAtIndex:i fontSize:kFontSize];
       if (CGRectContainsPoint(rect, origin)) {
-      [character drawAtPoint:origin
-              withAttributes:@{ NSFontAttributeName:
-                                  [UIFont systemFontOfSize:kFontSize]}];
+        [character drawAtPoint:origin
+                withAttributes:@{ NSFontAttributeName:
+                                    [UIFont systemFontOfSize:kFontSize]}];
       }
     }
   }
@@ -98,7 +98,8 @@ static const CGFloat kFontSize = 16.0;
     CGSize
     prevCharacterSize = [prevCharacter
                          sizeWithAttributes:@{ NSFontAttributeName:
-                                                 [UIFont systemFontOfSize:fontSize]}];
+                                                 [UIFont systemFontOfSize:fontSize]
+                                               }];
     origin.x += prevCharacterSize.width;
     if (origin.x > CGRectGetWidth(self.bounds)) {
       origin.x = 0;
