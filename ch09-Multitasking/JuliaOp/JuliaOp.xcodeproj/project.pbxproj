@@ -56,12 +56,12 @@
 		FBA913C815D0914A00CB92B2 = {
 			isa = PBXGroup;
 			children = (
+				FB18AE3D15D158BA00465301 /* JuliaOperation.h */,
+				FB18AE3E15D158BA00465301 /* JuliaOperation.m */,
 				FBA913F415D0918000CB92B2 /* CollectionViewController.h */,
 				FBA913F515D0918000CB92B2 /* CollectionViewController.m */,
 				FBA913F715D091C400CB92B2 /* JuliaCell.h */,
 				FBA913F815D091C400CB92B2 /* JuliaCell.m */,
-				FB18AE3D15D158BA00465301 /* JuliaOperation.h */,
-				FB18AE3E15D158BA00465301 /* JuliaOperation.m */,
 				FBA913DD15D0914A00CB92B2 /* Julia */,
 				FBA913D615D0914A00CB92B2 /* Frameworks */,
 				FBA913D415D0914A00CB92B2 /* Products */,
@@ -134,7 +134,7 @@
 		FBA913CA15D0914A00CB92B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Rob Napier";
 			};
 			buildConfigurationList = FBA913CD15D0914A00CB92B2 /* Build configuration list for PBXProject "JuliaOp" */;
@@ -222,7 +222,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -242,7 +243,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
