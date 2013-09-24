@@ -45,6 +45,7 @@ unsigned int countOfCores() {
   self.queue = [[NSOperationQueue alloc] init];
   [self useAllScales];
 
+  // No longer needed in iOS 7
   self.queue.maxConcurrentOperationCount = countOfCores();
 }
 
