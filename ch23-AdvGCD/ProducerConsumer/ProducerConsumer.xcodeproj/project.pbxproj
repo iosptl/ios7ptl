@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB486DB217FA135F00E71CD9 /* RNQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FB486DB117FA135F00E71CD9 /* RNQueue.m */; };
 		FBA8485117F8D82E002A2635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA8485017F8D82E002A2635 /* Foundation.framework */; };
 		FBA8485317F8D82E002A2635 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA8485217F8D82E002A2635 /* CoreGraphics.framework */; };
 		FBA8485517F8D82F002A2635 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA8485417F8D82F002A2635 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB486DB017FA135F00E71CD9 /* RNQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNQueue.h; sourceTree = "<group>"; };
+		FB486DB117FA135F00E71CD9 /* RNQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNQueue.m; sourceTree = "<group>"; };
 		FBA8484D17F8D82E002A2635 /* ProducerConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProducerConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA8485017F8D82E002A2635 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FBA8485217F8D82E002A2635 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +85,8 @@
 		FBA8484417F8D82E002A2635 = {
 			isa = PBXGroup;
 			children = (
+				FB486DB017FA135F00E71CD9 /* RNQueue.h */,
+				FB486DB117FA135F00E71CD9 /* RNQueue.m */,
 				FBA8485617F8D82F002A2635 /* ProducerConsumer */,
 				FBA8487517F8D82F002A2635 /* ProducerConsumerTests */,
 				FBA8484F17F8D82E002A2635 /* Frameworks */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA8486717F8D82F002A2635 /* ViewController.m in Sources */,
+				FB486DB217FA135F00E71CD9 /* RNQueue.m in Sources */,
 				FBA8486117F8D82F002A2635 /* AppDelegate.m in Sources */,
 				FBA8485D17F8D82F002A2635 /* main.m in Sources */,
 			);
@@ -460,6 +466,7 @@
 				FBA8488117F8D82F002A2635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBA8488217F8D82F002A2635 /* Build configuration list for PBXNativeTarget "ProducerConsumerTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +475,7 @@
 				FBA8488417F8D82F002A2635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
