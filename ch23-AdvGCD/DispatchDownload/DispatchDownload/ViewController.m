@@ -46,7 +46,7 @@
 }
 
 - (NSString *)outputFilePathForPath:(NSString *)path {
-  return [[NSTemporaryDirectory() stringByAppendingPathComponent:[path lastPathComponent]] stringByAppendingPathExtension:@"out"];
+  return [NSTemporaryDirectory() stringByAppendingPathComponent:[path lastPathComponent]];
 }
 
 - (void)writeToChannel:(dispatch_io_t)channel
@@ -62,12 +62,44 @@
                       NSLog(@"Wrote %zu bytes",
                             dispatch_data_get_size(writeData) - unwrittenDataLength);
                     });
+}
 
+- (BOOL)findHeader:(dispatch_data_t)headerData bodyData:(dispatch_data_t*)bodyData {
+  static NSData *kHeaderDeliminator;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    kHeaderDeliminator = [@"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding];
+  });
+
+  dispatch_data_t mappedData = dispatch_data_create_map(headerData, NULL, NULL);
+  __block BOOL found = NO;
+
+  // This is unnecessary; we could have gotten buffer and size from dispatch_data_create_map,
+  // but this shows how to use dispatch_data_apply, and there are subtle ARC issues with accessing
+  // the values through dispatch_data_create_map. (We have to be careful that mappedData doesn't get
+  // released immediately.)
+  dispatch_data_apply(mappedData,
+                      ^bool(dispatch_data_t region, size_t offset, const void *buffer, size_t size) {
+    NSData *searchData = [[NSData alloc] initWithBytesNoCopy:(void *)buffer length:size freeWhenDone:NO];
+    NSRange range = [searchData rangeOfData:kHeaderDeliminator options:0 range:NSMakeRange(0, searchData.length)];
+    if (range.location != NSNotFound) {
+      found = YES;
+      size_t body_offset = NSMaxRange(range);
+      size_t body_size = size - body_offset;
+      *bodyData = dispatch_data_create_subrange(region, body_offset, body_size);
+    }
+    return false;
+  });
+
+  return found;
 }
 
 - (void)readFromChannel:(dispatch_io_t)readChannel
          writeToChannel:(dispatch_io_t)writeChannel
                   queue:(dispatch_queue_t)queue {
+
+  __block BOOL haveHeader;
+  __block dispatch_data_t headerData = dispatch_data_empty;
   dispatch_io_read(readChannel, 0, SIZE_MAX, queue,
                    ^(bool serverReadDone,
                      dispatch_data_t serverReadData,
@@ -81,9 +113,23 @@
                        dispatch_io_close(readChannel, 0);
                      }
                      else {
-                       [self writeToChannel:writeChannel
-                                       data:serverReadData
-                                      queue:queue];
+                       if (! haveHeader) {
+                         dispatch_data_t bodyData;
+                         headerData = dispatch_data_create_concat(headerData,
+                                                                  serverReadData);
+                         haveHeader = [self findHeader:headerData
+                                              bodyData:&bodyData];
+                         if (haveHeader) {
+                           [self writeToChannel:writeChannel
+                                           data:bodyData
+                                          queue:queue];
+                         }
+                       }
+                       else {
+                         [self writeToChannel:writeChannel
+                                         data:serverReadData
+                                        queue:queue];
+                       }
                      }
                    });
 }
@@ -91,7 +137,8 @@
 - (dispatch_data_t)requestDataForHostName:(NSString *)hostName
                                      path:(NSString *)path {
   NSString *
-  getString = [NSString stringWithFormat:@"GET %@ HTTP/1.1\r\nHost: %@\r\n\r\n",
+  getString = [NSString
+               stringWithFormat:@"GET %@ HTTP/1.1\r\nHost: %@\r\n\r\n",
                path, hostName];
   NSLog(@"Request:\n%@", getString);
 
