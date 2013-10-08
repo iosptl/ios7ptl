@@ -14,8 +14,19 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
+NSString * const kHeaderDelimiterString = @"\r\n\r\n";
 
 @implementation ViewController
+
+- (NSData *)headerDelimiter {
+  static NSData *data;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    data = [kHeaderDelimiterString dataUsingEncoding:NSUTF8StringEncoding];
+  });
+
+  return data;
+}
 
 - (dispatch_fd_t)connectToHostName:(NSString *)hostName port:(int)port {
   int s;
@@ -57,20 +68,16 @@
                       NSAssert(!error, @"File write error:%d", error);
                       size_t unwrittenDataLength = 0;
                       if (remainingData) {
-                        unwrittenDataLength = dispatch_data_get_size(remainingData);
+                        unwrittenDataLength =
+                        dispatch_data_get_size(remainingData);
                       }
                       NSLog(@"Wrote %zu bytes",
-                            dispatch_data_get_size(writeData) - unwrittenDataLength);
+                            dispatch_data_get_size(writeData)
+                            - unwrittenDataLength);
                     });
 }
 
 - (BOOL)findHeader:(dispatch_data_t)headerData bodyData:(dispatch_data_t*)bodyData {
-  static NSData *kHeaderDeliminator;
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    kHeaderDeliminator = [@"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding];
-  });
-
   dispatch_data_t mappedData = dispatch_data_create_map(headerData, NULL, NULL);
   __block BOOL found = NO;
 
@@ -80,19 +87,46 @@
   // released immediately.)
   dispatch_data_apply(mappedData,
                       ^bool(dispatch_data_t region, size_t offset, const void *buffer, size_t size) {
-    NSData *searchData = [[NSData alloc] initWithBytesNoCopy:(void *)buffer length:size freeWhenDone:NO];
-    NSRange range = [searchData rangeOfData:kHeaderDeliminator options:0 range:NSMakeRange(0, searchData.length)];
-    if (range.location != NSNotFound) {
-      found = YES;
-      size_t body_offset = NSMaxRange(range);
-      size_t body_size = size - body_offset;
-      *bodyData = dispatch_data_create_subrange(region, body_offset, body_size);
-    }
-    return false;
-  });
+                        NSData *searchData = [[NSData alloc] initWithBytesNoCopy:(void *)buffer length:size freeWhenDone:NO];
+                        NSRange range = [searchData rangeOfData:[self headerDelimiter] options:0 range:NSMakeRange(0, searchData.length)];
+                        if (range.location != NSNotFound) {
+                          found = YES;
+                          size_t body_offset = NSMaxRange(range);
+                          size_t body_size = size - body_offset;
+                          *bodyData = dispatch_data_create_subrange(region, body_offset, body_size);
+                        }
+                        return false;
+                      });
 
   return found;
 }
+
+- (void)handleDoneWithChannels:(NSArray *)channels {
+  NSLog(@"Done Downloading");
+  for (dispatch_io_t channel in channels) {
+    dispatch_io_close(channel, 0);
+  }
+}
+
+- (BOOL)handleData:(dispatch_data_t)newData
+      previousData:(dispatch_data_t *)previousData
+      writeChannel:(dispatch_io_t)writeChannel
+             queue:(dispatch_queue_t)queue {
+  BOOL haveHeader = NO;
+  dispatch_data_t bodyData;
+
+  *previousData = dispatch_data_create_concat(*previousData,
+                                              newData);
+  haveHeader = [self findHeader:*previousData
+                       bodyData:&bodyData];
+  if (haveHeader) {
+    [self writeToChannel:writeChannel
+                    data:bodyData
+                   queue:queue];
+  }
+  return haveHeader;
+}
+
 
 - (void)readFromChannel:(dispatch_io_t)readChannel
          writeToChannel:(dispatch_io_t)writeChannel
@@ -100,6 +134,7 @@
 
   __block BOOL haveHeader;
   __block dispatch_data_t headerData = dispatch_data_empty;
+
   dispatch_io_read(readChannel, 0, SIZE_MAX, queue,
                    ^(bool serverReadDone,
                      dispatch_data_t serverReadData,
@@ -108,22 +143,15 @@
                      NSAssert(!serverReadError,
                               @"Server read error:%d", serverReadError);
                      if (serverReadDone) {
-                       NSLog(@"Done Downloading");
-                       dispatch_io_close(writeChannel, 0);
-                       dispatch_io_close(readChannel, 0);
+                       [self handleDoneWithChannels:@[writeChannel,
+                                                      readChannel]];
                      }
                      else {
                        if (! haveHeader) {
-                         dispatch_data_t bodyData;
-                         headerData = dispatch_data_create_concat(headerData,
-                                                                  serverReadData);
-                         haveHeader = [self findHeader:headerData
-                                              bodyData:&bodyData];
-                         if (haveHeader) {
-                           [self writeToChannel:writeChannel
-                                           data:bodyData
-                                          queue:queue];
-                         }
+                         haveHeader = [self handleData:serverReadData
+                                          previousData:&headerData
+                                          writeChannel:writeChannel
+                                                 queue:queue];
                        }
                        else {
                          [self writeToChannel:writeChannel
@@ -183,7 +211,7 @@
                     ^(bool serverWriteDone,
                       dispatch_data_t serverWriteData,
                       int serverWriteError) {
-
+                      
                       NSAssert(!serverWriteError,
                                @"Server write error:%d", serverWriteError);
                       if (serverWriteDone) {
