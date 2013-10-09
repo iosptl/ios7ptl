@@ -64,41 +64,15 @@ NSString * const kHeaderDelimiterString = @"\r\n\r\n";
                   data:(dispatch_data_t)writeData
                  queue:(dispatch_queue_t)queue {
   dispatch_io_write(channel, 0, writeData, queue,
-                    ^(bool done, dispatch_data_t remainingData, int error) {
-                      NSAssert(!error, @"File write error:%d", error);
-                      size_t unwrittenDataLength = 0;
-                      if (remainingData) {
-                        unwrittenDataLength =
-                        dispatch_data_get_size(remainingData);
-                      }
-                      NSLog(@"Wrote %zu bytes",
-                            dispatch_data_get_size(writeData)
-                            - unwrittenDataLength);
-                    });
-}
-
-- (BOOL)findHeader:(dispatch_data_t)headerData bodyData:(dispatch_data_t*)bodyData {
-  dispatch_data_t mappedData = dispatch_data_create_map(headerData, NULL, NULL);
-  __block BOOL found = NO;
-
-  // This is unnecessary; we could have gotten buffer and size from dispatch_data_create_map,
-  // but this shows how to use dispatch_data_apply, and there are subtle ARC issues with accessing
-  // the values through dispatch_data_create_map. (We have to be careful that mappedData doesn't get
-  // released immediately.)
-  dispatch_data_apply(mappedData,
-                      ^bool(dispatch_data_t region, size_t offset, const void *buffer, size_t size) {
-                        NSData *searchData = [[NSData alloc] initWithBytesNoCopy:(void *)buffer length:size freeWhenDone:NO];
-                        NSRange range = [searchData rangeOfData:[self headerDelimiter] options:0 range:NSMakeRange(0, searchData.length)];
-                        if (range.location != NSNotFound) {
-                          found = YES;
-                          size_t body_offset = NSMaxRange(range);
-                          size_t body_size = size - body_offset;
-                          *bodyData = dispatch_data_create_subrange(region, body_offset, body_size);
-                        }
-                        return false;
-                      });
-
-  return found;
+    ^(bool done, dispatch_data_t remainingData, int error) {
+      NSAssert(!error, @"File write error:%d", error);
+      size_t unwrittenDataLength = 0;
+      if (remainingData) {
+        unwrittenDataLength = dispatch_data_get_size(remainingData);
+      }
+      NSLog(@"Wrote %zu bytes",
+            dispatch_data_get_size(writeData) - unwrittenDataLength);
+    });
 }
 
 - (void)handleDoneWithChannels:(NSArray *)channels {
@@ -108,58 +82,115 @@ NSString * const kHeaderDelimiterString = @"\r\n\r\n";
   }
 }
 
-- (BOOL)handleData:(dispatch_data_t)newData
-      previousData:(dispatch_data_t *)previousData
-      writeChannel:(dispatch_io_t)writeChannel
-             queue:(dispatch_queue_t)queue {
-  BOOL haveHeader = NO;
-  dispatch_data_t bodyData;
+- (dispatch_data_t)findHeaderInData:(dispatch_data_t)newData
+                       previousData:(dispatch_data_t *)previousData
+                       writeChannel:(dispatch_io_t)writeChannel
+                              queue:(dispatch_queue_t)queue {
 
+
+  // Glue the previous data to new data. This is a cheap operation.
   *previousData = dispatch_data_create_concat(*previousData,
                                               newData);
-  haveHeader = [self findHeader:*previousData
-                       bodyData:&bodyData];
-  if (haveHeader) {
+
+  // Create a contiguous memory region. This requires a memory copy.
+  dispatch_data_t mappedData = dispatch_data_create_map(*previousData,
+                                                        NULL, NULL);
+
+  __block dispatch_data_t headerData;
+  __block dispatch_data_t bodyData;
+
+  // The dispatch_data_apply is unnecessary; we could have gotten
+  // buffer and size from dispatch_data_create_map, but this shows
+  // how to use dispatch_data_apply, and there are subtle ARC issues
+  // with accessing the values through dispatch_data_create_map. We
+  // have to be careful that mappedData doesn't get released immediately.
+  dispatch_data_apply(mappedData,
+    ^bool(dispatch_data_t region, size_t offset,
+          const void *buffer, size_t size) {
+
+      // We know that region is all the data because we just mapped it.
+      // Convert it into an NSData for simpler searching.
+      NSData *search =
+      [[NSData alloc] initWithBytesNoCopy:(void*)buffer
+                                   length:size
+                             freeWhenDone:NO];
+      NSRange r =
+      [search rangeOfData:[self headerDelimiter]
+                  options:0
+                    range:NSMakeRange(0,
+                                      search.length)];
+
+      // If we found the delimiter, split into header and body
+      if (r.location != NSNotFound) {
+        headerData = dispatch_data_create_subrange(region,
+                                                   0,
+                                                   r.location);
+        size_t body_offset = NSMaxRange(r);
+        size_t body_size = size - body_offset;
+        bodyData = dispatch_data_create_subrange(region,
+                                                 body_offset,
+                                                 body_size);
+      }
+
+      // We only need to process one block
+      return false;
+    });
+
+  if (bodyData) {
     [self writeToChannel:writeChannel
                     data:bodyData
                    queue:queue];
   }
-  return haveHeader;
+  return headerData;
 }
 
+- (void)printHeader:(dispatch_data_t)headerData {
+  printf("\nHeader:\n\n");
+  dispatch_data_apply(headerData, ^bool(dispatch_data_t region,
+                                        size_t offset,
+                                        const void *buffer,
+                                        size_t size) {
+    fwrite(buffer, size, 1, stdout);
+    return true;
+  });
+  printf("\n\n");
+
+}
 
 - (void)readFromChannel:(dispatch_io_t)readChannel
          writeToChannel:(dispatch_io_t)writeChannel
                   queue:(dispatch_queue_t)queue {
 
-  __block BOOL haveHeader;
-  __block dispatch_data_t headerData = dispatch_data_empty;
-
+  __block dispatch_data_t previousData = dispatch_data_empty;
+  __block dispatch_data_t headerData;
   dispatch_io_read(readChannel, 0, SIZE_MAX, queue,
-                   ^(bool serverReadDone,
-                     dispatch_data_t serverReadData,
-                     int serverReadError) {
+   ^(bool serverReadDone,
+     dispatch_data_t serverReadData,
+     int serverReadError) {
 
-                     NSAssert(!serverReadError,
-                              @"Server read error:%d", serverReadError);
-                     if (serverReadDone) {
-                       [self handleDoneWithChannels:@[writeChannel,
-                                                      readChannel]];
-                     }
-                     else {
-                       if (! haveHeader) {
-                         haveHeader = [self handleData:serverReadData
-                                          previousData:&headerData
-                                          writeChannel:writeChannel
-                                                 queue:queue];
-                       }
-                       else {
-                         [self writeToChannel:writeChannel
-                                         data:serverReadData
-                                        queue:queue];
-                       }
-                     }
-                   });
+     NSAssert(!serverReadError,
+              @"Server read error:%d", serverReadError);
+     if (serverReadDone) {
+       [self handleDoneWithChannels:@[writeChannel,
+                                      readChannel]];
+     }
+     else {
+       if (! headerData) {
+         headerData = [self findHeaderInData:serverReadData
+                                previousData:&previousData
+                                writeChannel:writeChannel
+                                       queue:queue];
+         if (headerData) {
+           [self printHeader:headerData];
+         }
+       }
+       else {
+         [self writeToChannel:writeChannel
+                         data:serverReadData
+                        queue:queue];
+       }
+     }
+   });
 }
 
 - (dispatch_data_t)requestDataForHostName:(NSString *)hostName
@@ -208,18 +239,18 @@ NSString * const kHeaderDelimiterString = @"\r\n\r\n";
                                              nil);
 
   dispatch_io_write(serverChannel, 0, requestData, queue,
-                    ^(bool serverWriteDone,
-                      dispatch_data_t serverWriteData,
-                      int serverWriteError) {
-                      
-                      NSAssert(!serverWriteError,
-                               @"Server write error:%d", serverWriteError);
-                      if (serverWriteDone) {
-                        [self readFromChannel:serverChannel
-                               writeToChannel:fileChannel
-                                        queue:queue];
-                      }
-                    });
+    ^(bool serverWriteDone,
+      dispatch_data_t serverWriteData,
+      int serverWriteError) {
+
+      NSAssert(!serverWriteError,
+               @"Server write error:%d", serverWriteError);
+      if (serverWriteDone) {
+        [self readFromChannel:serverChannel
+               writeToChannel:fileChannel
+                        queue:queue];
+      }
+    });
 }
 
 - (void)viewDidLoad {
