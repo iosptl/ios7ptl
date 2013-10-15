@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DraggableView : UIView
+@interface DraggableView : UIView <NSCopying>
 - (instancetype)initWithFrame:(CGRect)frame
                      animator:(UIDynamicAnimator *)animator;
 @end

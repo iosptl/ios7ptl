@@ -31,7 +31,7 @@
   return self;
 }
 
-- (instancetype)copyWithZone:(NSZone *)zone {
+- (id)copyWithZone:(NSZone *)zone {
   DraggableView *newView = [[[self class] alloc]
                             initWithFrame:CGRectZero
                             animator:self.dynamicAnimator];
