@@ -16,7 +16,7 @@
 		FB1BD0FA13D35C8F00836033 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1BD0F813D35C8F00836033 /* MainStoryboard.storyboard */; };
 		FB1BD0FD13D35C8F00836033 /* LayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1BD0FC13D35C8F00836033 /* LayerAnimationViewController.m */; };
 		FB1BD10413D35E0000836033 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1BD10313D35E0000836033 /* QuartzCore.framework */; };
-		FB95FB221607774A00210BD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB95FB211607774A00210BD7 /* Default-568h@2x.png */; };
+		FB608D11182ACEEF00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D10182ACEEF00010FB9 /* Images.xcassets */; };
 		FB95FB261607783000210BD7 /* CALayer+RNAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB95FB251607783000210BD7 /* CALayer+RNAnimation.m */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		FB1BD0FB13D35C8F00836033 /* LayerAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LayerAnimationViewController.h; path = LayerAnimation/LayerAnimationViewController.h; sourceTree = "<group>"; };
 		FB1BD0FC13D35C8F00836033 /* LayerAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LayerAnimationViewController.m; path = LayerAnimation/LayerAnimationViewController.m; sourceTree = "<group>"; };
 		FB1BD10313D35E0000836033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FB95FB211607774A00210BD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D10182ACEEF00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB95FB241607783000210BD7 /* CALayer+RNAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+RNAnimation.h"; path = "LayerAnimation/CALayer+RNAnimation.h"; sourceTree = "<group>"; };
 		FB95FB251607783000210BD7 /* CALayer+RNAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+RNAnimation.m"; path = "LayerAnimation/CALayer+RNAnimation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +93,7 @@
 				FB1BD0F513D35C8F00836033 /* LayerAnimationAppDelegate.h */,
 				FB1BD0F613D35C8F00836033 /* LayerAnimationAppDelegate.m */,
 				FB1BD0F813D35C8F00836033 /* MainStoryboard.storyboard */,
+				FB608D10182ACEEF00010FB9 /* Images.xcassets */,
 				FB1BD0ED13D35C8F00836033 /* Supporting Files */,
 			);
 			path = LayerAnimation;
@@ -101,7 +102,6 @@
 		FB1BD0ED13D35C8F00836033 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB95FB211607774A00210BD7 /* Default-568h@2x.png */,
 				FB1BD0EE13D35C8F00836033 /* LayerAnimation-Info.plist */,
 				FB1BD0EF13D35C8F00836033 /* InfoPlist.strings */,
 				FB1BD0F213D35C8F00836033 /* main.m */,
@@ -161,8 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1BD0F113D35C8F00836033 /* InfoPlist.strings in Resources */,
+				FB608D11182ACEEF00010FB9 /* Images.xcassets in Resources */,
 				FB1BD0FA13D35C8F00836033 /* MainStoryboard.storyboard in Resources */,
-				FB95FB221607774A00210BD7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +267,8 @@
 		FB1BD10113D35C8F00836033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayerAnimation/LayerAnimation-Prefix.pch";
 				INFOPLIST_FILE = "LayerAnimation/LayerAnimation-Info.plist";
@@ -278,6 +280,8 @@
 		FB1BD10213D35C8F00836033 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayerAnimation/LayerAnimation-Prefix.pch";
 				INFOPLIST_FILE = "LayerAnimation/LayerAnimation-Info.plist";

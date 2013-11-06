@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB95FB1B1607773200210BD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB95FB1A1607773200210BD7 /* Default-568h@2x.png */; };
+		FB608D13182ACF7300010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D12182ACF7300010FB9 /* Images.xcassets */; };
 		FBA0554B13CE43E100565C60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0554A13CE43E100565C60 /* UIKit.framework */; };
 		FBA0554D13CE43E100565C60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0554C13CE43E100565C60 /* Foundation.framework */; };
 		FBA0554F13CE43E100565C60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0554E13CE43E100565C60 /* CoreGraphics.framework */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB95FB1A1607773200210BD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D12182ACF7300010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBA0554613CE43E100565C60 /* ViewAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA0554A13CE43E100565C60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBA0554C13CE43E100565C60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +90,7 @@
 				FBA0555113CE43E100565C60 /* Supporting Files */,
 				FBA0556713CE456400565C60 /* CircleView.h */,
 				FBA0556813CE456400565C60 /* CircleView.m */,
+				FB608D12182ACF7300010FB9 /* Images.xcassets */,
 			);
 			path = ViewAnimation;
 			sourceTree = "<group>";
@@ -97,7 +98,6 @@
 		FBA0555113CE43E100565C60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB95FB1A1607773200210BD7 /* Default-568h@2x.png */,
 				FBA0555213CE43E100565C60 /* ViewAnimation-Info.plist */,
 				FBA0555313CE43E100565C60 /* InfoPlist.strings */,
 				FBA0555613CE43E100565C60 /* main.m */,
@@ -157,8 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA0555513CE43E100565C60 /* InfoPlist.strings in Resources */,
+				FB608D13182ACF7300010FB9 /* Images.xcassets in Resources */,
 				FBA0555E13CE43E100565C60 /* MainStoryboard.storyboard in Resources */,
-				FB95FB1B1607773200210BD7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +261,8 @@
 		FBA0556513CE43E100565C60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewAnimation/ViewAnimation-Prefix.pch";
 				INFOPLIST_FILE = "ViewAnimation/ViewAnimation-Info.plist";
@@ -272,6 +274,8 @@
 		FBA0556613CE43E100565C60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewAnimation/ViewAnimation-Prefix.pch";
 				INFOPLIST_FILE = "ViewAnimation/ViewAnimation-Info.plist";

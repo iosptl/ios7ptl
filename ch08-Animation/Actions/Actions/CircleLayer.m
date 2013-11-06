@@ -31,16 +31,16 @@
 @dynamic radius;
 
 - (id)init {
-    self = [super init];
-    if (self) {
-      [self setNeedsDisplay];
-    }
-    
-    return self;
+  self = [super init];
+  if (self) {
+    [self setNeedsDisplay];
+  }
+
+  return self;
 }
 
 - (void)drawInContext:(CGContextRef)ctx {
-  CGContextSetFillColorWithColor(ctx, 
+  CGContextSetFillColorWithColor(ctx,
                                  [[UIColor redColor] CGColor]);
   CGFloat radius = self.radius;
   CGRect rect;

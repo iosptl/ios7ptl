@@ -56,11 +56,11 @@
 		FB64C03817D1571300834E39 /* ScribbleLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScribbleLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		FB64C03A17D1571300834E39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB64C03C17D1571300834E39 /* ScribbleLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleLayoutTests.m; sourceTree = "<group>"; };
-		FB64C04617D1572800834E39 /* PTLScribbleLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLScribbleLayoutManager.h; sourceTree = "<group>"; };
-		FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLScribbleLayoutManager.m; sourceTree = "<group>"; };
+		FB64C04617D1572800834E39 /* PTLScribbleLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTLScribbleLayoutManager.h; path = ScribbleLayout/PTLScribbleLayoutManager.h; sourceTree = "<group>"; };
+		FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTLScribbleLayoutManager.m; path = ScribbleLayout/PTLScribbleLayoutManager.m; sourceTree = "<group>"; };
 		FB64C04917D1576F00834E39 /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.txt; sourceTree = "<group>"; };
-		FB64C04B17D15A2000834E39 /* PTLScribbleTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLScribbleTextStorage.h; sourceTree = "<group>"; };
-		FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLScribbleTextStorage.m; sourceTree = "<group>"; };
+		FB64C04B17D15A2000834E39 /* PTLScribbleTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTLScribbleTextStorage.h; path = ScribbleLayout/PTLScribbleTextStorage.h; sourceTree = "<group>"; };
+		FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTLScribbleTextStorage.m; path = ScribbleLayout/PTLScribbleTextStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +90,10 @@
 		FB64C00517D1571200834E39 = {
 			isa = PBXGroup;
 			children = (
+				FB64C04617D1572800834E39 /* PTLScribbleLayoutManager.h */,
+				FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */,
+				FB64C04B17D15A2000834E39 /* PTLScribbleTextStorage.h */,
+				FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */,
 				FB64C01717D1571200834E39 /* ScribbleLayout */,
 				FB64C03617D1571300834E39 /* ScribbleLayoutTests */,
 				FB64C01017D1571200834E39 /* Frameworks */,
@@ -128,10 +132,6 @@
 				FB64C02717D1571300834E39 /* ViewController.m */,
 				FB64C02917D1571300834E39 /* Images.xcassets */,
 				FB64C01817D1571200834E39 /* Supporting Files */,
-				FB64C04617D1572800834E39 /* PTLScribbleLayoutManager.h */,
-				FB64C04717D1572800834E39 /* PTLScribbleLayoutManager.m */,
-				FB64C04B17D15A2000834E39 /* PTLScribbleTextStorage.h */,
-				FB64C04C17D15A2000834E39 /* PTLScribbleTextStorage.m */,
 			);
 			path = ScribbleLayout;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 				ORGANIZATIONNAME = "Rob Napier";
 				TargetAttributes = {
 					FB64C02E17D1571300834E39 = {
-						TestTargetID = FB64C00D17D1571200834E39 /* ScribbleLayout */;
+						TestTargetID = FB64C00D17D1571200834E39;
 					};
 				};
 			};
@@ -472,6 +472,7 @@
 				FB64C04217D1571300834E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB64C04317D1571300834E39 /* Build configuration list for PBXNativeTarget "ScribbleLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +481,7 @@
 				FB64C04517D1571300834E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

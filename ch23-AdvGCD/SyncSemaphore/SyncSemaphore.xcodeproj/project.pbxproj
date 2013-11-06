@@ -52,7 +52,7 @@
 		FB486E1F17FA2E5100E71CD9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FB486E2717FA2E5100E71CD9 /* SyncSemaphoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SyncSemaphoreTests-Info.plist"; sourceTree = "<group>"; };
 		FB486E2917FA2E5100E71CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FB486E2B17FA2E5100E71CD9 /* SyncSemaphoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncSemaphoreTests.m; sourceTree = "<group>"; };
+		FB486E2B17FA2E5100E71CD9 /* SyncSemaphoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SyncSemaphoreTests.m; path = SyncSemaphoreTests/SyncSemaphoreTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +82,7 @@
 		FB486DF417FA2E5100E71CD9 = {
 			isa = PBXGroup;
 			children = (
+				FB486E2B17FA2E5100E71CD9 /* SyncSemaphoreTests.m */,
 				FB486E0617FA2E5100E71CD9 /* SyncSemaphore */,
 				FB486E2517FA2E5100E71CD9 /* SyncSemaphoreTests */,
 				FB486DFF17FA2E5100E71CD9 /* Frameworks */,
@@ -137,7 +138,6 @@
 		FB486E2517FA2E5100E71CD9 /* SyncSemaphoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB486E2B17FA2E5100E71CD9 /* SyncSemaphoreTests.m */,
 				FB486E2617FA2E5100E71CD9 /* Supporting Files */,
 			);
 			path = SyncSemaphoreTests;
@@ -460,6 +460,7 @@
 				FB486E3117FA2E5100E71CD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB486E3217FA2E5100E71CD9 /* Build configuration list for PBXNativeTarget "SyncSemaphoreTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				FB486E3417FA2E5100E71CD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

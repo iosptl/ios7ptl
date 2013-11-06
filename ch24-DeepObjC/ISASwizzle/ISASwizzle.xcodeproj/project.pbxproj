@@ -13,7 +13,7 @@
 		FB0AB87614033EED007F02E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB87514033EED007F02E5 /* main.m */; };
 		FB0AB88914033F01007F02E5 /* MYNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */; };
 		FB0AB88A14033F01007F02E5 /* NSObject+SetClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */; };
-		FBBF3A6C16053FF80093BD67 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */; };
+		FB608D31182AEAF400010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D30182AEAF400010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNotificationCenter.m; sourceTree = "<group>"; };
 		FB0AB88714033F01007F02E5 /* NSObject+SetClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SetClass.h"; sourceTree = "<group>"; };
 		FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SetClass.m"; sourceTree = "<group>"; };
-		FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D30182AEAF400010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +78,7 @@
 		FB0AB86F14033EED007F02E5 /* ISASwizzle */ = {
 			isa = PBXGroup;
 			children = (
+				FB608D30182AEAF400010FB9 /* Images.xcassets */,
 				FB0AB87014033EED007F02E5 /* Supporting Files */,
 			);
 			path = ISASwizzle;
@@ -86,7 +87,6 @@
 		FB0AB87014033EED007F02E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */,
 				FB0AB87114033EED007F02E5 /* ISASwizzle-Info.plist */,
 				FB0AB87214033EED007F02E5 /* InfoPlist.strings */,
 				FB0AB87714033EED007F02E5 /* ISASwizzle-Prefix.pch */,
@@ -144,8 +144,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB608D31182AEAF400010FB9 /* Images.xcassets in Resources */,
 				FB0AB87414033EED007F02E5 /* InfoPlist.strings in Resources */,
-				FBBF3A6C16053FF80093BD67 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +222,8 @@
 		FB0AB87E14033EED007F02E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ISASwizzle/ISASwizzle-Prefix.pch";
 				INFOPLIST_FILE = "ISASwizzle/ISASwizzle-Info.plist";
@@ -233,6 +235,8 @@
 		FB0AB87F14033EED007F02E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ISASwizzle/ISASwizzle-Prefix.pch";
 				INFOPLIST_FILE = "ISASwizzle/ISASwizzle-Info.plist";

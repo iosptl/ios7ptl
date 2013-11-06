@@ -15,7 +15,7 @@
 		FB11838D13E7563F00E13D59 /* ConnectionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB11838C13E7563F00E13D59 /* ConnectionAppDelegate.m */; };
 		FB11839013E7563F00E13D59 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB11838E13E7563F00E13D59 /* MainStoryboard.storyboard */; };
 		FB11839313E7563F00E13D59 /* ConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB11839213E7563F00E13D59 /* ConnectionViewController.m */; };
-		FB1A38C716419BC400E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A38C616419BC400E387DC /* Default-568h@2x.png */; };
+		FB608D1D182AE44F00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D1C182AE44F00010FB9 /* Images.xcassets */; };
 		FBB097CB13E84F2B00F732C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB097CA13E84F2B00F732C1 /* Security.framework */; };
 		FBC6861D13EC7946006238F6 /* My Example Server.cer in Resources */ = {isa = PBXBuildFile; fileRef = FBC6861C13EC7946006238F6 /* My Example Server.cer */; };
 /* End PBXBuildFile section */
@@ -34,7 +34,7 @@
 		FB11838F13E7563F00E13D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB11839113E7563F00E13D59 /* ConnectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConnectionViewController.h; path = Connection/ConnectionViewController.h; sourceTree = "<group>"; };
 		FB11839213E7563F00E13D59 /* ConnectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ConnectionViewController.m; path = Connection/ConnectionViewController.m; sourceTree = "<group>"; };
-		FB1A38C616419BC400E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D1C182AE44F00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBB097CA13E84F2B00F732C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FBC6861C13EC7946006238F6 /* My Example Server.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "My Example Server.cer"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +57,6 @@
 		FB11836D13E7563F00E13D59 = {
 			isa = PBXGroup;
 			children = (
-				FB1A38C616419BC400E387DC /* Default-568h@2x.png */,
 				FB11839113E7563F00E13D59 /* ConnectionViewController.h */,
 				FB11839213E7563F00E13D59 /* ConnectionViewController.m */,
 				FBB097CA13E84F2B00F732C1 /* Security.framework */,
@@ -91,6 +90,7 @@
 				FB11838B13E7563F00E13D59 /* ConnectionAppDelegate.h */,
 				FB11838C13E7563F00E13D59 /* ConnectionAppDelegate.m */,
 				FB11838E13E7563F00E13D59 /* MainStoryboard.storyboard */,
+				FB608D1C182AE44F00010FB9 /* Images.xcassets */,
 				FB11838313E7563F00E13D59 /* Supporting Files */,
 			);
 			path = Connection;
@@ -159,9 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB11838713E7563F00E13D59 /* InfoPlist.strings in Resources */,
+				FB608D1D182AE44F00010FB9 /* Images.xcassets in Resources */,
 				FB11839013E7563F00E13D59 /* MainStoryboard.storyboard in Resources */,
 				FBC6861D13EC7946006238F6 /* My Example Server.cer in Resources */,
-				FB1A38C716419BC400E387DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +244,8 @@
 		FB11839713E7563F00E13D59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Connection/Connection-Prefix.pch";
 				INFOPLIST_FILE = "Connection/Connection-Info.plist";
@@ -255,6 +257,8 @@
 		FB11839813E7563F00E13D59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Connection/Connection-Prefix.pch";
 				INFOPLIST_FILE = "Connection/Connection-Info.plist";

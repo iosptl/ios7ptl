@@ -47,14 +47,14 @@
 		FB6924E317CD5817004D081C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB6924E617CD5817004D081C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB6924E817CD5817004D081C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB6924E917CD5817004D081C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB6924E917CD5817004D081C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Exclusion/ViewController.m; sourceTree = "<group>"; };
 		FB6924EB17CD5817004D081C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB6924F117CD5817004D081C /* ExclusionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExclusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6924F217CD5817004D081C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FB6924FA17CD5817004D081C /* ExclusionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExclusionTests-Info.plist"; sourceTree = "<group>"; };
 		FB6924FC17CD5817004D081C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB6924FE17CD5817004D081C /* ExclusionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExclusionTests.m; sourceTree = "<group>"; };
-		FB69250817CD5853004D081C /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.txt; sourceTree = "<group>"; };
+		FB69250817CD5853004D081C /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample.txt; path = ../sample.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		FB6924C717CD5817004D081C = {
 			isa = PBXGroup;
 			children = (
-				FB69250817CD5853004D081C /* sample.txt */,
+				FB6924E917CD5817004D081C /* ViewController.m */,
 				FB6924D917CD5817004D081C /* Exclusion */,
 				FB6924F817CD5817004D081C /* ExclusionTests */,
 				FB6924D217CD5817004D081C /* Frameworks */,
@@ -119,7 +119,6 @@
 				FB6924E317CD5817004D081C /* AppDelegate.m */,
 				FB6924E517CD5817004D081C /* Main.storyboard */,
 				FB6924E817CD5817004D081C /* ViewController.h */,
-				FB6924E917CD5817004D081C /* ViewController.m */,
 				FB6924EB17CD5817004D081C /* Images.xcassets */,
 				FB6924DA17CD5817004D081C /* Supporting Files */,
 			);
@@ -129,6 +128,7 @@
 		FB6924DA17CD5817004D081C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB69250817CD5853004D081C /* sample.txt */,
 				FB6924DB17CD5817004D081C /* Exclusion-Info.plist */,
 				FB6924DC17CD5817004D081C /* InfoPlist.strings */,
 				FB6924DF17CD5817004D081C /* main.m */,
@@ -460,6 +460,7 @@
 				FB69250417CD5817004D081C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB69250517CD5817004D081C /* Build configuration list for PBXNativeTarget "ExclusionTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				FB69250717CD5817004D081C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

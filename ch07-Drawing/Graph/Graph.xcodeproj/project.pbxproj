@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF1F164198C2002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF1E164198C2002140CF /* Default-568h@2x.png */; };
 		FB423B2A13C506530009C21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB423B2913C506530009C21A /* UIKit.framework */; };
 		FB423B2C13C506530009C21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB423B2B13C506530009C21A /* Foundation.framework */; };
 		FB423B2E13C506530009C21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB423B2D13C506530009C21A /* CoreGraphics.framework */; };
@@ -18,10 +17,10 @@
 		FB423B3F13C506530009C21A /* GraphViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = FB423B3E13C506530009C21A /* GraphViewController.h */; };
 		FB423B4113C506530009C21A /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB423B4013C506530009C21A /* GraphViewController.m */; };
 		FB423B4C13C506820009C21A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB423B4B13C506820009C21A /* GraphView.m */; };
+		FB608D01182ACDEB00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D00182ACDEB00010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF1E164198C2002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB423B2513C506530009C21A /* Graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB423B2913C506530009C21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB423B2B13C506530009C21A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +36,7 @@
 		FB423B4013C506530009C21A /* GraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		FB423B4A13C506820009C21A /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = Graph/GraphView.h; sourceTree = "<group>"; };
 		FB423B4B13C506820009C21A /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = Graph/GraphView.m; sourceTree = "<group>"; };
+		FB608D00182ACDEB00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,6 @@
 				FB423B2F13C506530009C21A /* Graph */,
 				FB423B2813C506530009C21A /* Frameworks */,
 				FB423B2613C506530009C21A /* Products */,
-				FB1BBF1E164198C2002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +90,7 @@
 				FB423B3B13C506530009C21A /* MainStoryboard.storyboard */,
 				FB423B3E13C506530009C21A /* GraphViewController.h */,
 				FB423B4013C506530009C21A /* GraphViewController.m */,
+				FB608D00182ACDEB00010FB9 /* Images.xcassets */,
 				FB423B3013C506530009C21A /* Supporting Files */,
 			);
 			path = Graph;
@@ -158,9 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB423B3413C506530009C21A /* InfoPlist.strings in Resources */,
+				FB608D01182ACDEB00010FB9 /* Images.xcassets in Resources */,
 				FB423B3D13C506530009C21A /* MainStoryboard.storyboard in Resources */,
 				FB423B3F13C506530009C21A /* GraphViewController.h in Resources */,
-				FB1BBF1F164198C2002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +263,8 @@
 		FB423B4513C506530009C21A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Graph/Graph-Prefix.pch";
 				INFOPLIST_FILE = "Graph/Graph-Info.plist";
@@ -274,6 +276,8 @@
 		FB423B4613C506530009C21A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Graph/Graph-Prefix.pch";
 				INFOPLIST_FILE = "Graph/Graph-Info.plist";

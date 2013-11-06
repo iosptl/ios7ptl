@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF3A16419906002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF3916419906002140CF /* Default-568h@2x.png */; };
+		FB608D07182ACE4100010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D06182ACE4100010FB9 /* Images.xcassets */; };
 		FB6BB8F713BBD1080023B4AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6BB8F613BBD1080023B4AD /* UIKit.framework */; };
 		FB6BB8F913BBD1080023B4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6BB8F813BBD1080023B4AD /* Foundation.framework */; };
 		FB6BB8FB13BBD1080023B4AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6BB8FA13BBD1080023B4AD /* CoreGraphics.framework */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF3916419906002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D06182ACE4100010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB6BB8F213BBD1080023B4AD /* Transforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6BB8F613BBD1080023B4AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB6BB8F813BBD1080023B4AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,7 +61,6 @@
 				FB6BB8FC13BBD1080023B4AD /* Transforms */,
 				FB6BB8F513BBD1080023B4AD /* Frameworks */,
 				FB6BB8F313BBD1080023B4AD /* Products */,
-				FB1BBF3916419906002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +90,7 @@
 				FB6BB90813BBD1080023B4AD /* MainStoryboard.storyboard */,
 				FB6BB90B13BBD1080023B4AD /* TransformsViewController.h */,
 				FB6BB90D13BBD1080023B4AD /* TransformsViewController.m */,
+				FB608D06182ACE4100010FB9 /* Images.xcassets */,
 				FB6BB8FD13BBD1080023B4AD /* Supporting Files */,
 			);
 			path = Transforms;
@@ -158,9 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6BB90113BBD1080023B4AD /* InfoPlist.strings in Resources */,
+				FB608D07182ACE4100010FB9 /* Images.xcassets in Resources */,
 				FB6BB90A13BBD1080023B4AD /* MainStoryboard.storyboard in Resources */,
 				FB6BB90C13BBD1080023B4AD /* TransformsViewController.h in Resources */,
-				FB1BBF3A16419906002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +263,8 @@
 		FB6BB91213BBD1080023B4AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Transforms/Transforms-Prefix.pch";
 				INFOPLIST_FILE = "Transforms/Transforms-Info.plist";
@@ -274,6 +276,8 @@
 		FB6BB91313BBD1080023B4AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Transforms/Transforms-Prefix.pch";
 				INFOPLIST_FILE = "Transforms/Transforms-Info.plist";

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB18AE3F15D158BA00465301 /* JuliaOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB18AE3E15D158BA00465301 /* JuliaOperation.m */; };
+		FB608D15182ACFAE00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D14182ACFAE00010FB9 /* Images.xcassets */; };
 		FBA913D815D0914A00CB92B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA913D715D0914A00CB92B2 /* UIKit.framework */; };
 		FBA913DA15D0914A00CB92B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA913D915D0914A00CB92B2 /* Foundation.framework */; };
 		FBA913DC15D0914A00CB92B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA913DB15D0914A00CB92B2 /* CoreGraphics.framework */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		FB18AE3D15D158BA00465301 /* JuliaOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JuliaOperation.h; sourceTree = "<group>"; };
 		FB18AE3E15D158BA00465301 /* JuliaOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JuliaOperation.m; sourceTree = "<group>"; };
+		FB608D14182ACFAE00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = JuliaOp/Images.xcassets; sourceTree = "<group>"; };
 		FBA913D315D0914A00CB92B2 /* JuliaOp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuliaOp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA913D715D0914A00CB92B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBA913D915D0914A00CB92B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +58,7 @@
 		FBA913C815D0914A00CB92B2 = {
 			isa = PBXGroup;
 			children = (
+				FB608D14182ACFAE00010FB9 /* Images.xcassets */,
 				FB18AE3D15D158BA00465301 /* JuliaOperation.h */,
 				FB18AE3E15D158BA00465301 /* JuliaOperation.m */,
 				FBA913F415D0918000CB92B2 /* CollectionViewController.h */,
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB608D15182ACFAE00010FB9 /* Images.xcassets in Resources */,
 				FBA913E215D0914A00CB92B2 /* InfoPlist.strings in Resources */,
 				FBA913EB15D0914A00CB92B2 /* MainStoryboard.storyboard in Resources */,
 			);
@@ -254,6 +258,8 @@
 		FBA913F215D0914A00CB92B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Julia/JuliaOp-Prefix.pch";
 				INFOPLIST_FILE = "Julia/JuliaOp-Info.plist";
@@ -265,6 +271,8 @@
 		FBA913F315D0914A00CB92B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Julia/JuliaOp-Prefix.pch";
 				INFOPLIST_FILE = "Julia/JuliaOp-Info.plist";

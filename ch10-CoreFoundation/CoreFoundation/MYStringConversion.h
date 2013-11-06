@@ -26,7 +26,7 @@
 
 CF_IMPLICIT_BRIDGING_ENABLED
 
-char * MYCFStringCopyUTF8String(CFStringRef aString);
+char * MYCFStringCopyUTF8String(CFStringRef aString) CF_RETURNS_NOT_RETAINED;
 const char * MYCFStringGetUTF8String(CFStringRef aString, char **buffer);
 
 CF_IMPLICIT_BRIDGING_DISABLED

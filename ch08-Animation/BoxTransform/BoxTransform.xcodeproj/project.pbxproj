@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF5416419945002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF5316419945002140CF /* Default-568h@2x.png */; };
+		FB608D0D182ACEB500010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D0C182ACEB500010FB9 /* Images.xcassets */; };
 		FB8FC9FB13D68E7F0051C3FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8FC9FA13D68E7F0051C3FA /* UIKit.framework */; };
 		FB8FC9FD13D68E7F0051C3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8FC9FC13D68E7F0051C3FA /* Foundation.framework */; };
 		FB8FC9FF13D68E7F0051C3FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8FC9FE13D68E7F0051C3FA /* CoreGraphics.framework */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF5316419945002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D0C182ACEB500010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB8FC9F613D68E7F0051C3FA /* BoxTransform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxTransform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8FC9FA13D68E7F0051C3FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB8FC9FC13D68E7F0051C3FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,7 +60,6 @@
 				FB8FCA0013D68E7F0051C3FA /* BoxTransform */,
 				FB8FC9F913D68E7F0051C3FA /* Frameworks */,
 				FB8FC9F713D68E7F0051C3FA /* Products */,
-				FB1BBF5316419945002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +88,7 @@
 				FB8FCA0913D68E7F0051C3FA /* BoxTransformAppDelegate.h */,
 				FB8FCA0A13D68E7F0051C3FA /* BoxTransformAppDelegate.m */,
 				FB8FCA0C13D68E7F0051C3FA /* MainStoryboard.storyboard */,
+				FB608D0C182ACEB500010FB9 /* Images.xcassets */,
 				FB8FCA0113D68E7F0051C3FA /* Supporting Files */,
 			);
 			path = BoxTransform;
@@ -156,8 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8FCA0513D68E7F0051C3FA /* InfoPlist.strings in Resources */,
+				FB608D0D182ACEB500010FB9 /* Images.xcassets in Resources */,
 				FB8FCA0E13D68E7F0051C3FA /* MainStoryboard.storyboard in Resources */,
-				FB1BBF5416419945002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +259,8 @@
 		FB8FCA1513D68E7F0051C3FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BoxTransform/BoxTransform-Prefix.pch";
 				INFOPLIST_FILE = "BoxTransform/BoxTransform-Info.plist";
@@ -270,6 +272,8 @@
 		FB8FCA1613D68E7F0051C3FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BoxTransform/BoxTransform-Prefix.pch";
 				INFOPLIST_FILE = "BoxTransform/BoxTransform-Info.plist";

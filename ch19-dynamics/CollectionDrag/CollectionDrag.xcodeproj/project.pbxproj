@@ -52,10 +52,10 @@
 		FB2DE9B617EC9B1300C16885 /* CollectionDragTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionDragTests-Info.plist"; sourceTree = "<group>"; };
 		FB2DE9B817EC9B1300C16885 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB2DE9BA17EC9B1300C16885 /* CollectionDragTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionDragTests.m; sourceTree = "<group>"; };
-		FB2DE9C417EC9B7300C16885 /* DragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragViewController.h; sourceTree = "<group>"; };
-		FB2DE9C517EC9B7300C16885 /* DragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragViewController.m; sourceTree = "<group>"; };
-		FB2DE9C717EC9CBC00C16885 /* DragLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragLayout.h; sourceTree = "<group>"; };
-		FB2DE9C817EC9CBC00C16885 /* DragLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragLayout.m; sourceTree = "<group>"; };
+		FB2DE9C417EC9B7300C16885 /* DragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragViewController.h; path = CollectionDrag/DragViewController.h; sourceTree = "<group>"; };
+		FB2DE9C517EC9B7300C16885 /* DragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragViewController.m; path = CollectionDrag/DragViewController.m; sourceTree = "<group>"; };
+		FB2DE9C717EC9CBC00C16885 /* DragLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragLayout.h; path = CollectionDrag/DragLayout.h; sourceTree = "<group>"; };
+		FB2DE9C817EC9CBC00C16885 /* DragLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragLayout.m; path = CollectionDrag/DragLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,10 @@
 		FB2DE98317EC9B1300C16885 = {
 			isa = PBXGroup;
 			children = (
+				FB2DE9C417EC9B7300C16885 /* DragViewController.h */,
+				FB2DE9C517EC9B7300C16885 /* DragViewController.m */,
+				FB2DE9C717EC9CBC00C16885 /* DragLayout.h */,
+				FB2DE9C817EC9CBC00C16885 /* DragLayout.m */,
 				FB2DE99517EC9B1300C16885 /* CollectionDrag */,
 				FB2DE9B417EC9B1300C16885 /* CollectionDragTests */,
 				FB2DE98E17EC9B1300C16885 /* Frameworks */,
@@ -120,10 +124,6 @@
 				FB2DE9A117EC9B1300C16885 /* Main.storyboard */,
 				FB2DE9A717EC9B1300C16885 /* Images.xcassets */,
 				FB2DE99617EC9B1300C16885 /* Supporting Files */,
-				FB2DE9C417EC9B7300C16885 /* DragViewController.h */,
-				FB2DE9C517EC9B7300C16885 /* DragViewController.m */,
-				FB2DE9C717EC9CBC00C16885 /* DragLayout.h */,
-				FB2DE9C817EC9CBC00C16885 /* DragLayout.m */,
 			);
 			path = CollectionDrag;
 			sourceTree = "<group>";
@@ -468,6 +468,7 @@
 				FB2DE9C017EC9B1300C16885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB2DE9C117EC9B1300C16885 /* Build configuration list for PBXNativeTarget "CollectionDragTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +477,7 @@
 				FB2DE9C317EC9B1300C16885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

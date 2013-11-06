@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF661641997A002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF651641997A002140CF /* Default-568h@2x.png */; };
 		FB49334413D277D10047529C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB49334313D277D10047529C /* UIKit.framework */; };
 		FB49334613D277D10047529C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB49334513D277D10047529C /* Foundation.framework */; };
 		FB49334813D277D10047529C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB49334713D277D10047529C /* CoreGraphics.framework */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF651641997A002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB49333F13D277D10047529C /* Layers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB49334313D277D10047529C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB49334513D277D10047529C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,7 +36,7 @@
 		FB49335913D277D10047529C /* LayersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LayersViewController.m; path = Layers/LayersViewController.m; sourceTree = "<group>"; };
 		FB49336813D28A6A0047529C /* DelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DelegateView.h; path = Layers/DelegateView.h; sourceTree = "<group>"; };
 		FB49336913D28A6A0047529C /* DelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DelegateView.m; path = Layers/DelegateView.m; sourceTree = "<group>"; };
-		FB66B21F179887DA005F97B8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Layers/Media.xcassets; sourceTree = "<group>"; };
+		FB66B21F179887DA005F97B8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		FBAA2C6813D295020038FCA0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -64,11 +62,9 @@
 				FB49335913D277D10047529C /* LayersViewController.m */,
 				FB49336813D28A6A0047529C /* DelegateView.h */,
 				FB49336913D28A6A0047529C /* DelegateView.m */,
-				FB66B21F179887DA005F97B8 /* Media.xcassets */,
 				FB49334913D277D10047529C /* Layers */,
 				FB49334213D277D10047529C /* Frameworks */,
 				FB49334013D277D10047529C /* Products */,
-				FB1BBF651641997A002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +101,7 @@
 		FB49334A13D277D10047529C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB66B21F179887DA005F97B8 /* Media.xcassets */,
 				FB49334B13D277D10047529C /* Layers-Info.plist */,
 				FB49334C13D277D10047529C /* InfoPlist.strings */,
 				FB49334F13D277D10047529C /* main.m */,
@@ -166,7 +163,6 @@
 				FB66B220179887DA005F97B8 /* Media.xcassets in Resources */,
 				FB49334E13D277D10047529C /* InfoPlist.strings in Resources */,
 				FB49335713D277D10047529C /* MainStoryboard.storyboard in Resources */,
-				FB1BBF661641997A002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +247,8 @@
 		FB49335E13D277D10047529C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Layers/Layers-Prefix.pch";
 				INFOPLIST_FILE = "Layers/Layers-Info.plist";
@@ -262,6 +260,8 @@
 		FB49335F13D277D10047529C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Layers/Layers-Prefix.pch";
 				INFOPLIST_FILE = "Layers/Layers-Info.plist";

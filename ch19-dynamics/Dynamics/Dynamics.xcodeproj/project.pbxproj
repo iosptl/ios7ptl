@@ -46,7 +46,7 @@
 		FBE1A6A317E64E2300D43CB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FBE1A6A617E64E2300D43CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBE1A6A817E64E2300D43CB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FBE1A6A917E64E2300D43CB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBE1A6A917E64E2300D43CB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Dynamics/ViewController.m; sourceTree = "<group>"; };
 		FBE1A6AB17E64E2300D43CB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBE1A6B117E64E2300D43CB0 /* DynamicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE1A6B217E64E2300D43CB0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,6 +82,7 @@
 		FBE1A68717E64E2200D43CB0 = {
 			isa = PBXGroup;
 			children = (
+				FBE1A6A917E64E2300D43CB0 /* ViewController.m */,
 				FBE1A69917E64E2300D43CB0 /* Dynamics */,
 				FBE1A6B817E64E2300D43CB0 /* DynamicsTests */,
 				FBE1A69217E64E2200D43CB0 /* Frameworks */,
@@ -114,9 +115,8 @@
 			children = (
 				FBE1A6A217E64E2300D43CB0 /* AppDelegate.h */,
 				FBE1A6A317E64E2300D43CB0 /* AppDelegate.m */,
-				FBE1A6A517E64E2300D43CB0 /* Main.storyboard */,
 				FBE1A6A817E64E2300D43CB0 /* ViewController.h */,
-				FBE1A6A917E64E2300D43CB0 /* ViewController.m */,
+				FBE1A6A517E64E2300D43CB0 /* Main.storyboard */,
 				FBE1A6AB17E64E2300D43CB0 /* Images.xcassets */,
 				FBE1A69A17E64E2300D43CB0 /* Supporting Files */,
 			);
@@ -462,6 +462,7 @@
 				FBE1A6C417E64E2300D43CB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBE1A6C517E64E2300D43CB0 /* Build configuration list for PBXNativeTarget "DynamicsTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +471,7 @@
 				FBE1A6C717E64E2300D43CB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

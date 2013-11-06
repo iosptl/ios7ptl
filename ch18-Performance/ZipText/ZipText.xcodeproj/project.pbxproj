@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB0E75261602C55800586BD3 /* RNTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0E75251602C55800586BD3 /* RNTimer.m */; };
+		FB4738BA15B478250052A492 /* ZipTextView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4738B915B478250052A492 /* ZipTextView1.m */; };
+		FB608D21182AE56500010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D20182AE56500010FB9 /* Images.xcassets */; };
+		FB7303E415B2F75D00D3E9EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7303E315B2F75D00D3E9EA /* UIKit.framework */; };
+		FB7303E615B2F75D00D3E9EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7303E515B2F75D00D3E9EA /* Foundation.framework */; };
+		FB7303E815B2F75D00D3E9EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7303E715B2F75D00D3E9EA /* CoreGraphics.framework */; };
+		FB7303EE15B2F75D00D3E9EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB7303EC15B2F75D00D3E9EA /* InfoPlist.strings */; };
+		FB7303F015B2F75D00D3E9EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7303EF15B2F75D00D3E9EA /* main.m */; };
+		FB7303F415B2F75D00D3E9EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7303F315B2F75D00D3E9EA /* AppDelegate.m */; };
+		FB7303F715B2F75D00D3E9EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7303F615B2F75D00D3E9EA /* ViewController.m */; };
+		FB7303FA15B2F75D00D3E9EA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7303F815B2F75D00D3E9EA /* ViewController_iPhone.xib */; };
+		FB7303FD15B2F75D00D3E9EA /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7303FB15B2F75D00D3E9EA /* ViewController_iPad.xib */; };
+		FB73040415B2F79100D3E9EA /* Lorem.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB73040315B2F79100D3E9EA /* Lorem.txt */; };
+		FBCE21D515B8B3F500DD1D1E /* ZipTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */; };
+		FBCE21D715B8B4A400DD1D1E /* ZipTextView3.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */; };
+		FBCE21D915B8B4EE00DD1D1E /* ZipTextView4.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */; };
+		FBCE21DB15B8BC2300DD1D1E /* ZipTextView5.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB0E75241602C55800586BD3 /* RNTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTimer.h; sourceTree = "<group>"; };
+		FB0E75251602C55800586BD3 /* RNTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTimer.m; sourceTree = "<group>"; };
+		FB4738B815B478250052A492 /* ZipTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipTextView.h; path = ZipText/ZipTextView.h; sourceTree = "<group>"; };
+		FB4738B915B478250052A492 /* ZipTextView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView1.m; path = ZipText/ZipTextView1.m; sourceTree = "<group>"; };
+		FB608D20182AE56500010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB7303DF15B2F75D00D3E9EA /* ZipText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB7303E315B2F75D00D3E9EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB7303E515B2F75D00D3E9EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB7303E715B2F75D00D3E9EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB7303EB15B2F75D00D3E9EA /* ZipText-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZipText-Info.plist"; sourceTree = "<group>"; };
+		FB7303ED15B2F75D00D3E9EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB7303EF15B2F75D00D3E9EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB7303F115B2F75D00D3E9EA /* ZipText-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZipText-Prefix.pch"; sourceTree = "<group>"; };
+		FB7303F215B2F75D00D3E9EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB7303F315B2F75D00D3E9EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB7303F515B2F75D00D3E9EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB7303F615B2F75D00D3E9EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB7303F915B2F75D00D3E9EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		FB7303FC15B2F75D00D3E9EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		FB73040315B2F79100D3E9EA /* Lorem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lorem.txt; sourceTree = "<group>"; };
+		FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView2.m; path = ZipText/ZipTextView2.m; sourceTree = "<group>"; };
+		FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView3.m; path = ZipText/ZipTextView3.m; sourceTree = "<group>"; };
+		FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView4.m; path = ZipText/ZipTextView4.m; sourceTree = "<group>"; };
+		FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView5.m; path = ZipText/ZipTextView5.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB7303DC15B2F75D00D3E9EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7303E415B2F75D00D3E9EA /* UIKit.framework in Frameworks */,
+				FB7303E615B2F75D00D3E9EA /* Foundation.framework in Frameworks */,
+				FB7303E815B2F75D00D3E9EA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB7303D415B2F75C00D3E9EA = {
+			isa = PBXGroup;
+			children = (
+				FB4738B815B478250052A492 /* ZipTextView.h */,
+				FB4738B915B478250052A492 /* ZipTextView1.m */,
+				FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */,
+				FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */,
+				FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */,
+				FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */,
+				FB7303E915B2F75D00D3E9EA /* ZipText */,
+				FB7303E215B2F75D00D3E9EA /* Frameworks */,
+				FB7303E015B2F75D00D3E9EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB7303E015B2F75D00D3E9EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB7303DF15B2F75D00D3E9EA /* ZipText.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB7303E215B2F75D00D3E9EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB7303E315B2F75D00D3E9EA /* UIKit.framework */,
+				FB7303E515B2F75D00D3E9EA /* Foundation.framework */,
+				FB7303E715B2F75D00D3E9EA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB7303E915B2F75D00D3E9EA /* ZipText */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E75241602C55800586BD3 /* RNTimer.h */,
+				FB0E75251602C55800586BD3 /* RNTimer.m */,
+				FB7303F215B2F75D00D3E9EA /* AppDelegate.h */,
+				FB7303F315B2F75D00D3E9EA /* AppDelegate.m */,
+				FB7303F515B2F75D00D3E9EA /* ViewController.h */,
+				FB7303F615B2F75D00D3E9EA /* ViewController.m */,
+				FB73040315B2F79100D3E9EA /* Lorem.txt */,
+				FB7303F815B2F75D00D3E9EA /* ViewController_iPhone.xib */,
+				FB7303FB15B2F75D00D3E9EA /* ViewController_iPad.xib */,
+				FB608D20182AE56500010FB9 /* Images.xcassets */,
+				FB7303EA15B2F75D00D3E9EA /* Supporting Files */,
+			);
+			path = ZipText;
+			sourceTree = "<group>";
+		};
+		FB7303EA15B2F75D00D3E9EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB7303EB15B2F75D00D3E9EA /* ZipText-Info.plist */,
+				FB7303EC15B2F75D00D3E9EA /* InfoPlist.strings */,
+				FB7303EF15B2F75D00D3E9EA /* main.m */,
+				FB7303F115B2F75D00D3E9EA /* ZipText-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB7303DE15B2F75D00D3E9EA /* ZipText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB73040015B2F75D00D3E9EA /* Build configuration list for PBXNativeTarget "ZipText" */;
+			buildPhases = (
+				FB7303DB15B2F75D00D3E9EA /* Sources */,
+				FB7303DC15B2F75D00D3E9EA /* Frameworks */,
+				FB7303DD15B2F75D00D3E9EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZipText;
+			productName = ZipText;
+			productReference = FB7303DF15B2F75D00D3E9EA /* ZipText.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB7303D615B2F75C00D3E9EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Rob Napier";
+			};
+			buildConfigurationList = FB7303D915B2F75C00D3E9EA /* Build configuration list for PBXProject "ZipText" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB7303D415B2F75C00D3E9EA;
+			productRefGroup = FB7303E015B2F75D00D3E9EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB7303DE15B2F75D00D3E9EA /* ZipText */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB7303DD15B2F75D00D3E9EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7303EE15B2F75D00D3E9EA /* InfoPlist.strings in Resources */,
+				FB7303FA15B2F75D00D3E9EA /* ViewController_iPhone.xib in Resources */,
+				FB7303FD15B2F75D00D3E9EA /* ViewController_iPad.xib in Resources */,
+				FB608D21182AE56500010FB9 /* Images.xcassets in Resources */,
+				FB73040415B2F79100D3E9EA /* Lorem.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB7303DB15B2F75D00D3E9EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7303F015B2F75D00D3E9EA /* main.m in Sources */,
+				FB7303F415B2F75D00D3E9EA /* AppDelegate.m in Sources */,
+				FB7303F715B2F75D00D3E9EA /* ViewController.m in Sources */,
+				FB4738BA15B478250052A492 /* ZipTextView1.m in Sources */,
+				FBCE21D515B8B3F500DD1D1E /* ZipTextView2.m in Sources */,
+				FBCE21D715B8B4A400DD1D1E /* ZipTextView3.m in Sources */,
+				FBCE21D915B8B4EE00DD1D1E /* ZipTextView4.m in Sources */,
+				FBCE21DB15B8BC2300DD1D1E /* ZipTextView5.m in Sources */,
+				FB0E75261602C55800586BD3 /* RNTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB7303EC15B2F75D00D3E9EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB7303ED15B2F75D00D3E9EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB7303F815B2F75D00D3E9EA /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB7303F915B2F75D00D3E9EA /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FB7303FB15B2F75D00D3E9EA /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB7303FC15B2F75D00D3E9EA /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB7303FE15B2F75D00D3E9EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB7303FF15B2F75D00D3E9EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB73040115B2F75D00D3E9EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZipText/ZipText-Prefix.pch";
+				INFOPLIST_FILE = "ZipText/ZipText-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB73040215B2F75D00D3E9EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZipText/ZipText-Prefix.pch";
+				INFOPLIST_FILE = "ZipText/ZipText-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB7303D915B2F75C00D3E9EA /* Build configuration list for PBXProject "ZipText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB7303FE15B2F75D00D3E9EA /* Debug */,
+				FB7303FF15B2F75D00D3E9EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB73040015B2F75D00D3E9EA /* Build configuration list for PBXNativeTarget "ZipText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB73040115B2F75D00D3E9EA /* Debug */,
+				FB73040215B2F75D00D3E9EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB7303D615B2F75C00D3E9EA /* Project object */;
+}

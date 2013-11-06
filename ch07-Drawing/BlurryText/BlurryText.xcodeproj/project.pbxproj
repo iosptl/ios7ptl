@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF1316419850002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF1216419850002140CF /* Default-568h@2x.png */; };
 		FB3A3CDE1426A3DB00F2ED3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A3CDD1426A3DB00F2ED3E /* UIKit.framework */; };
 		FB3A3CE01426A3DB00F2ED3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A3CDF1426A3DB00F2ED3E /* Foundation.framework */; };
 		FB3A3CE21426A3DB00F2ED3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A3CE11426A3DB00F2ED3E /* CoreGraphics.framework */; };
@@ -16,10 +15,10 @@
 		FB3A3CEE1426A3DB00F2ED3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A3CED1426A3DB00F2ED3E /* AppDelegate.m */; };
 		FB3A3CF11426A3DB00F2ED3E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3A3CEF1426A3DB00F2ED3E /* MainStoryboard.storyboard */; };
 		FB3A3CF41426A3DB00F2ED3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A3CF31426A3DB00F2ED3E /* ViewController.m */; };
+		FB608CFD182ACD5C00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608CFC182ACD5C00010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF1216419850002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB3A3CD91426A3DB00F2ED3E /* BlurryText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurryText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3A3CDD1426A3DB00F2ED3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB3A3CDF1426A3DB00F2ED3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -33,6 +32,7 @@
 		FB3A3CF01426A3DB00F2ED3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB3A3CF21426A3DB00F2ED3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB3A3CF31426A3DB00F2ED3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = BlurryText/ViewController.m; sourceTree = "<group>"; };
+		FB608CFC182ACD5C00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,6 @@
 				FB3A3CE31426A3DB00F2ED3E /* BlurryText */,
 				FB3A3CDC1426A3DB00F2ED3E /* Frameworks */,
 				FB3A3CDA1426A3DB00F2ED3E /* Products */,
-				FB1BBF1216419850002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +84,7 @@
 				FB3A3CED1426A3DB00F2ED3E /* AppDelegate.m */,
 				FB3A3CEF1426A3DB00F2ED3E /* MainStoryboard.storyboard */,
 				FB3A3CF21426A3DB00F2ED3E /* ViewController.h */,
+				FB608CFC182ACD5C00010FB9 /* Images.xcassets */,
 				FB3A3CE41426A3DB00F2ED3E /* Supporting Files */,
 			);
 			path = BlurryText;
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB3A3CE81426A3DB00F2ED3E /* InfoPlist.strings in Resources */,
+				FB608CFD182ACD5C00010FB9 /* Images.xcassets in Resources */,
 				FB3A3CF11426A3DB00F2ED3E /* MainStoryboard.storyboard in Resources */,
-				FB1BBF1316419850002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +255,8 @@
 		FB3A3CF81426A3DB00F2ED3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlurryText/BlurryText-Prefix.pch";
 				INFOPLIST_FILE = "BlurryText/BlurryText-Info.plist";
@@ -266,6 +268,8 @@
 		FB3A3CF91426A3DB00F2ED3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlurryText/BlurryText-Prefix.pch";
 				INFOPLIST_FILE = "BlurryText/BlurryText-Info.plist";

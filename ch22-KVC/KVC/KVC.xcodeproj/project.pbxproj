@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB0E75281602C56D00586BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0E75271602C56D00586BD3 /* Default-568h@2x.png */; };
 		FB486F14141E740B0088D73F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB486F13141E740B0088D73F /* UIKit.framework */; };
 		FB486F16141E740B0088D73F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB486F15141E740B0088D73F /* Foundation.framework */; };
 		FB486F18141E740B0088D73F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB486F17141E740B0088D73F /* CoreGraphics.framework */; };
@@ -17,10 +16,10 @@
 		FB486F27141E740B0088D73F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB486F25141E740B0088D73F /* MainStoryboard.storyboard */; };
 		FB486F34141E742B0088D73F /* KVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB486F31141E742B0088D73F /* KVCTableViewCell.m */; };
 		FB486F35141E742B0088D73F /* KVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB486F33141E742B0088D73F /* KVCTableViewController.m */; };
+		FB608D2B182AE9A500010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D2A182AE9A500010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB0E75271602C56D00586BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB486F0F141E740B0088D73F /* KVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB486F13141E740B0088D73F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB486F15141E740B0088D73F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,6 +35,7 @@
 		FB486F31141E742B0088D73F /* KVCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVCTableViewCell.m; path = KVC/KVCTableViewCell.m; sourceTree = "<group>"; };
 		FB486F32141E742B0088D73F /* KVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVCTableViewController.h; path = KVC/KVCTableViewController.h; sourceTree = "<group>"; };
 		FB486F33141E742B0088D73F /* KVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVCTableViewController.m; path = KVC/KVCTableViewController.m; sourceTree = "<group>"; };
+		FB608D2A182AE9A500010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,7 @@
 				FB486F22141E740B0088D73F /* AppDelegate.h */,
 				FB486F23141E740B0088D73F /* AppDelegate.m */,
 				FB486F25141E740B0088D73F /* MainStoryboard.storyboard */,
+				FB608D2A182AE9A500010FB9 /* Images.xcassets */,
 				FB486F1A141E740B0088D73F /* Supporting Files */,
 			);
 			path = KVC;
@@ -97,7 +98,6 @@
 		FB486F1A141E740B0088D73F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB0E75271602C56D00586BD3 /* Default-568h@2x.png */,
 				FB486F1B141E740B0088D73F /* KVC-Info.plist */,
 				FB486F1C141E740B0088D73F /* InfoPlist.strings */,
 				FB486F1F141E740B0088D73F /* main.m */,
@@ -157,8 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB486F1E141E740B0088D73F /* InfoPlist.strings in Resources */,
+				FB608D2B182AE9A500010FB9 /* Images.xcassets in Resources */,
 				FB486F27141E740B0088D73F /* MainStoryboard.storyboard in Resources */,
-				FB0E75281602C56D00586BD3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +261,8 @@
 		FB486F2E141E740B0088D73F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KVC/KVC-Prefix.pch";
 				INFOPLIST_FILE = "KVC/KVC-Info.plist";
@@ -272,6 +274,8 @@
 		FB486F2F141E740B0088D73F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KVC/KVC-Prefix.pch";
 				INFOPLIST_FILE = "KVC/KVC-Info.plist";

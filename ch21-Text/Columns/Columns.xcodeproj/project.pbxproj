@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB608D25182AE7BF00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D24182AE7BF00010FB9 /* Images.xcassets */; };
 		FB9469EA140834CF00F7A625 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9469E9140834CF00F7A625 /* UIKit.framework */; };
 		FB9469EC140834CF00F7A625 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9469EB140834CF00F7A625 /* Foundation.framework */; };
 		FB9469F2140834CF00F7A625 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB9469F0140834CF00F7A625 /* InfoPlist.strings */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB608D24182AE7BF00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB9469E5140834CF00F7A625 /* Columns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Columns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9469E9140834CF00F7A625 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB9469EB140834CF00F7A625 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +95,7 @@
 				FB9469F9140834CF00F7A625 /* MainStoryboard.storyboard */,
 				FB9469FC140834CF00F7A625 /* ViewController.h */,
 				FB9469FD140834CF00F7A625 /* ViewController.m */,
+				FB608D24182AE7BF00010FB9 /* Images.xcassets */,
 				FB9469EE140834CF00F7A625 /* Supporting Files */,
 			);
 			path = Columns;
@@ -136,7 +139,7 @@
 		FB9469DC140834CF00F7A625 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FB9469DF140834CF00F7A625 /* Build configuration list for PBXProject "Columns" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9469F2140834CF00F7A625 /* InfoPlist.strings in Resources */,
+				FB608D25182AE7BF00010FB9 /* Images.xcassets in Resources */,
 				FB9469FB140834CF00F7A625 /* MainStoryboard.storyboard in Resources */,
 				FB946A051408350C00F7A625 /* Lipsum.txt in Resources */,
 			);
@@ -206,7 +210,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -222,6 +225,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -231,7 +235,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -250,6 +253,8 @@
 		FB946A02140834CF00F7A625 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Columns/Columns-Prefix.pch";
 				INFOPLIST_FILE = "Columns/Columns-Info.plist";
@@ -261,6 +266,8 @@
 		FB946A03140834CF00F7A625 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Columns/Columns-Prefix.pch";
 				INFOPLIST_FILE = "Columns/Columns-Info.plist";

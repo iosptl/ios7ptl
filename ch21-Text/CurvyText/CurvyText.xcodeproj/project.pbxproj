@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB608D27182AE7FB00010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D26182AE7FB00010FB9 /* Images.xcassets */; };
 		FBF04060140ADF4400D1CD70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF0405F140ADF4400D1CD70 /* UIKit.framework */; };
 		FBF04062140ADF4400D1CD70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF04061140ADF4400D1CD70 /* Foundation.framework */; };
 		FBF04068140ADF4400D1CD70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBF04066140ADF4400D1CD70 /* InfoPlist.strings */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB608D26182AE7FB00010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBF0405B140ADF4400D1CD70 /* CurvyText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurvyText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF0405F140ADF4400D1CD70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBF04061140ADF4400D1CD70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +97,7 @@
 				FBF0406F140ADF4400D1CD70 /* MainStoryboard.storyboard */,
 				FBF04072140ADF4400D1CD70 /* ViewController.h */,
 				FBF04073140ADF4400D1CD70 /* ViewController.m */,
+				FB608D26182AE7FB00010FB9 /* Images.xcassets */,
 				FBF04064140ADF4400D1CD70 /* Supporting Files */,
 			);
 			path = CurvyText;
@@ -161,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB608D27182AE7FB00010FB9 /* Images.xcassets in Resources */,
 				FBF04068140ADF4400D1CD70 /* InfoPlist.strings in Resources */,
 				FBF04071140ADF4400D1CD70 /* MainStoryboard.storyboard in Resources */,
 			);
@@ -267,6 +271,8 @@
 		FBF04078140ADF4400D1CD70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CurvyText/CurvyText-Prefix.pch";
 				INFOPLIST_FILE = "CurvyText/CurvyText-Info.plist";
@@ -278,6 +284,8 @@
 		FBF04079140ADF4400D1CD70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CurvyText/CurvyText-Prefix.pch";
 				INFOPLIST_FILE = "CurvyText/CurvyText-Info.plist";

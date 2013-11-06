@@ -46,7 +46,7 @@
 		FB3EC15C17A98E6C0091AC1A /* PTLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLAppDelegate.m; sourceTree = "<group>"; };
 		FB3EC15F17A98E6C0091AC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB3EC16117A98E6C0091AC1A /* PTLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTLViewController.h; sourceTree = "<group>"; };
-		FB3EC16217A98E6C0091AC1A /* PTLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTLViewController.m; sourceTree = "<group>"; };
+		FB3EC16217A98E6C0091AC1A /* PTLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTLViewController.m; path = BeBold/PTLViewController.m; sourceTree = "<group>"; };
 		FB3EC16417A98E6C0091AC1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB3EC16A17A98E6C0091AC1A /* BeBoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeBoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3EC16B17A98E6C0091AC1A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,6 +82,7 @@
 		FB3EC14017A98E6C0091AC1A = {
 			isa = PBXGroup;
 			children = (
+				FB3EC16217A98E6C0091AC1A /* PTLViewController.m */,
 				FB3EC15217A98E6C0091AC1A /* BeBold */,
 				FB3EC17117A98E6C0091AC1A /* BeBoldTests */,
 				FB3EC14B17A98E6C0091AC1A /* Frameworks */,
@@ -116,7 +117,6 @@
 				FB3EC15C17A98E6C0091AC1A /* PTLAppDelegate.m */,
 				FB3EC15E17A98E6C0091AC1A /* Main.storyboard */,
 				FB3EC16117A98E6C0091AC1A /* PTLViewController.h */,
-				FB3EC16217A98E6C0091AC1A /* PTLViewController.m */,
 				FB3EC16417A98E6C0091AC1A /* Images.xcassets */,
 				FB3EC15317A98E6C0091AC1A /* Supporting Files */,
 			);
@@ -457,6 +457,7 @@
 				FB3EC17D17A98E6C0091AC1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB3EC17E17A98E6C0091AC1A /* Build configuration list for PBXNativeTarget "BeBoldTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				FB3EC18017A98E6C0091AC1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

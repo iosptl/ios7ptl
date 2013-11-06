@@ -30,8 +30,7 @@
 
 @implementation DecorationViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
   CALayer *layer;
   layer = [CALayer layer];

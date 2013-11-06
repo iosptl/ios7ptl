@@ -15,7 +15,7 @@
 		FB17A1DC13E49E9200DCBA02 /* FileExplorerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17A1DB13E49E9200DCBA02 /* FileExplorerAppDelegate.m */; };
 		FB17A1DF13E49E9200DCBA02 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB17A1DD13E49E9200DCBA02 /* MainStoryboard.storyboard */; };
 		FB17A1E213E49E9200DCBA02 /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17A1E113E49E9200DCBA02 /* DirectoryViewController.m */; };
-		FB1A38D216419BD900E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A38D116419BD900E387DC /* Default-568h@2x.png */; };
+		FB608D1F182AE47200010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D1E182AE47200010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		FB17A1DE13E49E9200DCBA02 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB17A1E013E49E9200DCBA02 /* DirectoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
 		FB17A1E113E49E9200DCBA02 /* DirectoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
-		FB1A38D116419BD900E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D1E182AE47200010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,6 @@
 		FB17A1BC13E49E9200DCBA02 = {
 			isa = PBXGroup;
 			children = (
-				FB1A38D116419BD900E387DC /* Default-568h@2x.png */,
 				FB17A1D113E49E9200DCBA02 /* FileExplorer */,
 				FB17A1CA13E49E9200DCBA02 /* Frameworks */,
 				FB17A1C813E49E9200DCBA02 /* Products */,
@@ -85,6 +84,7 @@
 				FB17A1DD13E49E9200DCBA02 /* MainStoryboard.storyboard */,
 				FB17A1E013E49E9200DCBA02 /* DirectoryViewController.h */,
 				FB17A1E113E49E9200DCBA02 /* DirectoryViewController.m */,
+				FB608D1E182AE47200010FB9 /* Images.xcassets */,
 				FB17A1D213E49E9200DCBA02 /* Supporting Files */,
 			);
 			path = FileExplorer;
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB17A1D613E49E9200DCBA02 /* InfoPlist.strings in Resources */,
+				FB608D1F182AE47200010FB9 /* Images.xcassets in Resources */,
 				FB17A1DF13E49E9200DCBA02 /* MainStoryboard.storyboard in Resources */,
-				FB1A38D216419BD900E387DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +238,8 @@
 		FB17A1E913E49E9200DCBA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileExplorer/FileExplorer-Prefix.pch";
 				INFOPLIST_FILE = "FileExplorer/FileExplorer-Info.plist";
@@ -249,6 +251,8 @@
 		FB17A1EA13E49E9200DCBA02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileExplorer/FileExplorer-Prefix.pch";
 				INFOPLIST_FILE = "FileExplorer/FileExplorer-Info.plist";

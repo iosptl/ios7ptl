@@ -33,7 +33,7 @@
   const size_t kImageWidth = 200;
   const size_t kImageHeight = 200;
   CGImageRef textImage = NULL;
-  UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline1];
+  UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
   UIColor *color = [UIColor redColor];
   
   UIGraphicsBeginImageContext(CGSizeMake(kImageWidth, kImageHeight));  

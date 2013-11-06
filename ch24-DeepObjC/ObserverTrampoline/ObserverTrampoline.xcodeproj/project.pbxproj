@@ -18,7 +18,7 @@
 		FB1000D91417E41600431287 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000D81417E41600431287 /* ViewController.m */; };
 		FB1000E11417E46B00431287 /* RNObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000E01417E46B00431287 /* RNObserverManager.m */; };
 		FB2A1C77141911BB004303E7 /* RNMainThreadTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */; };
-		FB5DB1F7164196B1004448BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB5DB1F6164196B1004448BD /* Default-568h@2x.png */; };
+		FB608D35182AEB5500010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D34182AEB5500010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		FB1000E01417E46B00431287 /* RNObserverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNObserverManager.m; sourceTree = "<group>"; };
 		FB2A1C75141911BB004303E7 /* RNMainThreadTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainThreadTrampoline.h; sourceTree = "<group>"; };
 		FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainThreadTrampoline.m; sourceTree = "<group>"; };
-		FB5DB1F6164196B1004448BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D34182AEB5500010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,6 @@
 		FB1000B01417E41500431287 = {
 			isa = PBXGroup;
 			children = (
-				FB5DB1F6164196B1004448BD /* Default-568h@2x.png */,
 				FB1000DF1417E46B00431287 /* RNObserverManager.h */,
 				FB1000E01417E46B00431287 /* RNObserverManager.m */,
 				FB2A1C75141911BB004303E7 /* RNMainThreadTrampoline.h */,
@@ -98,6 +97,7 @@
 				FB1000D41417E41600431287 /* MainStoryboard_iPad.storyboard */,
 				FB1000D71417E41600431287 /* ViewController.h */,
 				FB1000D81417E41600431287 /* ViewController.m */,
+				FB608D34182AEB5500010FB9 /* Images.xcassets */,
 				FB1000C61417E41500431287 /* Supporting Files */,
 			);
 			path = ObserverTrampoline;
@@ -140,7 +140,7 @@
 		FB1000B21417E41500431287 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FB1000B51417E41500431287 /* Build configuration list for PBXProject "ObserverTrampoline" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -165,9 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1000CA1417E41500431287 /* InfoPlist.strings in Resources */,
+				FB608D35182AEB5500010FB9 /* Images.xcassets in Resources */,
 				FB1000D31417E41500431287 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FB1000D61417E41600431287 /* MainStoryboard_iPad.storyboard in Resources */,
-				FB5DB1F7164196B1004448BD /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -236,6 +235,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -245,7 +245,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -264,6 +263,8 @@
 		FB1000DD1417E41600431287 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObserverTrampoline/ObserverTrampoline-Prefix.pch";
 				INFOPLIST_FILE = "ObserverTrampoline/ObserverTrampoline-Info.plist";
@@ -275,6 +276,8 @@
 		FB1000DE1417E41600431287 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObserverTrampoline/ObserverTrampoline-Prefix.pch";
 				INFOPLIST_FILE = "ObserverTrampoline/ObserverTrampoline-Info.plist";

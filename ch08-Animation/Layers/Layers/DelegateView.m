@@ -44,7 +44,7 @@
   [[UIColor whiteColor] set];
   UIRectFill(layer.bounds);
 
-  UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline1];
+  UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
   UIColor *color = [UIColor blackColor];
 
   NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];

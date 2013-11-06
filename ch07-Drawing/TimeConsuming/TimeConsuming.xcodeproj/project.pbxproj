@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF33164198FB002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF32164198FB002140CF /* Default-568h@2x.png */; };
+		FB608D05182ACE2000010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D04182ACE2000010FB9 /* Images.xcassets */; };
 		FB7213211425125C00ED8BCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7213201425125C00ED8BCD /* UIKit.framework */; };
 		FB7213231425125C00ED8BCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7213221425125C00ED8BCD /* Foundation.framework */; };
 		FB7213251425125C00ED8BCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7213241425125C00ED8BCD /* CoreGraphics.framework */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF32164198FB002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D04182ACE2000010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB72131C1425125C00ED8BCD /* TimeConsuming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeConsuming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7213201425125C00ED8BCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB7213221425125C00ED8BCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,7 +56,6 @@
 				FB7213261425125C00ED8BCD /* TimeConsuming */,
 				FB72131F1425125C00ED8BCD /* Frameworks */,
 				FB72131D1425125C00ED8BCD /* Products */,
-				FB1BBF32164198FB002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +82,7 @@
 			children = (
 				FB7213321425125C00ED8BCD /* MainStoryboard.storyboard */,
 				FB7213351425125C00ED8BCD /* ViewController.h */,
+				FB608D04182ACE2000010FB9 /* Images.xcassets */,
 				FB7213271425125C00ED8BCD /* Supporting Files */,
 			);
 			path = TimeConsuming;
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB72132B1425125C00ED8BCD /* InfoPlist.strings in Resources */,
+				FB608D05182ACE2000010FB9 /* Images.xcassets in Resources */,
 				FB7213341425125C00ED8BCD /* MainStoryboard.storyboard in Resources */,
-				FB1BBF33164198FB002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +257,8 @@
 		FB72133B1425125C00ED8BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TimeConsuming/TimeConsuming-Prefix.pch";
 				INFOPLIST_FILE = "TimeConsuming/TimeConsuming-Info.plist";
@@ -268,6 +270,8 @@
 		FB72133C1425125C00ED8BCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TimeConsuming/TimeConsuming-Prefix.pch";
 				INFOPLIST_FILE = "TimeConsuming/TimeConsuming-Info.plist";

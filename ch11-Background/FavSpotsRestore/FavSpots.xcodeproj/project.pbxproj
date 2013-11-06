@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF9416419A1B002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF9316419A1B002140CF /* Default-568h@2x.png */; };
 		FB23EDCC15D6995000DFA486 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB23EDCB15D6995000DFA486 /* MapKit.framework */; };
 		FB23EDCF15D69AE200DFA486 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */; };
 		FB3D5E9C15D7133800E05249 /* NSCoder+FavSpots.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3D5E9B15D7133800E05249 /* NSCoder+FavSpots.m */; };
 		FB4DCE7415D6A77900C7D7ED /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */; };
 		FB4DCE7815D6A81300C7D7ED /* Spot.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7715D6A81300C7D7ED /* Spot.m */; };
 		FB4DCE7D15D6D84D00C7D7ED /* TextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7C15D6D84D00C7D7ED /* TextEditViewController.m */; };
+		FB608D1B182ADBD500010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D1A182ADBD500010FB9 /* Images.xcassets */; };
 		FB6DC6D815D69710000FDEC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6DC6D715D69710000FDEC1 /* UIKit.framework */; };
 		FB6DC6DA15D69710000FDEC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6DC6D915D69710000FDEC1 /* Foundation.framework */; };
 		FB6DC6DC15D69710000FDEC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6DC6DB15D69710000FDEC1 /* CoreGraphics.framework */; };
@@ -31,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF9316419A1B002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB23EDCB15D6995000DFA486 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FB3D5E9A15D7133800E05249 /* NSCoder+FavSpots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+FavSpots.h"; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		FB4DCE7715D6A81300C7D7ED /* Spot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spot.m; sourceTree = "<group>"; };
 		FB4DCE7B15D6D84D00C7D7ED /* TextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditViewController.h; sourceTree = "<group>"; };
 		FB4DCE7C15D6D84D00C7D7ED /* TextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditViewController.m; sourceTree = "<group>"; };
+		FB608D1A182ADBD500010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB6DC6D315D69710000FDEC1 /* FavSpots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavSpots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6DC6D715D69710000FDEC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB6DC6D915D69710000FDEC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -156,6 +156,7 @@
 				FBFBCB8B15D7042A00E687E2 /* NSCoder+RNMapKit.m */,
 				FB3D5E9A15D7133800E05249 /* NSCoder+FavSpots.h */,
 				FB3D5E9B15D7133800E05249 /* NSCoder+FavSpots.m */,
+				FB608D1A182ADBD500010FB9 /* Images.xcassets */,
 			);
 			path = FavSpots;
 			sourceTree = "<group>";
@@ -163,7 +164,6 @@
 		FB6DC6E015D69710000FDEC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB1BBF9316419A1B002140CF /* Default-568h@2x.png */,
 				FB6DC6E115D69710000FDEC1 /* FavSpots-Info.plist */,
 				FB6DC6E215D69710000FDEC1 /* InfoPlist.strings */,
 				FB6DC6E515D69710000FDEC1 /* main.m */,
@@ -224,8 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6DC6E415D69710000FDEC1 /* InfoPlist.strings in Resources */,
+				FB608D1B182ADBD500010FB9 /* Images.xcassets in Resources */,
 				FB6DC6ED15D69710000FDEC1 /* MainStoryboard.storyboard in Resources */,
-				FB1BBF9416419A1B002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +324,8 @@
 		FB6DC6FA15D69710000FDEC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FavSpots/FavSpots-Prefix.pch";
 				INFOPLIST_FILE = "FavSpots/FavSpots-Info.plist";
@@ -335,6 +337,8 @@
 		FB6DC6FB15D69710000FDEC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FavSpots/FavSpots-Prefix.pch";
 				INFOPLIST_FILE = "FavSpots/FavSpots-Info.plist";

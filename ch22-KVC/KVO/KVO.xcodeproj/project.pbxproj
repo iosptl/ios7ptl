@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB0E75391602CA4300586BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0E75381602CA4300586BD3 /* Default-568h@2x.png */; };
+		FB608D2F182AEA0100010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D2E182AEA0100010FB9 /* Images.xcassets */; };
 		FBC741EE141E75EB003A090A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC741ED141E75EB003A090A /* UIKit.framework */; };
 		FBC741F0141E75EB003A090A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC741EF141E75EB003A090A /* Foundation.framework */; };
 		FBC741F2141E75EB003A090A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC741F1141E75EB003A090A /* CoreGraphics.framework */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB0E75381602CA4300586BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB608D2E182AEA0100010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBC741E9141E75EB003A090A /* KVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC741ED141E75EB003A090A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBC741EF141E75EB003A090A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +94,7 @@
 				FBC741FC141E75EB003A090A /* AppDelegate.h */,
 				FBC741FD141E75EB003A090A /* AppDelegate.m */,
 				FBC741FF141E75EB003A090A /* MainStoryboard.storyboard */,
+				FB608D2E182AEA0100010FB9 /* Images.xcassets */,
 				FBC741F4141E75EB003A090A /* Supporting Files */,
 			);
 			path = KVO;
@@ -102,7 +103,6 @@
 		FBC741F4141E75EB003A090A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB0E75381602CA4300586BD3 /* Default-568h@2x.png */,
 				FBC741F5141E75EB003A090A /* KVO-Info.plist */,
 				FBC741F6141E75EB003A090A /* InfoPlist.strings */,
 				FBC741F9141E75EB003A090A /* main.m */,
@@ -137,7 +137,7 @@
 		FBC741E0141E75EA003A090A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = FBC741E3141E75EA003A090A /* Build configuration list for PBXProject "KVO" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -162,8 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC741F8141E75EB003A090A /* InfoPlist.strings in Resources */,
+				FB608D2F182AEA0100010FB9 /* Images.xcassets in Resources */,
 				FBC74201141E75EB003A090A /* MainStoryboard.storyboard in Resources */,
-				FB0E75391602CA4300586BD3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +208,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -224,6 +223,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -232,7 +232,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -250,6 +249,8 @@
 		FBC74208141E75EB003A090A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KVO/KVO-Prefix.pch";
 				INFOPLIST_FILE = "KVO/KVO-Info.plist";
@@ -261,6 +262,8 @@
 		FBC74209141E75EB003A090A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KVO/KVO-Prefix.pch";
 				INFOPLIST_FILE = "KVO/KVO-Info.plist";

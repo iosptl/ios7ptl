@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1BBF4616419928002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF4516419928002140CF /* Default-568h@2x.png */; };
 		FB1BD11513D3B82D00836033 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1BD11413D3B82D00836033 /* UIKit.framework */; };
 		FB1BD11713D3B82D00836033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1BD11613D3B82D00836033 /* Foundation.framework */; };
 		FB1BD11913D3B82D00836033 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1BD11813D3B82D00836033 /* CoreGraphics.framework */; };
@@ -18,10 +17,10 @@
 		FB1BD12B13D3B82D00836033 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1BD12A13D3B82D00836033 /* ActionsViewController.m */; };
 		FB1BD13313D3B87200836033 /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1BD13213D3B87200836033 /* CircleLayer.m */; };
 		FB1BD13513D3B8CD00836033 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1BD13413D3B8CD00836033 /* QuartzCore.framework */; };
+		FB608D09182ACE6800010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D08182ACE6800010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1BBF4516419928002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB1BD11013D3B82D00836033 /* Actions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1BD11413D3B82D00836033 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB1BD11613D3B82D00836033 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,6 +37,7 @@
 		FB1BD13113D3B87200836033 /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleLayer.h; path = Actions/CircleLayer.h; sourceTree = "<group>"; };
 		FB1BD13213D3B87200836033 /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleLayer.m; path = Actions/CircleLayer.m; sourceTree = "<group>"; };
 		FB1BD13413D3B8CD00836033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB608D08182ACE6800010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,6 @@
 				FB1BD11A13D3B82D00836033 /* Actions */,
 				FB1BD11313D3B82D00836033 /* Frameworks */,
 				FB1BD11113D3B82D00836033 /* Products */,
-				FB1BBF4516419928002140CF /* Default-568h@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +93,7 @@
 				FB1BD12313D3B82D00836033 /* ActionsAppDelegate.h */,
 				FB1BD12413D3B82D00836033 /* ActionsAppDelegate.m */,
 				FB1BD12613D3B82D00836033 /* MainStoryboard.storyboard */,
+				FB608D08182ACE6800010FB9 /* Images.xcassets */,
 				FB1BD11B13D3B82D00836033 /* Supporting Files */,
 			);
 			path = Actions;
@@ -161,8 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1BD11F13D3B82D00836033 /* InfoPlist.strings in Resources */,
+				FB608D09182ACE6800010FB9 /* Images.xcassets in Resources */,
 				FB1BD12813D3B82D00836033 /* MainStoryboard.storyboard in Resources */,
-				FB1BBF4616419928002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +265,8 @@
 		FB1BD12F13D3B82D00836033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Actions/Actions-Prefix.pch";
 				INFOPLIST_FILE = "Actions/Actions-Info.plist";
@@ -276,6 +278,8 @@
 		FB1BD13013D3B82D00836033 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Actions/Actions-Prefix.pch";
 				INFOPLIST_FILE = "Actions/Actions-Info.plist";

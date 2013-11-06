@@ -49,7 +49,7 @@
 		FBA8486017F8D82F002A2635 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FBA8486317F8D82F002A2635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBA8486517F8D82F002A2635 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FBA8486617F8D82F002A2635 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBA8486617F8D82F002A2635 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ProducerConsumer/ViewController.m; sourceTree = "<group>"; };
 		FBA8486817F8D82F002A2635 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FBA8486E17F8D82F002A2635 /* ProducerConsumerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProducerConsumerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA8486F17F8D82F002A2635 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -85,6 +85,7 @@
 		FBA8484417F8D82E002A2635 = {
 			isa = PBXGroup;
 			children = (
+				FBA8486617F8D82F002A2635 /* ViewController.m */,
 				FB486DB017FA135F00E71CD9 /* RNQueue.h */,
 				FB486DB117FA135F00E71CD9 /* RNQueue.m */,
 				FBA8485617F8D82F002A2635 /* ProducerConsumer */,
@@ -121,7 +122,6 @@
 				FBA8486017F8D82F002A2635 /* AppDelegate.m */,
 				FBA8486217F8D82F002A2635 /* Main.storyboard */,
 				FBA8486517F8D82F002A2635 /* ViewController.h */,
-				FBA8486617F8D82F002A2635 /* ViewController.m */,
 				FBA8486817F8D82F002A2635 /* Images.xcassets */,
 				FBA8485717F8D82F002A2635 /* Supporting Files */,
 			);

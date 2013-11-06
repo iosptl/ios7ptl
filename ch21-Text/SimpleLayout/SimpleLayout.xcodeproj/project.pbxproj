@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB1A390C16419F5700E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A390B16419F5700E387DC /* Default-568h@2x.png */; };
 		FB1EACF91406A22600B2D03F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1EACF81406A22600B2D03F /* UIKit.framework */; };
 		FB1EACFB1406A22600B2D03F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1EACFA1406A22600B2D03F /* Foundation.framework */; };
 		FB1EAD011406A22600B2D03F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB1EACFF1406A22600B2D03F /* InfoPlist.strings */; };
@@ -18,10 +17,10 @@
 		FB1EAD141406A4BA00B2D03F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1EAD131406A4BA00B2D03F /* CoreText.framework */; };
 		FB1EAD171406AAD000B2D03F /* CoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1EAD161406AAD000B2D03F /* CoreTextLabel.m */; };
 		FB1EAD1B1406ABE700B2D03F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1EAD1A1406ABE700B2D03F /* CoreGraphics.framework */; };
+		FB608D29182AE93100010FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB608D28182AE93100010FB9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB1A390B16419F5700E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB1EACF41406A22600B2D03F /* SimpleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1EACF81406A22600B2D03F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB1EACFA1406A22600B2D03F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +38,7 @@
 		FB1EAD161406AAD000B2D03F /* CoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextLabel.m; sourceTree = "<group>"; };
 		FB1EAD181406ABD100B2D03F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB1EAD1A1406ABE700B2D03F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB608D28182AE93100010FB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +59,8 @@
 		FB1EACE91406A22600B2D03F = {
 			isa = PBXGroup;
 			children = (
-				FB1EAD1A1406ABE700B2D03F /* CoreGraphics.framework */,
-				FB1EAD181406ABD100B2D03F /* QuartzCore.framework */,
 				FB1EAD151406AAD000B2D03F /* CoreTextLabel.h */,
 				FB1EAD161406AAD000B2D03F /* CoreTextLabel.m */,
-				FB1EAD131406A4BA00B2D03F /* CoreText.framework */,
 				FB1EACFC1406A22600B2D03F /* SimpleLayout */,
 				FB1EACF71406A22600B2D03F /* Frameworks */,
 				FB1EACF51406A22600B2D03F /* Products */,
@@ -81,6 +78,9 @@
 		FB1EACF71406A22600B2D03F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB1EAD1A1406ABE700B2D03F /* CoreGraphics.framework */,
+				FB1EAD181406ABD100B2D03F /* QuartzCore.framework */,
+				FB1EAD131406A4BA00B2D03F /* CoreText.framework */,
 				FB1EACF81406A22600B2D03F /* UIKit.framework */,
 				FB1EACFA1406A22600B2D03F /* Foundation.framework */,
 			);
@@ -95,6 +95,7 @@
 				FB1EAD081406A22600B2D03F /* MainStoryboard.storyboard */,
 				FB1EAD0B1406A22600B2D03F /* ViewController.h */,
 				FB1EAD0C1406A22600B2D03F /* ViewController.m */,
+				FB608D28182AE93100010FB9 /* Images.xcassets */,
 				FB1EACFD1406A22600B2D03F /* Supporting Files */,
 			);
 			path = SimpleLayout;
@@ -103,7 +104,6 @@
 		FB1EACFD1406A22600B2D03F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB1A390B16419F5700E387DC /* Default-568h@2x.png */,
 				FB1EACFE1406A22600B2D03F /* SimpleLayout-Info.plist */,
 				FB1EACFF1406A22600B2D03F /* InfoPlist.strings */,
 				FB1EAD021406A22600B2D03F /* main.m */,
@@ -163,8 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1EAD011406A22600B2D03F /* InfoPlist.strings in Resources */,
+				FB608D29182AE93100010FB9 /* Images.xcassets in Resources */,
 				FB1EAD0A1406A22600B2D03F /* MainStoryboard.storyboard in Resources */,
-				FB1A390C16419F5700E387DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +267,11 @@
 		FB1EAD111406A22600B2D03F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleLayout/SimpleLayout-Prefix.pch";
 				INFOPLIST_FILE = "SimpleLayout/SimpleLayout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -279,10 +280,11 @@
 		FB1EAD121406A22600B2D03F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleLayout/SimpleLayout-Prefix.pch";
 				INFOPLIST_FILE = "SimpleLayout/SimpleLayout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
