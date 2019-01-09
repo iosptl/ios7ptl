@@ -37,7 +37,7 @@ char * MYCFStringCopyUTF8String(CFStringRef aString) {
   CFIndex length = CFStringGetLength(aString);
   CFIndex maxSize =
   CFStringGetMaximumSizeForEncoding(length,
-                                    kCFStringEncodingUTF8);
+                                    kCFStringEncodingUTF8) + 1; // + 1 for \0
   char *buffer = (char *)malloc(maxSize);
   if (CFStringGetCString(aString, buffer, maxSize,
                          kCFStringEncodingUTF8)) {
